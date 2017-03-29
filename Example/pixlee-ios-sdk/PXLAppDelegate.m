@@ -9,8 +9,8 @@
 
 #import <pixlee_sdk/PXLClient.h>
 #import <pixlee_sdk/pixlee_sdk.h>
-#import <sdk/PXLClient.h>
-#import <sdk/PXLAlbum.h>
+#import <pixlee_sdk/PXLClient.h>
+#import <pixlee_sdk/PXLAlbum.h>
 
 @implementation PXLAppDelegate
 
