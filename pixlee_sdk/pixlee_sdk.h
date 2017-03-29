@@ -8,16 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PXLPhoto.h"
-#import "PXLClient.h"
-#import "PXLProductCollectionViewCell.h"
-#import "PXLAlbumSortOptions.h"
-#import "PXLAlbumFilterOptions.h"
-#import "PXLPhotoDetailViewController.h"
-#import "PXLProduct.h"
-#import "PXLAlbum.h"
-#import "PXLAlbumViewController.h"
-#import "PXLPhotoCollectionViewCell.h"
+
 
 
 //! Project version number for pixlee_sdk.
@@ -29,3 +20,13 @@ FOUNDATION_EXPORT const unsigned char pixlee_sdkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <pixlee_sdk/PublicHeader.h>
 
 
+#import <pixlee_sdk/PXLPhoto.h>
+#import <pixlee_sdk/PXLClient.h>
+#import <pixlee_sdk/PXLProductCollectionViewCell.h>
+#import <pixlee_sdk/PXLAlbumSortOptions.h>
+#import <pixlee_sdk/PXLAlbumFilterOptions.h>
+#import <pixlee_sdk/PXLPhotoDetailViewController.h>
+#import <pixlee_sdk/PXLProduct.h>
+#import <pixlee_sdk/PXLAlbum.h>
+#import <pixlee_sdk/PXLAlbumViewController.h>
+#import <pixlee_sdk/PXLPhotoCollectionViewCell.h>
