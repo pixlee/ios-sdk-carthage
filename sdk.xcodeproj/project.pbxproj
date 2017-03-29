@@ -16,25 +16,45 @@
 		CDE8D5E21E8B3B0F004CF3E4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8D5DE1E8B3B0F004CF3E4 /* AFNetworking.framework */; };
 		CDE8D5E41E8B3B20004CF3E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8D5E31E8B3B20004CF3E4 /* UIKit.framework */; };
 		CDE8D6351E8B3D38004CF3E4 /* PXLAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6211E8B3D38004CF3E4 /* PXLAlbum.h */; };
-		CDE8D6361E8B3D38004CF3E4 /* PXLAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6221E8B3D38004CF3E4 /* PXLAlbum.m */; };
 		CDE8D6371E8B3D38004CF3E4 /* PXLAlbumFilterOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6231E8B3D38004CF3E4 /* PXLAlbumFilterOptions.h */; };
-		CDE8D6381E8B3D38004CF3E4 /* PXLAlbumFilterOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6241E8B3D38004CF3E4 /* PXLAlbumFilterOptions.m */; };
 		CDE8D6391E8B3D38004CF3E4 /* PXLAlbumSortOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6251E8B3D38004CF3E4 /* PXLAlbumSortOptions.h */; };
-		CDE8D63A1E8B3D38004CF3E4 /* PXLAlbumSortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6261E8B3D38004CF3E4 /* PXLAlbumSortOptions.m */; };
 		CDE8D63B1E8B3D38004CF3E4 /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6271E8B3D38004CF3E4 /* PXLAlbumViewController.h */; };
-		CDE8D63C1E8B3D38004CF3E4 /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6281E8B3D38004CF3E4 /* PXLAlbumViewController.m */; };
 		CDE8D63D1E8B3D38004CF3E4 /* PXLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6291E8B3D38004CF3E4 /* PXLClient.h */; };
-		CDE8D63E1E8B3D38004CF3E4 /* PXLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D62A1E8B3D38004CF3E4 /* PXLClient.m */; };
 		CDE8D63F1E8B3D38004CF3E4 /* PXLPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D62B1E8B3D38004CF3E4 /* PXLPhoto.h */; };
-		CDE8D6401E8B3D38004CF3E4 /* PXLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D62C1E8B3D38004CF3E4 /* PXLPhoto.m */; };
 		CDE8D6411E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D62D1E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.h */; };
-		CDE8D6421E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D62E1E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.m */; };
 		CDE8D6431E8B3D38004CF3E4 /* PXLPhotoDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D62F1E8B3D38004CF3E4 /* PXLPhotoDetailViewController.h */; };
-		CDE8D6441E8B3D38004CF3E4 /* PXLPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6301E8B3D38004CF3E4 /* PXLPhotoDetailViewController.m */; };
 		CDE8D6451E8B3D38004CF3E4 /* PXLProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6311E8B3D38004CF3E4 /* PXLProduct.h */; };
-		CDE8D6461E8B3D38004CF3E4 /* PXLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6321E8B3D38004CF3E4 /* PXLProduct.m */; };
 		CDE8D6471E8B3D38004CF3E4 /* PXLProductCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6331E8B3D38004CF3E4 /* PXLProductCollectionViewCell.h */; };
-		CDE8D6481E8B3D38004CF3E4 /* PXLProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6341E8B3D38004CF3E4 /* PXLProductCollectionViewCell.m */; };
+		CDE8D6781E8B47FB004CF3E4 /* PXLAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6641E8B47FB004CF3E4 /* PXLAlbum.h */; };
+		CDE8D67A1E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6661E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h */; };
+		CDE8D67C1E8B47FB004CF3E4 /* PXLAlbumSortOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6681E8B47FB004CF3E4 /* PXLAlbumSortOptions.h */; };
+		CDE8D67E1E8B47FB004CF3E4 /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D66A1E8B47FB004CF3E4 /* PXLAlbumViewController.h */; };
+		CDE8D6801E8B47FB004CF3E4 /* PXLClient.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D66C1E8B47FB004CF3E4 /* PXLClient.h */; };
+		CDE8D6821E8B47FB004CF3E4 /* PXLPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D66E1E8B47FB004CF3E4 /* PXLPhoto.h */; };
+		CDE8D6841E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6701E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h */; };
+		CDE8D6861E8B47FC004CF3E4 /* PXLPhotoDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6721E8B47FB004CF3E4 /* PXLPhotoDetailViewController.h */; };
+		CDE8D6881E8B47FC004CF3E4 /* PXLProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6741E8B47FB004CF3E4 /* PXLProduct.h */; };
+		CDE8D68A1E8B47FC004CF3E4 /* PXLProductCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D6761E8B47FB004CF3E4 /* PXLProductCollectionViewCell.h */; };
+		CDE8D68C1E8B481A004CF3E4 /* PXLAlbum.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6641E8B47FB004CF3E4 /* PXLAlbum.h */; };
+		CDE8D68D1E8B481A004CF3E4 /* PXLAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6651E8B47FB004CF3E4 /* PXLAlbum.m */; };
+		CDE8D68E1E8B481A004CF3E4 /* PXLAlbumFilterOptions.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6661E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h */; };
+		CDE8D68F1E8B481A004CF3E4 /* PXLAlbumFilterOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6671E8B47FB004CF3E4 /* PXLAlbumFilterOptions.m */; };
+		CDE8D6901E8B481A004CF3E4 /* PXLAlbumSortOptions.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6681E8B47FB004CF3E4 /* PXLAlbumSortOptions.h */; };
+		CDE8D6911E8B481A004CF3E4 /* PXLAlbumSortOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6691E8B47FB004CF3E4 /* PXLAlbumSortOptions.m */; };
+		CDE8D6921E8B481A004CF3E4 /* PXLAlbumViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66A1E8B47FB004CF3E4 /* PXLAlbumViewController.h */; };
+		CDE8D6931E8B481A004CF3E4 /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66B1E8B47FB004CF3E4 /* PXLAlbumViewController.m */; };
+		CDE8D6941E8B481A004CF3E4 /* PXLClient.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66C1E8B47FB004CF3E4 /* PXLClient.h */; };
+		CDE8D6951E8B481A004CF3E4 /* PXLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66D1E8B47FB004CF3E4 /* PXLClient.m */; };
+		CDE8D6961E8B481A004CF3E4 /* PXLPhoto.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66E1E8B47FB004CF3E4 /* PXLPhoto.h */; };
+		CDE8D6971E8B481A004CF3E4 /* PXLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D66F1E8B47FB004CF3E4 /* PXLPhoto.m */; };
+		CDE8D6981E8B481A004CF3E4 /* PXLPhotoCollectionViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6701E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h */; };
+		CDE8D6991E8B481A004CF3E4 /* PXLPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6711E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.m */; };
+		CDE8D69A1E8B481A004CF3E4 /* PXLPhotoDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6721E8B47FB004CF3E4 /* PXLPhotoDetailViewController.h */; };
+		CDE8D69B1E8B481A004CF3E4 /* PXLPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6731E8B47FB004CF3E4 /* PXLPhotoDetailViewController.m */; };
+		CDE8D69C1E8B481A004CF3E4 /* PXLProduct.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6741E8B47FB004CF3E4 /* PXLProduct.h */; };
+		CDE8D69D1E8B481A004CF3E4 /* PXLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6751E8B47FB004CF3E4 /* PXLProduct.m */; };
+		CDE8D69E1E8B481A004CF3E4 /* PXLProductCollectionViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6761E8B47FB004CF3E4 /* PXLProductCollectionViewCell.h */; };
+		CDE8D69F1E8B481A004CF3E4 /* PXLProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D6771E8B47FB004CF3E4 /* PXLProductCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +116,26 @@
 		CDE8D6321E8B3D38004CF3E4 /* PXLProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLProduct.m; sourceTree = "<group>"; };
 		CDE8D6331E8B3D38004CF3E4 /* PXLProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLProductCollectionViewCell.h; sourceTree = "<group>"; };
 		CDE8D6341E8B3D38004CF3E4 /* PXLProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLProductCollectionViewCell.m; sourceTree = "<group>"; };
+		CDE8D6641E8B47FB004CF3E4 /* PXLAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLAlbum.h; path = Classes/PXLAlbum.h; sourceTree = "<group>"; };
+		CDE8D6651E8B47FB004CF3E4 /* PXLAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLAlbum.m; path = Classes/PXLAlbum.m; sourceTree = "<group>"; };
+		CDE8D6661E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLAlbumFilterOptions.h; path = Classes/PXLAlbumFilterOptions.h; sourceTree = "<group>"; };
+		CDE8D6671E8B47FB004CF3E4 /* PXLAlbumFilterOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLAlbumFilterOptions.m; path = Classes/PXLAlbumFilterOptions.m; sourceTree = "<group>"; };
+		CDE8D6681E8B47FB004CF3E4 /* PXLAlbumSortOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLAlbumSortOptions.h; path = Classes/PXLAlbumSortOptions.h; sourceTree = "<group>"; };
+		CDE8D6691E8B47FB004CF3E4 /* PXLAlbumSortOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLAlbumSortOptions.m; path = Classes/PXLAlbumSortOptions.m; sourceTree = "<group>"; };
+		CDE8D66A1E8B47FB004CF3E4 /* PXLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLAlbumViewController.h; path = Classes/PXLAlbumViewController.h; sourceTree = "<group>"; };
+		CDE8D66B1E8B47FB004CF3E4 /* PXLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLAlbumViewController.m; path = Classes/PXLAlbumViewController.m; sourceTree = "<group>"; };
+		CDE8D66C1E8B47FB004CF3E4 /* PXLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLClient.h; path = Classes/PXLClient.h; sourceTree = "<group>"; };
+		CDE8D66D1E8B47FB004CF3E4 /* PXLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLClient.m; path = Classes/PXLClient.m; sourceTree = "<group>"; };
+		CDE8D66E1E8B47FB004CF3E4 /* PXLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLPhoto.h; path = Classes/PXLPhoto.h; sourceTree = "<group>"; };
+		CDE8D66F1E8B47FB004CF3E4 /* PXLPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLPhoto.m; path = Classes/PXLPhoto.m; sourceTree = "<group>"; };
+		CDE8D6701E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLPhotoCollectionViewCell.h; path = Classes/PXLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		CDE8D6711E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLPhotoCollectionViewCell.m; path = Classes/PXLPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		CDE8D6721E8B47FB004CF3E4 /* PXLPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLPhotoDetailViewController.h; path = Classes/PXLPhotoDetailViewController.h; sourceTree = "<group>"; };
+		CDE8D6731E8B47FB004CF3E4 /* PXLPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLPhotoDetailViewController.m; path = Classes/PXLPhotoDetailViewController.m; sourceTree = "<group>"; };
+		CDE8D6741E8B47FB004CF3E4 /* PXLProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLProduct.h; path = Classes/PXLProduct.h; sourceTree = "<group>"; };
+		CDE8D6751E8B47FB004CF3E4 /* PXLProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLProduct.m; path = Classes/PXLProduct.m; sourceTree = "<group>"; };
+		CDE8D6761E8B47FB004CF3E4 /* PXLProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXLProductCollectionViewCell.h; path = Classes/PXLProductCollectionViewCell.h; sourceTree = "<group>"; };
+		CDE8D6771E8B47FB004CF3E4 /* PXLProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXLProductCollectionViewCell.m; path = Classes/PXLProductCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +165,7 @@
 		CDE8D5B61E8B3AE1004CF3E4 = {
 			isa = PBXGroup;
 			children = (
+				CDE8D6631E8B47D5004CF3E4 /* Classes */,
 				CDE8D60E1E8B3B83004CF3E4 /* Assets */,
 				CDE8D5C21E8B3AE1004CF3E4 /* sdk */,
 				CDE8D5CD1E8B3AE1004CF3E4 /* sdkTests */,
@@ -224,6 +265,33 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		CDE8D6631E8B47D5004CF3E4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDE8D6641E8B47FB004CF3E4 /* PXLAlbum.h */,
+				CDE8D6651E8B47FB004CF3E4 /* PXLAlbum.m */,
+				CDE8D6661E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h */,
+				CDE8D6671E8B47FB004CF3E4 /* PXLAlbumFilterOptions.m */,
+				CDE8D6681E8B47FB004CF3E4 /* PXLAlbumSortOptions.h */,
+				CDE8D6691E8B47FB004CF3E4 /* PXLAlbumSortOptions.m */,
+				CDE8D66A1E8B47FB004CF3E4 /* PXLAlbumViewController.h */,
+				CDE8D66B1E8B47FB004CF3E4 /* PXLAlbumViewController.m */,
+				CDE8D66C1E8B47FB004CF3E4 /* PXLClient.h */,
+				CDE8D66D1E8B47FB004CF3E4 /* PXLClient.m */,
+				CDE8D66E1E8B47FB004CF3E4 /* PXLPhoto.h */,
+				CDE8D66F1E8B47FB004CF3E4 /* PXLPhoto.m */,
+				CDE8D6701E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h */,
+				CDE8D6711E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.m */,
+				CDE8D6721E8B47FB004CF3E4 /* PXLPhotoDetailViewController.h */,
+				CDE8D6731E8B47FB004CF3E4 /* PXLPhotoDetailViewController.m */,
+				CDE8D6741E8B47FB004CF3E4 /* PXLProduct.h */,
+				CDE8D6751E8B47FB004CF3E4 /* PXLProduct.m */,
+				CDE8D6761E8B47FB004CF3E4 /* PXLProductCollectionViewCell.h */,
+				CDE8D6771E8B47FB004CF3E4 /* PXLProductCollectionViewCell.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -232,16 +300,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE8D63F1E8B3D38004CF3E4 /* PXLPhoto.h in Headers */,
+				CDE8D6861E8B47FC004CF3E4 /* PXLPhotoDetailViewController.h in Headers */,
 				CDE8D63D1E8B3D38004CF3E4 /* PXLClient.h in Headers */,
+				CDE8D67C1E8B47FB004CF3E4 /* PXLAlbumSortOptions.h in Headers */,
+				CDE8D68A1E8B47FC004CF3E4 /* PXLProductCollectionViewCell.h in Headers */,
+				CDE8D6841E8B47FB004CF3E4 /* PXLPhotoCollectionViewCell.h in Headers */,
 				CDE8D6391E8B3D38004CF3E4 /* PXLAlbumSortOptions.h in Headers */,
+				CDE8D6801E8B47FB004CF3E4 /* PXLClient.h in Headers */,
+				CDE8D67E1E8B47FB004CF3E4 /* PXLAlbumViewController.h in Headers */,
 				CDE8D6471E8B3D38004CF3E4 /* PXLProductCollectionViewCell.h in Headers */,
 				CDE8D6371E8B3D38004CF3E4 /* PXLAlbumFilterOptions.h in Headers */,
 				CDE8D6431E8B3D38004CF3E4 /* PXLPhotoDetailViewController.h in Headers */,
 				CDE8D6451E8B3D38004CF3E4 /* PXLProduct.h in Headers */,
 				CDE8D5D11E8B3AE1004CF3E4 /* sdk.h in Headers */,
 				CDE8D6351E8B3D38004CF3E4 /* PXLAlbum.h in Headers */,
+				CDE8D6781E8B47FB004CF3E4 /* PXLAlbum.h in Headers */,
+				CDE8D6881E8B47FC004CF3E4 /* PXLProduct.h in Headers */,
 				CDE8D63B1E8B3D38004CF3E4 /* PXLAlbumViewController.h in Headers */,
+				CDE8D6821E8B47FB004CF3E4 /* PXLPhoto.h in Headers */,
 				CDE8D6411E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.h in Headers */,
+				CDE8D67A1E8B47FB004CF3E4 /* PXLAlbumFilterOptions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,16 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDE8D63A1E8B3D38004CF3E4 /* PXLAlbumSortOptions.m in Sources */,
-				CDE8D6441E8B3D38004CF3E4 /* PXLPhotoDetailViewController.m in Sources */,
-				CDE8D6361E8B3D38004CF3E4 /* PXLAlbum.m in Sources */,
-				CDE8D6421E8B3D38004CF3E4 /* PXLPhotoCollectionViewCell.m in Sources */,
-				CDE8D6381E8B3D38004CF3E4 /* PXLAlbumFilterOptions.m in Sources */,
-				CDE8D63E1E8B3D38004CF3E4 /* PXLClient.m in Sources */,
-				CDE8D6461E8B3D38004CF3E4 /* PXLProduct.m in Sources */,
-				CDE8D6481E8B3D38004CF3E4 /* PXLProductCollectionViewCell.m in Sources */,
-				CDE8D63C1E8B3D38004CF3E4 /* PXLAlbumViewController.m in Sources */,
-				CDE8D6401E8B3D38004CF3E4 /* PXLPhoto.m in Sources */,
+				CDE8D68C1E8B481A004CF3E4 /* PXLAlbum.h in Sources */,
+				CDE8D68D1E8B481A004CF3E4 /* PXLAlbum.m in Sources */,
+				CDE8D68E1E8B481A004CF3E4 /* PXLAlbumFilterOptions.h in Sources */,
+				CDE8D68F1E8B481A004CF3E4 /* PXLAlbumFilterOptions.m in Sources */,
+				CDE8D6901E8B481A004CF3E4 /* PXLAlbumSortOptions.h in Sources */,
+				CDE8D6911E8B481A004CF3E4 /* PXLAlbumSortOptions.m in Sources */,
+				CDE8D6921E8B481A004CF3E4 /* PXLAlbumViewController.h in Sources */,
+				CDE8D6931E8B481A004CF3E4 /* PXLAlbumViewController.m in Sources */,
+				CDE8D6941E8B481A004CF3E4 /* PXLClient.h in Sources */,
+				CDE8D6951E8B481A004CF3E4 /* PXLClient.m in Sources */,
+				CDE8D6961E8B481A004CF3E4 /* PXLPhoto.h in Sources */,
+				CDE8D6971E8B481A004CF3E4 /* PXLPhoto.m in Sources */,
+				CDE8D6981E8B481A004CF3E4 /* PXLPhotoCollectionViewCell.h in Sources */,
+				CDE8D6991E8B481A004CF3E4 /* PXLPhotoCollectionViewCell.m in Sources */,
+				CDE8D69A1E8B481A004CF3E4 /* PXLPhotoDetailViewController.h in Sources */,
+				CDE8D69B1E8B481A004CF3E4 /* PXLPhotoDetailViewController.m in Sources */,
+				CDE8D69C1E8B481A004CF3E4 /* PXLProduct.h in Sources */,
+				CDE8D69D1E8B481A004CF3E4 /* PXLProduct.m in Sources */,
+				CDE8D69E1E8B481A004CF3E4 /* PXLProductCollectionViewCell.h in Sources */,
+				CDE8D69F1E8B481A004CF3E4 /* PXLProductCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
