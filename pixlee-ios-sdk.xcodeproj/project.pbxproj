@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDE8D5CA1E8B3AE1004CF3E4 /* sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8D5C01E8B3AE1004CF3E4 /* sdk.framework */; };
+		CDE8D5CA1E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8D5C01E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework */; };
 		CDE8D5CF1E8B3AE1004CF3E4 /* sdkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8D5CE1E8B3AE1004CF3E4 /* sdkTests.m */; };
 		CDE8D5D11E8B3AE1004CF3E4 /* sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8D5C31E8B3AE1004CF3E4 /* sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8D5E41E8B3B20004CF3E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8D5E31E8B3B20004CF3E4 /* UIKit.framework */; };
@@ -59,10 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CDE8D5C01E8B3AE1004CF3E4 /* sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE8D5C01E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "pixlee-ios-sdk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8D5C31E8B3AE1004CF3E4 /* sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sdk.h; sourceTree = "<group>"; };
 		CDE8D5C41E8B3AE1004CF3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDE8D5C91E8B3AE1004CF3E4 /* sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE8D5C91E8B3AE1004CF3E4 /* pixlee-ios-sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixlee-ios-sdkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE8D5CE1E8B3AE1004CF3E4 /* sdkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sdkTests.m; sourceTree = "<group>"; };
 		CDE8D5D01E8B3AE1004CF3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE8D5DB1E8B3B0F004CF3E4 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDE8D5CA1E8B3AE1004CF3E4 /* sdk.framework in Frameworks */,
+				CDE8D5CA1E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +167,8 @@
 		CDE8D5C11E8B3AE1004CF3E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDE8D5C01E8B3AE1004CF3E4 /* sdk.framework */,
-				CDE8D5C91E8B3AE1004CF3E4 /* sdkTests.xctest */,
+				CDE8D5C01E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework */,
+				CDE8D5C91E8B3AE1004CF3E4 /* pixlee-ios-sdkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,9 +299,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CDE8D5BF1E8B3AE1004CF3E4 /* sdk */ = {
+		CDE8D5BF1E8B3AE1004CF3E4 /* pixlee-ios-sdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDE8D5D41E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "sdk" */;
+			buildConfigurationList = CDE8D5D41E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "pixlee-ios-sdk" */;
 			buildPhases = (
 				CDE8D5BB1E8B3AE1004CF3E4 /* Sources */,
 				CDE8D5BC1E8B3AE1004CF3E4 /* Frameworks */,
@@ -312,14 +312,14 @@
 			);
 			dependencies = (
 			);
-			name = sdk;
+			name = "pixlee-ios-sdk";
 			productName = sdk;
-			productReference = CDE8D5C01E8B3AE1004CF3E4 /* sdk.framework */;
+			productReference = CDE8D5C01E8B3AE1004CF3E4 /* pixlee-ios-sdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CDE8D5C81E8B3AE1004CF3E4 /* sdkTests */ = {
+		CDE8D5C81E8B3AE1004CF3E4 /* pixlee-ios-sdkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDE8D5D71E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "sdkTests" */;
+			buildConfigurationList = CDE8D5D71E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "pixlee-ios-sdkTests" */;
 			buildPhases = (
 				CDE8D5C51E8B3AE1004CF3E4 /* Sources */,
 				CDE8D5C61E8B3AE1004CF3E4 /* Frameworks */,
@@ -330,9 +330,9 @@
 			dependencies = (
 				CDE8D5CC1E8B3AE1004CF3E4 /* PBXTargetDependency */,
 			);
-			name = sdkTests;
+			name = "pixlee-ios-sdkTests";
 			productName = sdkTests;
-			productReference = CDE8D5C91E8B3AE1004CF3E4 /* sdkTests.xctest */;
+			productReference = CDE8D5C91E8B3AE1004CF3E4 /* pixlee-ios-sdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDE8D5BA1E8B3AE1004CF3E4 /* Build configuration list for PBXProject "sdk" */;
+			buildConfigurationList = CDE8D5BA1E8B3AE1004CF3E4 /* Build configuration list for PBXProject "pixlee-ios-sdk" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -366,8 +366,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDE8D5BF1E8B3AE1004CF3E4 /* sdk */,
-				CDE8D5C81E8B3AE1004CF3E4 /* sdkTests */,
+				CDE8D5BF1E8B3AE1004CF3E4 /* pixlee-ios-sdk */,
+				CDE8D5C81E8B3AE1004CF3E4 /* pixlee-ios-sdkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -431,7 +431,7 @@
 /* Begin PBXTargetDependency section */
 		CDE8D5CC1E8B3AE1004CF3E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CDE8D5BF1E8B3AE1004CF3E4 /* sdk */;
+			target = CDE8D5BF1E8B3AE1004CF3E4 /* pixlee-ios-sdk */;
 			targetProxy = CDE8D5CB1E8B3AE1004CF3E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -548,7 +548,7 @@
 				INFOPLIST_FILE = sdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sdkcarthage.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixlee.pixlee-ios-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -569,7 +569,7 @@
 				INFOPLIST_FILE = sdk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sdkcarthage.sdk;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixlee.pixlee-ios-sdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -598,7 +598,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDE8D5BA1E8B3AE1004CF3E4 /* Build configuration list for PBXProject "sdk" */ = {
+		CDE8D5BA1E8B3AE1004CF3E4 /* Build configuration list for PBXProject "pixlee-ios-sdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDE8D5D21E8B3AE1004CF3E4 /* Debug */,
@@ -607,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDE8D5D41E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "sdk" */ = {
+		CDE8D5D41E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "pixlee-ios-sdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDE8D5D51E8B3AE1004CF3E4 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDE8D5D71E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "sdkTests" */ = {
+		CDE8D5D71E8B3AE1004CF3E4 /* Build configuration list for PBXNativeTarget "pixlee-ios-sdkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDE8D5D81E8B3AE1004CF3E4 /* Debug */,

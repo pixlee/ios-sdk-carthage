@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CDE8D5BF1E8B3AE1004CF3E4"
-               BuildableName = "sdk.framework"
-               BlueprintName = "sdk"
-               ReferencedContainer = "container:sdk.xcodeproj">
+               BuildableName = "pixlee-ios-sdk.framework"
+               BlueprintName = "pixlee-ios-sdk"
+               ReferencedContainer = "container:pixlee-ios-sdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CDE8D5C81E8B3AE1004CF3E4"
-               BuildableName = "sdkTests.xctest"
-               BlueprintName = "sdkTests"
-               ReferencedContainer = "container:sdk.xcodeproj">
+               BuildableName = "pixlee-ios-sdkTests.xctest"
+               BlueprintName = "pixlee-ios-sdkTests"
+               ReferencedContainer = "container:pixlee-ios-sdk.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDE8D5BF1E8B3AE1004CF3E4"
-            BuildableName = "sdk.framework"
-            BlueprintName = "sdk"
-            ReferencedContainer = "container:sdk.xcodeproj">
+            BuildableName = "pixlee-ios-sdk.framework"
+            BlueprintName = "pixlee-ios-sdk"
+            ReferencedContainer = "container:pixlee-ios-sdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDE8D5BF1E8B3AE1004CF3E4"
-            BuildableName = "sdk.framework"
-            BlueprintName = "sdk"
-            ReferencedContainer = "container:sdk.xcodeproj">
+            BuildableName = "pixlee-ios-sdk.framework"
+            BlueprintName = "pixlee-ios-sdk"
+            ReferencedContainer = "container:pixlee-ios-sdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CDE8D5BF1E8B3AE1004CF3E4"
-            BuildableName = "sdk.framework"
-            BlueprintName = "sdk"
-            ReferencedContainer = "container:sdk.xcodeproj">
+            BuildableName = "pixlee-ios-sdk.framework"
+            BlueprintName = "pixlee-ios-sdk"
+            ReferencedContainer = "container:pixlee-ios-sdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
