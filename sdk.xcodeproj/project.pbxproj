@@ -282,6 +282,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE8D5D11E8B3AE1004CF3E4 /* sdk.h in Headers */,
 				CDE8E2C41E8B4A65004CF3E4 /* PXLClient.h in Headers */,
 				CDE8E2CA1E8B4A65004CF3E4 /* PXLPhotoDetailViewController.h in Headers */,
 				CDE8E2C01E8B4A65004CF3E4 /* PXLAlbumSortOptions.h in Headers */,
@@ -292,7 +293,6 @@
 				CDE8E2CC1E8B4A65004CF3E4 /* PXLProduct.h in Headers */,
 				CDE8E2C61E8B4A65004CF3E4 /* PXLPhoto.h in Headers */,
 				CDE8E2BE1E8B4A65004CF3E4 /* PXLAlbumFilterOptions.h in Headers */,
-				CDE8D5D11E8B3AE1004CF3E4 /* sdk.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
