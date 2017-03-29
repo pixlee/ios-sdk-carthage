@@ -33,6 +33,7 @@
 		CDE8E33D1E8C5A42004CF3E4 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E3391E8C5A42004CF3E4 /* FormatterKit.framework */; };
 		CDE8E33E1E8C5A42004CF3E4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E33A1E8C5A42004CF3E4 /* AFNetworking.framework */; };
 		CDE8E3401E8C5A4B004CF3E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E33F1E8C5A4B004CF3E4 /* UIKit.framework */; };
+		CDE8E34F1E8C620E004CF3E4 /* pixlee_sdk.h in Sources */ = {isa = PBXBuildFile; fileRef = CDE8E3041E8C57A3004CF3E4 /* pixlee_sdk.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE8E34F1E8C620E004CF3E4 /* pixlee_sdk.h in Sources */,
 				CDE8E3251E8C57C1004CF3E4 /* PXLAlbumSortOptions.m in Sources */,
 				CDE8E32F1E8C57C1004CF3E4 /* PXLPhotoDetailViewController.m in Sources */,
 				CDE8E3211E8C57C1004CF3E4 /* PXLAlbum.m in Sources */,

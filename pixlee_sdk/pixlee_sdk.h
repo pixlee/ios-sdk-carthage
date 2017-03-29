@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "PXLPhoto.h"
 #import "PXLClient.h"
 #import "PXLProductCollectionViewCell.h"
