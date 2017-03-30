@@ -56,12 +56,6 @@ To run the example project, clone the repo, and run `carthage update` from the E
 
 To run the project, open example.xcodeproj in Xcode.
 
-Go to Build Phases > Copy Bundle Resources and press the +
-
-Select Add Other... and navigate to the Example directory, then from there to Carthage > Build > iOS
-
-Add all of the png files in the pixlee_sdk.framework and press Open.
-
 Run the project and you should see a grid of photos from that album.
 
 ## License
