@@ -25,6 +25,14 @@
 		CD1CCBBE1E8CA85100FF5B10 /* pixlee_sdk.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD1CCC1C1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */; };
 		CD1CCC1D1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */; };
+		CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */; };
+		CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */; };
+		CD9647B41E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AC1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m */; };
+		CD9647B51E8DAEFA00A8818F /* PXLPhotoDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AD1E8DAEFA00A8818F /* PXLPhotoDetailViewController.h */; };
+		CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */; };
+		CD9647B71E8DAEFA00A8818F /* PXLProductCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */; };
+		CD9647B81E8DAEFA00A8818F /* PXLProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */; };
 		CDE8E2F11E8C2890004CF3E4 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; };
 		CDE8E2F21E8C2890004CF3E4 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDE8E2F31E8C2890004CF3E4 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */; };
@@ -97,6 +105,14 @@
 		76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
 		CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
+		CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLAlbumViewController.h; sourceTree = "<group>"; };
+		CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLAlbumViewController.m; sourceTree = "<group>"; };
+		CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		CD9647AC1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		CD9647AD1E8DAEFA00A8818F /* PXLPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLPhotoDetailViewController.h; sourceTree = "<group>"; };
+		CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLPhotoDetailViewController.m; sourceTree = "<group>"; };
+		CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLProductCollectionViewCell.h; sourceTree = "<group>"; };
+		CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLProductCollectionViewCell.m; sourceTree = "<group>"; };
 		CDE8E2EB1E8C2890004CF3E4 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
@@ -169,6 +185,14 @@
 		6003F593195388D20070C39A /* pixlee-ios-sdk */ = {
 			isa = PBXGroup;
 			children = (
+				CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */,
+				CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */,
+				CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */,
+				CD9647AC1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m */,
+				CD9647AD1E8DAEFA00A8818F /* PXLPhotoDetailViewController.h */,
+				CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */,
+				CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */,
+				CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */,
 				6003F59C195388D20070C39A /* PXLAppDelegate.h */,
 				6003F59D195388D20070C39A /* PXLAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -219,6 +243,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9647B71E8DAEFA00A8818F /* PXLProductCollectionViewCell.h in Headers */,
+				CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */,
+				CD9647B51E8DAEFA00A8818F /* PXLPhotoDetailViewController.h in Headers */,
+				CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +373,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9647B81E8DAEFA00A8818F /* PXLProductCollectionViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* PXLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PXLExampleAlbumViewController.m in Sources */,
+				CD9647B41E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */,
+				CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
