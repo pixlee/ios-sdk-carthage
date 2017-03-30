@@ -54,7 +54,15 @@ When archiving your application for submission to the App Store or TestFlight, X
 
 To run the example project, clone the repo, and run `carthage update` from the Example directory first. Then in `PXLAppDelegate.m` set `PXLClientAPIKey` to your API key (available from the Pixlee dashboard). Then in `PXLExampleAlbumViewController.m` set the album id that you wish to display as `PXLAlbumIdentifier`.
 
-To run the project, open example.xcodeproj in Xcode.  Run the project and you should see a grid of photos from that album.
+To run the project, open example.xcodeproj in Xcode.
+
+Go to Build Phases > Copy Bundle Resources and press the +
+
+Select Add Other... and navigate to the Example directory, then from there to Carthage > Build > iOS
+
+Add all of the png files in the pixlee_sdk.framework and press Open.
+
+Run the project and you should see a grid of photos from that album.
 
 ## License
 
