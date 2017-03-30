@@ -66,17 +66,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
     
     const CGFloat kButtonTopMargin = 20;
     const CGFloat kButtonHeight = 44;
-    NSString *bundlePath = [[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] bundlePath];
-    NSError *error = nil;
-    
-    NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:bundlePath error:&error];
-    NSLog(@"directoryContents ====== %@",files);
-    
-    NSString *bundlePath1 = [[NSBundle bundleForClass:[self class]] bundlePath];
-    NSError *error1 = nil;
-    
-    NSArray *files1 = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:bundlePath1 error:&error1];
-    NSLog(@"directoryContents ====== %@",files1);
+
     
     self.gridButton = [self displayButtonWithImageName:@"grid" selector:@selector(displayButtonPressed:)];
     [self.view addSubview:self.gridButton];
@@ -103,7 +93,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
 - (UIButton *)displayButtonWithImageName:(NSString *)imageName selector:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor whiteColor];
-    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:imageName inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
