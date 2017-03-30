@@ -109,17 +109,16 @@
 }
 
 - (UIImage *)sourceIconImage {
-    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
     if ([self.source isEqualToString:@"instagram"]) {
-        return [UIImage imageNamed:@"pixlee_sdk.bundle/vine" ];
+        return [UIImage imageNamed:@"instagram"];
     } else if ([self.source isEqualToString:@"facebook"]) {
-        return [UIImage imageNamed:@"facebook" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+        return [UIImage imageNamed:@"facebook"];
     } else if ([self.source isEqualToString:@"pinterest"]) {
-        return [UIImage imageNamed:@"pinterest" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+        return [UIImage imageNamed:@"pinterest"];
     } else if ([self.source isEqualToString:@"tumblr"]) {
-        return [UIImage imageNamed:@"tumblr" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+        return [UIImage imageNamed:@"tumblr"];
     } else if ([self.source isEqualToString:@"twitter"]) {
-        return [UIImage imageNamed:@"twitter" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+        return [UIImage imageNamed:@"twitter"];
     } else if ([self.source isEqualToString:@"vine"]) {
         return [UIImage imageNamed:@"vine"];
     }
