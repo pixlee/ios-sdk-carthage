@@ -67,7 +67,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
     const CGFloat kButtonTopMargin = 20;
     const CGFloat kButtonHeight = 44;
     
-    self.gridButton = [self displayButtonWithImageName:@"pixlee_sdk.bundle/grid" selector:@selector(displayButtonPressed:)];
+    self.gridButton = [self displayButtonWithImageName:@"grid" selector:@selector(displayButtonPressed:)];
     [self.view addSubview:self.gridButton];
     self.listButton = [self displayButtonWithImageName:@"column" selector:@selector(displayButtonPressed:)];
     [self.view addSubview:self.listButton];
@@ -92,8 +92,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
 - (UIButton *)displayButtonWithImageName:(NSString *)imageName selector:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor whiteColor];
-    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
-    [button setImage:[UIImage imageNamed:imageName inBundle:frameWorkBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
