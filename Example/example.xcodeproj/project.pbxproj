@@ -33,6 +33,10 @@
 		CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */; };
 		CD9647B71E8DAEFA00A8818F /* PXLProductCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */; };
 		CD9647B81E8DAEFA00A8818F /* PXLProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */; };
+		CD9647BD1E8DBC1F00A8818F /* column@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647B91E8DBC1F00A8818F /* column@2x.png */; };
+		CD9647BE1E8DBC1F00A8818F /* column@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BA1E8DBC1F00A8818F /* column@3x.png */; };
+		CD9647BF1E8DBC1F00A8818F /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BB1E8DBC1F00A8818F /* grid@2x.png */; };
+		CD9647C01E8DBC1F00A8818F /* grid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BC1E8DBC1F00A8818F /* grid@3x.png */; };
 		CDE8E2F11E8C2890004CF3E4 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; };
 		CDE8E2F21E8C2890004CF3E4 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDE8E2F31E8C2890004CF3E4 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */; };
@@ -113,6 +117,10 @@
 		CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLPhotoDetailViewController.m; sourceTree = "<group>"; };
 		CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLProductCollectionViewCell.h; sourceTree = "<group>"; };
 		CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLProductCollectionViewCell.m; sourceTree = "<group>"; };
+		CD9647B91E8DBC1F00A8818F /* column@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "column@2x.png"; path = "Assets/column@2x.png"; sourceTree = "<group>"; };
+		CD9647BA1E8DBC1F00A8818F /* column@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "column@3x.png"; path = "Assets/column@3x.png"; sourceTree = "<group>"; };
+		CD9647BB1E8DBC1F00A8818F /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grid@2x.png"; path = "Assets/grid@2x.png"; sourceTree = "<group>"; };
+		CD9647BC1E8DBC1F00A8818F /* grid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grid@3x.png"; path = "Assets/grid@3x.png"; sourceTree = "<group>"; };
 		CDE8E2EB1E8C2890004CF3E4 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				CD9647C31E8DBC7800A8818F /* assets */,
 				CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */,
 				CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */,
 				CDE8E2EB1E8C2890004CF3E4 /* WebImage.framework */,
@@ -185,14 +194,7 @@
 		6003F593195388D20070C39A /* pixlee-ios-sdk */ = {
 			isa = PBXGroup;
 			children = (
-				CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */,
-				CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */,
-				CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */,
-				CD9647AC1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m */,
-				CD9647AD1E8DAEFA00A8818F /* PXLPhotoDetailViewController.h */,
-				CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */,
-				CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */,
-				CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */,
+				CD9647C21E8DBC4000A8818F /* views */,
 				6003F59C195388D20070C39A /* PXLAppDelegate.h */,
 				6003F59D195388D20070C39A /* PXLAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -234,6 +236,32 @@
 				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD9647C21E8DBC4000A8818F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */,
+				CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */,
+				CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */,
+				CD9647AC1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m */,
+				CD9647AD1E8DAEFA00A8818F /* PXLPhotoDetailViewController.h */,
+				CD9647AE1E8DAEFA00A8818F /* PXLPhotoDetailViewController.m */,
+				CD9647AF1E8DAEFA00A8818F /* PXLProductCollectionViewCell.h */,
+				CD9647B01E8DAEFA00A8818F /* PXLProductCollectionViewCell.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		CD9647C31E8DBC7800A8818F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				CD9647B91E8DBC1F00A8818F /* column@2x.png */,
+				CD9647BA1E8DBC1F00A8818F /* column@3x.png */,
+				CD9647BB1E8DBC1F00A8818F /* grid@2x.png */,
+				CD9647BC1E8DBC1F00A8818F /* grid@3x.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +360,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9647BD1E8DBC1F00A8818F /* column@2x.png in Resources */,
+				CD9647BE1E8DBC1F00A8818F /* column@3x.png in Resources */,
+				CD9647BF1E8DBC1F00A8818F /* grid@2x.png in Resources */,
+				CD9647C01E8DBC1F00A8818F /* grid@3x.png in Resources */,
 				76ED54F51E88709700B7E8F2 /* Default-568h.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
