@@ -110,7 +110,6 @@
 
 - (UIImage *)sourceIconImage {
     if ([self.source isEqualToString:@"instagram"]) {
-        NSLog(@"%@",[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"]);
         return [UIImage imageNamed:@"instagram" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"facebook"]) {
         return [UIImage imageNamed:@"facebook"];
