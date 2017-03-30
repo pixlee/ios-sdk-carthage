@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <pixlee_sdk/pixlee_sdk.h>
+#import "PXLAlbumViewController.h"
 
 
 @interface PXLExampleAlbumViewController : PXLAlbumViewController

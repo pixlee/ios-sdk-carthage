@@ -93,7 +93,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
 - (UIButton *)displayButtonWithImageName:(NSString *)imageName selector:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor whiteColor];
-    [button setImage:[UIImage imageNamed:imageName inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
