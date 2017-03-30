@@ -67,9 +67,9 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
     const CGFloat kButtonTopMargin = 20;
     const CGFloat kButtonHeight = 44;
     
-    self.gridButton = [self displayButtonWithImageName:@"pixlee-ios-sdk.bundle/grid" selector:@selector(displayButtonPressed:)];
+    self.gridButton = [self displayButtonWithImageName:@"pixlee_sdk.framework/grid" selector:@selector(displayButtonPressed:)];
     [self.view addSubview:self.gridButton];
-    self.listButton = [self displayButtonWithImageName:@"pixlee-ios-sdk.bundle/column" selector:@selector(displayButtonPressed:)];
+    self.listButton = [self displayButtonWithImageName:@"pixlee_sdk.framework/column" selector:@selector(displayButtonPressed:)];
     [self.view addSubview:self.listButton];
     
     self.gridButton.enabled = self.albumDisplayMode != PXLAlbumViewControllerDisplayModeGrid;
