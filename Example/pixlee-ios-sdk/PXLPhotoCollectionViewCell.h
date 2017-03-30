@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PXLPhoto.h"
+
+#import <pixlee_sdk/PXLPhoto.h>
 
 @interface PXLPhotoCollectionViewCell : UICollectionViewCell
 

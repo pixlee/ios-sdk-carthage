@@ -22,11 +22,9 @@ FOUNDATION_EXPORT const unsigned char pixlee_sdkVersionString[];
 
 #import <pixlee_sdk/PXLPhoto.h>
 #import <pixlee_sdk/PXLClient.h>
-#import <pixlee_sdk/PXLProductCollectionViewCell.h>
 #import <pixlee_sdk/PXLAlbumSortOptions.h>
 #import <pixlee_sdk/PXLAlbumFilterOptions.h>
-#import <pixlee_sdk/PXLPhotoDetailViewController.h>
 #import <pixlee_sdk/PXLProduct.h>
 #import <pixlee_sdk/PXLAlbum.h>
-#import <pixlee_sdk/PXLAlbumViewController.h>
-#import <pixlee_sdk/PXLPhotoCollectionViewCell.h>
+
+

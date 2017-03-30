@@ -8,7 +8,7 @@
 
 #import "PXLProductCollectionViewCell.h"
 
-#import "PXLProduct.h"
+#import <pixlee_sdk/PXLProduct.h>
 #import <Masonry/Masonry.h>
 #import <WebImage/UIImageView+WebCache.h>
 

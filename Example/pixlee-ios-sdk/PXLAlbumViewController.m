@@ -8,8 +8,8 @@
 
 #import "PXLAlbumViewController.h"
 
-#import "PXLAlbum.h"
-#import "PXLPhoto.h"
+#import <pixlee_sdk/PXLAlbum.h>
+#import <pixlee_sdk/PXLPhoto.h>
 #import "PXLPhotoCollectionViewCell.h"
 #import "PXLPhotoDetailViewController.h"
 #import <Masonry/Masonry.h>
