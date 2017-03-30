@@ -110,7 +110,7 @@
 
 - (UIImage *)sourceIconImage {
     if ([self.source isEqualToString:@"instagram"]) {
-        return [UIImage imageNamed:@"pixlee_sdk.framework/instagram"];
+        return [[UIImage alloc] initWithContentsOfFile:@"pixlee_sdk.framework/instagram.png"];
     } else if ([self.source isEqualToString:@"facebook"]) {
         return [UIImage imageNamed:@"pixlee_sdk.framework/facebook"];
     } else if ([self.source isEqualToString:@"pinterest"]) {
