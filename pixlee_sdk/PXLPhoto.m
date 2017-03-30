@@ -112,15 +112,15 @@
     if ([self.source isEqualToString:@"instagram"]) {
         return [UIImage imageNamed:@"instagram" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"facebook"]) {
-        return [UIImage imageNamed:@"facebook"];
+        return [UIImage imageNamed:@"facebook" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"pinterest"]) {
-        return [UIImage imageNamed:@"pinterest"];
+        return [UIImage imageNamed:@"pinterest" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"tumblr"]) {
-        return [UIImage imageNamed:@"tumblr"];
+        return [UIImage imageNamed:@"tumblr" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"twitter"]) {
-        return [UIImage imageNamed:@"twitter"];
+        return [UIImage imageNamed:@"twitter" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     } else if ([self.source isEqualToString:@"vine"]) {
-        return [UIImage imageNamed:@"vine"];
+        return [UIImage imageNamed:@"vine" inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil];
     }
     return nil;
 }
