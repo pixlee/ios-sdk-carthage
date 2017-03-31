@@ -20,9 +20,6 @@
 		CDE8E32B1E8C57C1004CF3E4 /* PXLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8E3171E8C57C1004CF3E4 /* PXLPhoto.m */; };
 		CDE8E3301E8C57C1004CF3E4 /* PXLProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8E31C1E8C57C1004CF3E4 /* PXLProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8E3311E8C57C1004CF3E4 /* PXLProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8E31D1E8C57C1004CF3E4 /* PXLProduct.m */; };
-		CDE8E33B1E8C5A42004CF3E4 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E3371E8C5A42004CF3E4 /* WebImage.framework */; };
-		CDE8E33C1E8C5A42004CF3E4 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E3381E8C5A42004CF3E4 /* Masonry.framework */; };
-		CDE8E33D1E8C5A42004CF3E4 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E3391E8C5A42004CF3E4 /* FormatterKit.framework */; };
 		CDE8E33E1E8C5A42004CF3E4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E33A1E8C5A42004CF3E4 /* AFNetworking.framework */; };
 		CDE8E3401E8C5A4B004CF3E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E33F1E8C5A4B004CF3E4 /* UIKit.framework */; };
 		CDE8E3641E8C6AD7004CF3E4 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE8E3541E8C6ACB004CF3E4 /* facebook@2x.png */; };
@@ -56,9 +53,6 @@
 		CDE8E31C1E8C57C1004CF3E4 /* PXLProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLProduct.h; sourceTree = "<group>"; };
 		CDE8E31D1E8C57C1004CF3E4 /* PXLProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLProduct.m; sourceTree = "<group>"; };
 		CDE8E3351E8C59E5004CF3E4 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		CDE8E3371E8C5A42004CF3E4 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
-		CDE8E3381E8C5A42004CF3E4 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
-		CDE8E3391E8C5A42004CF3E4 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
 		CDE8E33A1E8C5A42004CF3E4 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		CDE8E33F1E8C5A4B004CF3E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CDE8E3511E8C6ACB004CF3E4 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -86,9 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE8E3401E8C5A4B004CF3E4 /* UIKit.framework in Frameworks */,
-				CDE8E33B1E8C5A42004CF3E4 /* WebImage.framework in Frameworks */,
-				CDE8E33C1E8C5A42004CF3E4 /* Masonry.framework in Frameworks */,
-				CDE8E33D1E8C5A42004CF3E4 /* FormatterKit.framework in Frameworks */,
 				CDE8E33E1E8C5A42004CF3E4 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,9 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				CDE8E33F1E8C5A4B004CF3E4 /* UIKit.framework */,
-				CDE8E3371E8C5A42004CF3E4 /* WebImage.framework */,
-				CDE8E3381E8C5A42004CF3E4 /* Masonry.framework */,
-				CDE8E3391E8C5A42004CF3E4 /* FormatterKit.framework */,
 				CDE8E33A1E8C5A42004CF3E4 /* AFNetworking.framework */,
 				CDE8E3351E8C59E5004CF3E4 /* Cartfile.resolved */,
 			);
