@@ -11,7 +11,7 @@
 #import <pixlee_sdk/PXLAlbum.h>
 
 @interface PXLAlbumViewController : UIViewController
-
+@property (nonatomic, strong) PXLAlbum *album;
 
 
 + (instancetype)albumViewControllerWithAlbumId:(NSString *)albumId;

@@ -9,7 +9,7 @@
 
 
 
-#import <pixlee_sdk/PXLAlbumViewController.h>
+#import "PXLAlbumViewController.h"
 #import <pixlee_sdk/PXLProduct.h>
 
 

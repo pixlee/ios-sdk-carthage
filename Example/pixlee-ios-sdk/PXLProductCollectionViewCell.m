@@ -6,7 +6,7 @@
 //
 //
 
-#import <pixlee_sdk/PXLProductCollectionViewCell.h>
+#import "PXLProductCollectionViewCell.h"
 
 #import <pixlee_sdk/PXLProduct.h>
 #import <Masonry/Masonry.h>

@@ -10,10 +10,10 @@
 
 #import <pixlee_sdk/PXLAlbum.h>
 #import <pixlee_sdk/PXLPhoto.h>
-#import <pixlee_sdk/PXLAlbumViewController.h>
-#import <pixlee_sdk/PXLPhotoCollectionViewCell.h>
+#import "PXLAlbumViewController.h"
+#import "PXLPhotoCollectionViewCell.h"
 
-#import <pixlee_sdk/PXLPhotoDetailViewController.h>
+#import "PXLPhotoDetailViewController.h"
 #import <Masonry/Masonry.h>
 
 typedef NS_ENUM(NSInteger, PXLAlbumViewControllerDisplayMode) {
