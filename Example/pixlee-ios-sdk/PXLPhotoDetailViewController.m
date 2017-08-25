@@ -6,11 +6,11 @@
 //
 //
 
-#import "PXLPhotoDetailViewController.h"
+#import <pixlee_sdk/PXLPhotoDetailViewController.h>
 
 #import <pixlee_sdk/PXLProduct.h>
 #import <pixlee_sdk/PXLPhoto.h>
-#import "PXLProductCollectionViewCell.h"
+#import <pixlee_sdk/PXLProductCollectionViewCell.h>
 
 #import <FormatterKit/TTTTimeIntervalFormatter.h>
 #import <Masonry/Masonry.h>

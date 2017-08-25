@@ -7,9 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PXLAlbumViewController.h"
+
+
+#import <pixlee_sdk/PXLAlbumViewController.h>
+#import <pixlee_sdk/PXLProduct.h>
 
 
 @interface PXLExampleAlbumViewController : PXLAlbumViewController
+@property (nonatomic, strong) PXLPhoto *photo;
 
 @end
