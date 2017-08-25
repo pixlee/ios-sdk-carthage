@@ -44,6 +44,7 @@ static NSString * const PXLAlbumIdentifier = @"1868074";
     self.photo.identifier = @"181026316";
     
     NSLog(@"logging");
+    // Example of loading a photo with an identifier
     [PXLPhoto getPhotoWithId:@"181026316" callback:^(PXLPhoto *photo, NSError *error) {
         NSLog(@"%@", photo);
         NSLog(@"%@",error);
