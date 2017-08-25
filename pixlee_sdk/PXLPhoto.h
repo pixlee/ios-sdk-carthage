@@ -67,6 +67,8 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 @property (nonatomic, strong) NSURL *platformLink;
 @property (nonatomic, strong) NSArray *products;
 
+
+
 /**
  This function creates and returns an array of `PXLPhoto` objects when passed in an array that comes from the Pixlee API.
  
@@ -80,9 +82,11 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 + (instancetype)photoFromDict:(NSDictionary *)dict inAlbum:(PXLAlbum *)album;
 + (instancetype)singlePhotoFromDict:(NSDictionary *)dict;
 
++ (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock;
+
 - (NSURL *)photoUrlForSize:(PXLPhotoSize)photoSize;
 
-- (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(NSDictionary *photo, NSError *error))completionBlock ;
+- (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock ;
 - (UIImage *)sourceIconImage;
 
 @end

@@ -137,6 +137,25 @@
     return photo;
 }
 
++ (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
+    static NSString * const PXLAlbumGETRequestString = @"api/v2/media/%@";
+    NSLog(@"%@", identifier);
+    NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        NSDictionary *responsePhoto = responseObject[@"data"];
+        NSLog(@"%@", responsePhoto);
+        if (completionBlock) {
+            completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+    return dataTask;
+}
+
 + (NSURL *)nilSafeUrlFromDict:(NSDictionary *)dict forKey:(NSString *)key {
     NSString *urlString = dict[key];
     if (urlString) {
@@ -146,14 +165,17 @@
 }
 
 
-- (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(NSDictionary *photo, NSError *error))completionBlock {
+- (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
     static NSString * const PXLAlbumGETRequestString = @"api/v2/media/%@";
+    NSLog(@"%@", self.identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
-
-        completionBlock(responsePhoto, nil);
+        NSLog(@"%@", responsePhoto);
+        if (completionBlock) {
+            completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
+        }
     } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
         if (completionBlock) {
             completionBlock(nil, error);
