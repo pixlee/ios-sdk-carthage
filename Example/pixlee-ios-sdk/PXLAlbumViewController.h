@@ -12,8 +12,7 @@
 
 @interface PXLAlbumViewController : UIViewController
 
-@property (nonatomic, readonly) UICollectionView *albumCollectionView;
-@property (nonatomic, strong) PXLAlbum *album;
+
 
 + (instancetype)albumViewControllerWithAlbumId:(NSString *)albumId;
 - (void)loadNextPageOfPhotos;

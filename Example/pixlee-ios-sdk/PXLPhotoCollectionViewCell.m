@@ -6,7 +6,7 @@
 //
 //
 
-#import "PXLPhotoCollectionViewCell.h"
+#import <pixlee_sdk/PXLPhotoCollectionViewCell.h>
 
 #import <Masonry/Masonry.h>
 #import <WebImage/UIImageView+WebCache.h>
