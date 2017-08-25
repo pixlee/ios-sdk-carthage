@@ -138,7 +138,7 @@
 }
 
 + (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
-    static NSString * const PXLAlbumGETRequestString = @"api/v2/media/%@";
+    static NSString * const PXLAlbumGETRequestString = @"media/%@";
     NSLog(@"%@", identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
@@ -166,7 +166,7 @@
 
 
 - (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
-    static NSString * const PXLAlbumGETRequestString = @"api/v2/media/%@";
+    static NSString * const PXLAlbumGETRequestString = @"media/%@";
     NSLog(@"%@", self.identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
