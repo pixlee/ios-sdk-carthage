@@ -91,12 +91,10 @@
 
 + (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
-    NSLog(@"%@", identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
-        NSLog(@"%@", responsePhoto);
         if (completionBlock) {
             completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
         }
@@ -119,12 +117,10 @@
 
 - (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
-    NSLog(@"%@", self.identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
-        NSLog(@"%@", responsePhoto);
         if (completionBlock) {
             completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
         }
