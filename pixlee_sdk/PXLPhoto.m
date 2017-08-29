@@ -82,6 +82,10 @@
     photo.instUserHasLiked = [dict[@"inst_user_has_liked"] boolValue];
     photo.platformLink = [self nilSafeUrlFromDict:dict forKey:@"platform_link"];
     photo.products = [PXLProduct productsFromArray:dict[@"products"] withPhoto:photo];
+    photo.cdnSmallUrl = dict[@"pixlee_cdn_photos"][@"small_url"];
+    photo.cdnMediumUrl = dict[@"pixlee_cdn_photos"][@"medium_url"];
+    photo.cdnLargeUrl = dict[@"pixlee_cdn_photos"][@"large_url"];
+    photo.cdnOriginalUrl = dict[@"pixlee_cdn_photos"][@"original_url"];
     return photo;
 }
 

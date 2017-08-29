@@ -66,7 +66,10 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 @property (nonatomic) BOOL instUserHasLiked;
 @property (nonatomic, strong) NSURL *platformLink;
 @property (nonatomic, strong) NSArray *products;
-
+@property (nonatomic, strong) NSURL *cdnSmallUrl;
+@property (nonatomic, strong) NSURL *cdnMediumUrl;
+@property (nonatomic, strong) NSURL *cdnLargeUrl;
+@property (nonatomic, strong) NSURL *cdnOriginalUrl;
 
 
 /**
