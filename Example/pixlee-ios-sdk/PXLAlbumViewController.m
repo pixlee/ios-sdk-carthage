@@ -133,6 +133,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
         if (photos.count) {
             NSMutableArray *indexPaths = @[].mutableCopy;
             NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+            NSLog(@"%@", [self.album.photos objectAtIndex:0]);
             [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 NSInteger itemNum = firstIndex + idx;
                 NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];

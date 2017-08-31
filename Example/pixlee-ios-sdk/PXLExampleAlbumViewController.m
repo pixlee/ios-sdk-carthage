@@ -21,7 +21,7 @@
 
 #warning Replace with your Pixlee album identifier.
 
-static NSString * const PXLAlbumIdentifier = @"1868074";
+static NSString * const PXLAlbumIdentifier = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,17 +41,24 @@ static NSString * const PXLAlbumIdentifier = @"1868074";
     
     // Set the album to load.
     self.album = album;
-    self.photo.identifier = @"181026316";
-    
-    NSLog(@"logging");
-    // Example of loading a photo with an identifier
-    [PXLPhoto getPhotoWithId:@"181026316" callback:^(PXLPhoto *photo, NSError *error) {
+    self.photo.identifier = @"";
+    [self.photo loadPhotoWithId:^(PXLPhoto *photo, NSError *error) {
         NSLog(@"%@", photo.cdnOriginalUrl);
         NSLog(@"%@", photo.cdnLargeUrl);
         NSLog(@"%@", photo.cdnMediumUrl);
         NSLog(@"%@", photo.cdnSmallUrl);
         NSLog(@"%@",error);
     }];
+    NSLog(@"%@", album.photos);
+    NSLog(@"logging");
+    // Example of loading a photo with an identifier
+//    [PXLPhoto getPhotoWithId:@"187542438" callback:^(PXLPhoto *photo, NSError *error) {
+//        NSLog(@"%@", photo.cdnOriginalUrl);
+//        NSLog(@"%@", photo.cdnLargeUrl);
+//        NSLog(@"%@", photo.cdnMediumUrl);
+//        NSLog(@"%@", photo.cdnSmallUrl);
+//        NSLog(@"%@",error);
+//    }];
     
     
     

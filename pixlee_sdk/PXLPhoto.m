@@ -82,10 +82,10 @@
     photo.instUserHasLiked = [dict[@"inst_user_has_liked"] boolValue];
     photo.platformLink = [self nilSafeUrlFromDict:dict forKey:@"platform_link"];
     photo.products = [PXLProduct productsFromArray:dict[@"products"] withPhoto:photo];
-    photo.cdnSmallUrl = dict[@"pixlee_cdn_photos"][@"small_url"];
-    photo.cdnMediumUrl = dict[@"pixlee_cdn_photos"][@"medium_url"];
-    photo.cdnLargeUrl = dict[@"pixlee_cdn_photos"][@"large_url"];
-    photo.cdnOriginalUrl = dict[@"pixlee_cdn_photos"][@"original_url"];
+    photo.cdnSmallUrl =  [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"small_url"];
+    photo.cdnMediumUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"medium_url"];
+    photo.cdnLargeUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"large_url"];
+    photo.cdnOriginalUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"original_url"];
     return photo;
 }
 
@@ -117,7 +117,9 @@
 
 - (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
+    NSLog(@"%@", self.identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.identifier];
+    NSLog(requestString);
     NSMutableDictionary *params = @{}.mutableCopy;
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
