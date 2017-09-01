@@ -117,25 +117,6 @@
 }
 
 
-- (NSURLSessionDataTask *)loadPhotoWithId:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
-    static NSString * const PXLAlbumGETRequestString = @"media/%@";
-    NSLog(@"%@", self.identifier);
-    NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.identifier];
-    NSLog(@"%@", requestString);
-    NSMutableDictionary *params = @{}.mutableCopy;
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
-        NSDictionary *responsePhoto = responseObject[@"data"];
-        if (completionBlock) {
-            completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
-        }
-    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
-        if (completionBlock) {
-            completionBlock(nil, error);
-        }
-    }];
-    return dataTask;
-
-}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<PXLPhoto:%@ %@>", self.identifier, self.title];
