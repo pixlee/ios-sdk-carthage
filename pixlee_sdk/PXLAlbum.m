@@ -78,6 +78,9 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
             if (self.filterOptions) {
                 params[@"filter"] = [self.filterOptions urlParamString];
             }
+            if (self.perPage) {
+                params[@"per_page"] = [NSString stringWithFormat:@"%li", self.perPage];;
+            }
             if (self.lastPageFetched != NSNotFound) {
                 params[@"page"] = @(self.lastPageFetched + 1);
             }
