@@ -38,6 +38,7 @@ static NSString * const PXLAlbumIdentifier = @"1726727";
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypePhotoRank;
     album.sortOptions = sortOptions;
+    album.perPage = 100;
     
     // Set the album to load.
     self.album = album;
