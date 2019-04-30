@@ -6,11 +6,13 @@
 //
 //
 
-#import "PXLAlbumViewController.h"
 
-#import "PXLAlbum.h"
-#import "PXLPhoto.h"
+
+#import <pixlee_sdk/PXLAlbum.h>
+#import <pixlee_sdk/PXLPhoto.h>
+#import "PXLAlbumViewController.h"
 #import "PXLPhotoCollectionViewCell.h"
+
 #import "PXLPhotoDetailViewController.h"
 #import <Masonry/Masonry.h>
 
@@ -93,7 +95,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
 - (UIButton *)displayButtonWithImageName:(NSString *)imageName selector:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor whiteColor];
-    [button setImage:[UIImage imageNamed:imageName inBundle:[NSBundle bundleWithIdentifier:@"Pixlee.pixlee-sdk"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
@@ -131,6 +133,7 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
         if (photos.count) {
             NSMutableArray *indexPaths = @[].mutableCopy;
             NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+            NSLog(@"%@", [self.album.photos objectAtIndex:0]);
             [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 NSInteger itemNum = firstIndex + idx;
                 NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];

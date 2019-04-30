@@ -7,7 +7,7 @@
 //
 
 #import "PXLPhoto.h"
-
+#import "PXLClient.h"
 #import "PXLProduct.h"
 
 @implementation PXLPhoto
@@ -22,6 +22,13 @@
 }
 
 + (instancetype)photoFromDict:(NSDictionary *)dict inAlbum:(PXLAlbum *)album {
+    PXLPhoto *photo = [PXLPhoto singlePhotoFromDict:dict];
+    photo.album = album;
+    return photo;
+}
+
+
++ (instancetype)singlePhotoFromDict:(NSDictionary *)dict  {
     NSMutableDictionary *filteredDict = dict.mutableCopy;
     [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSNull class]]) {
@@ -66,7 +73,6 @@
     photo.approved = [dict[@"approved"] boolValue];
     photo.archived = [dict[@"archived"] boolValue];
     photo.isFlagged = [dict[@"is_flagged"] boolValue];
-    photo.album = album;
     photo.unreadCount = [dict[@"unread_count"] integerValue];
     photo.albumActionLink = [self nilSafeUrlFromDict:dict forKey:@"album_action_link"];
     photo.title = dict[@"title"];
@@ -76,7 +82,30 @@
     photo.instUserHasLiked = [dict[@"inst_user_has_liked"] boolValue];
     photo.platformLink = [self nilSafeUrlFromDict:dict forKey:@"platform_link"];
     photo.products = [PXLProduct productsFromArray:dict[@"products"] withPhoto:photo];
+    photo.cdnSmallUrl =  [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"small_url"];
+    photo.cdnMediumUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"medium_url"];
+    photo.cdnLargeUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"large_url"];
+    photo.cdnOriginalUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"original_url"];
     return photo;
+}
+
++ (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
+    static NSString * const PXLAlbumGETRequestString = @"media/%@";
+    NSLog(@"%@", identifier);
+    NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
+    NSLog(@"%@", requestString);
+    NSMutableDictionary *params = @{}.mutableCopy;
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        NSDictionary *responsePhoto = responseObject[@"data"];
+        if (completionBlock) {
+            completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+    return dataTask;
 }
 
 + (NSURL *)nilSafeUrlFromDict:(NSDictionary *)dict forKey:(NSString *)key {
@@ -86,6 +115,8 @@
     }
     return nil;
 }
+
+
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<PXLPhoto:%@ %@>", self.identifier, self.title];

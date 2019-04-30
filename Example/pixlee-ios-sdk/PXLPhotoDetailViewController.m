@@ -8,8 +8,8 @@
 
 #import "PXLPhotoDetailViewController.h"
 
-#import "PXLProduct.h"
-#import "PXLPhoto.h"
+#import <pixlee_sdk/PXLProduct.h>
+#import <pixlee_sdk/PXLPhoto.h>
 #import "PXLProductCollectionViewCell.h"
 
 #import <FormatterKit/TTTTimeIntervalFormatter.h>

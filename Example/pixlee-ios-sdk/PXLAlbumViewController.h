@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PXLAlbum.h"
+#import <pixlee_sdk/PXLAlbum.h>
 
 @interface PXLAlbumViewController : UIViewController
-
-@property (nonatomic, readonly) UICollectionView *albumCollectionView;
 @property (nonatomic, strong) PXLAlbum *album;
+
 
 + (instancetype)albumViewControllerWithAlbumId:(NSString *)albumId;
 - (void)loadNextPageOfPhotos;

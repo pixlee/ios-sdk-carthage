@@ -8,6 +8,7 @@
 #import "PXLExampleAlbumViewController.h"\
 
 #import <pixlee_sdk/PXLAlbum.h>
+#import <pixlee_sdk/PXLPhoto.h>
 #import <pixlee_sdk/PXLAlbumFilterOptions.h>
 #import <pixlee_sdk/PXLAlbumSortOptions.h>
 #import <pixlee_sdk/PXLClient.h>
@@ -19,8 +20,7 @@
 @implementation PXLExampleAlbumViewController
 
 #warning Replace with your Pixlee album identifier.
-
-static NSString * const PXLAlbumIdentifier = @"1568132";
+static NSString * const PXLAlbumIdentifier = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,9 +37,22 @@ static NSString * const PXLAlbumIdentifier = @"1568132";
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypePhotoRank;
     album.sortOptions = sortOptions;
+    album.perPage = 100;
     
     // Set the album to load.
     self.album = album;
+    // Example of loading a photo with an identifier
+    [PXLPhoto getPhotoWithId:@"187542438" callback:^(PXLPhoto *photo, NSError *error) {
+        NSLog(@"%@", photo.cdnOriginalUrl);
+        NSLog(@"%@", photo.cdnLargeUrl);
+        NSLog(@"%@", photo.cdnMediumUrl);
+        NSLog(@"%@", photo.cdnSmallUrl);
+        NSLog(@"%@",error);
+    }];
+    
+
+
+    
     [self loadNextPageOfPhotos];
 }
 
