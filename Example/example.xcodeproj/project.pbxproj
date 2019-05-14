@@ -37,8 +37,6 @@
 		CD9647BE1E8DBC1F00A8818F /* column@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BA1E8DBC1F00A8818F /* column@3x.png */; };
 		CD9647BF1E8DBC1F00A8818F /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BB1E8DBC1F00A8818F /* grid@2x.png */; };
 		CD9647C01E8DBC1F00A8818F /* grid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9647BC1E8DBC1F00A8818F /* grid@3x.png */; };
-		CDCE95E3228B425A009C1D34 /* PXLSkuAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCE95E1228B425A009C1D34 /* PXLSkuAlbumViewController.m */; };
-		CDCE95E4228B425A009C1D34 /* PXLSkuAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDCE95E2228B425A009C1D34 /* PXLSkuAlbumViewController.h */; };
 		CDE8E2F11E8C2890004CF3E4 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; };
 		CDE8E2F21E8C2890004CF3E4 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDE8E2F31E8C2890004CF3E4 /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */; };
@@ -123,8 +121,6 @@
 		CD9647BA1E8DBC1F00A8818F /* column@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "column@3x.png"; path = "Assets/column@3x.png"; sourceTree = "<group>"; };
 		CD9647BB1E8DBC1F00A8818F /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grid@2x.png"; path = "Assets/grid@2x.png"; sourceTree = "<group>"; };
 		CD9647BC1E8DBC1F00A8818F /* grid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grid@3x.png"; path = "Assets/grid@3x.png"; sourceTree = "<group>"; };
-		CDCE95E1228B425A009C1D34 /* PXLSkuAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLSkuAlbumViewController.m; sourceTree = "<group>"; };
-		CDCE95E2228B425A009C1D34 /* PXLSkuAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLSkuAlbumViewController.h; sourceTree = "<group>"; };
 		CDE8E2EB1E8C2890004CF3E4 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
@@ -206,8 +202,6 @@
 				76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */,
 				6003F5A5195388D20070C39A /* PXLExampleAlbumViewController.h */,
 				6003F5A6195388D20070C39A /* PXLExampleAlbumViewController.m */,
-				CDCE95E2228B425A009C1D34 /* PXLSkuAlbumViewController.h */,
-				CDCE95E1228B425A009C1D34 /* PXLSkuAlbumViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -281,7 +275,6 @@
 				CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */,
 				CD9647B51E8DAEFA00A8818F /* PXLPhotoDetailViewController.h in Headers */,
 				CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */,
-				CDCE95E4228B425A009C1D34 /* PXLSkuAlbumViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +411,6 @@
 				6003F5A7195388D20070C39A /* PXLExampleAlbumViewController.m in Sources */,
 				CD9647B41E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				CDCE95E3228B425A009C1D34 /* PXLSkuAlbumViewController.m in Sources */,
 				CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */,
 				CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */,
 			);
