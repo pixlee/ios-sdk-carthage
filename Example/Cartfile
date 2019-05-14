@@ -1,4 +1,4 @@
-github "pixlee/ios-sdk-carthage" "master"
+github "pixlee/ios-sdk-carthage" "mo/CR-3255"
 github "SnapKit/Masonry" ~> 0.6.4
 github "rs/SDWebImage" ~> 3.8.2
 github "mattt/FormatterKit" ~> 1.8.2

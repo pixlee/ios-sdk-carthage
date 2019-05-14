@@ -1,11 +1,11 @@
 //
-//  PXLViewController.m
+//  PXLSkuAlbumViewController.m
 //  pixlee-ios-sdk
 //
-//  Created by Tim Shi on 04/30/2015.
+// 
 //
 
-#import "PXLExampleAlbumViewController.h"\
+#import "PXLSkuAlbumViewController.h"\
 
 #import <pixlee_sdk/PXLAlbum.h>
 #import <pixlee_sdk/PXLPhoto.h>
@@ -26,7 +26,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"2";
     [super viewDidLoad];
     
     // Create a new album instance.
-    PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
+    PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:<#(NSString *)#>:<#(NSString *)#>:PXLSkuAlbumIdentifier];
     
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];

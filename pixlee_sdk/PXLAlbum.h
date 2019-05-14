@@ -25,7 +25,7 @@
 /**
  The unique identifier for this album sku.
  */
-@property (nonatomic, copy) NSString *sku;
+@property (nonatomic, copy, readonly) NSString *sku;
 
 /**
  The number of photos to load per page. Changing this will clear all existing photos and require a reload of the album.
@@ -78,7 +78,7 @@
 /**
  Creates and returns an album with the specified sku identifier.
  
- @param identifier The Pixlee Sku identifier.
+ @param sku The Pixlee Sku identifier.
  
  @return A new `PXLAlbum` object.
  */

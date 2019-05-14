@@ -14,6 +14,7 @@
 @interface PXLAlbum ()
 
 @property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, copy) NSString *sku;
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic) NSInteger lastPageFetched;
 @property (nonatomic) BOOL hasNextPage;
