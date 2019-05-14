@@ -23,6 +23,11 @@
 @property (nonatomic, copy, readonly) NSString *identifier;
 
 /**
+ The unique identifier for this album sku.
+ */
+@property (nonatomic, copy) NSString *sku;
+
+/**
  The number of photos to load per page. Changing this will clear all existing photos and require a reload of the album.
  */
 @property (nonatomic) NSInteger perPage;
@@ -65,6 +70,22 @@
  */
 + (instancetype)albumWithIdentifier:(NSString *)identifier;
 
+
+///---------------------
+/// @name Initialization
+///---------------------
+
+/**
+ Creates and returns an album with the specified sku identifier.
+ 
+ @param identifier The Pixlee Sku identifier.
+ 
+ @return A new `PXLAlbum` object.
+ */
++ (instancetype)albumWithSkuIdentifier:(NSString *)sku;
+
+
+
 ///---------------------
 /// @name Photo Loading
 ///---------------------
@@ -77,5 +98,19 @@
  @return The `NSURLSessionDataTask` used to load the data from the server.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotos:(void (^)(NSArray *photos, NSError *error))completionBlock;
+
+///---------------------
+/// @name Photo Loading
+///---------------------
+
+/**
+ Loads the next page of photos from the server. Each page will only be loaded once.
+ 
+ @param completionBlock A block called after the photos have been loaded or an error has occurred. `photos` will contain the photos loaded in this network call.
+ 
+ @return The `NSURLSessionDataTask` used to load the data from the server.
+ */
+- (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock;
+
 
 @end
