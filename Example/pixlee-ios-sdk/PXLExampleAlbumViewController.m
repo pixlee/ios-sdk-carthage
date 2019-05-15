@@ -45,18 +45,19 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Set the album to load.
     self.album = album;
     // Example of loading a photo with an identifier
-//    [PXLPhoto getPhotoWithId:@"187542438" callback:^(PXLPhoto *photo, NSError *error) {
-//        NSLog(@"%@", photo.cdnOriginalUrl);
-//        NSLog(@"%@", photo.cdnLargeUrl);
-//        NSLog(@"%@", photo.cdnMediumUrl);
-//        NSLog(@"%@", photo.cdnSmallUrl);
-//        NSLog(@"%@",error);
-//    }];
+    [PXLPhoto getPhotoWithId:@"187542438" callback:^(PXLPhoto *photo, NSError *error) {
+        NSLog(@"%@", photo.cdnOriginalUrl);
+        NSLog(@"%@", photo.cdnLargeUrl);
+        NSLog(@"%@", photo.cdnMediumUrl);
+        NSLog(@"%@", photo.cdnSmallUrl);
+        NSLog(@"%@",error);
+    }];
     
 
 
     
     [self loadNextPageOfPhotosFromSku];
+//    [self loadNextPageOfPhotos];
 }
 
 @end
