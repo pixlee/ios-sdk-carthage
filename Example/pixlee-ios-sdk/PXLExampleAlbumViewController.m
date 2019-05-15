@@ -27,8 +27,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     [super viewDidLoad];
     
     // Create a new album instance.
-//    PXLAlbum *album = [PXLAlbum albumWithIdentifier:<#(NSString *)#>:PXLAlbumIdentifier];
-    
+    // If you are using api/v2/album/@album_id/Photos
+    // PXLAlbum *album = [PXLAlbum albumWithIdentifier:<#(NSString *)#>:PXLAlbumIdentifier];
+    // If you are using api/v2/album/sku_from
     PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
     
     // Create and set filter options on the album.
@@ -55,9 +56,11 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
 
 
-    
-    [self loadNextPageOfPhotosFromSku];
+    // If you are using api/v2/album/@album_id/Photos
 //    [self loadNextPageOfPhotos];
+    // If you are using api/v2/album/sku_from
+    [self loadNextPageOfPhotosFromSku];
+
 }
 
 @end
