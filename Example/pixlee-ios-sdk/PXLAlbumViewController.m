@@ -130,6 +130,24 @@ const CGFloat PXLAlbumViewControllerDefaultMargin = 15;
 
 - (void)loadNextPageOfPhotos {
     [self.album loadNextPageOfPhotos:^(NSArray *photos, NSError *error) {
+        NSLog(@"%@",error);
+        if (photos.count) {
+            NSMutableArray *indexPaths = @[].mutableCopy;
+            NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+            NSLog(@"%@", [self.album.photos objectAtIndex:0]);
+            [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                NSInteger itemNum = firstIndex + idx;
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];
+                [indexPaths addObject:indexPath];
+            }];
+            [self.albumCollectionView insertItemsAtIndexPaths:indexPaths];
+        }
+    }];
+}
+
+- (void)loadNextPageOfPhotosFromSku {
+    [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error) {
+        NSLog(@"%@",error);
         if (photos.count) {
             NSMutableArray *indexPaths = @[].mutableCopy;
             NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];

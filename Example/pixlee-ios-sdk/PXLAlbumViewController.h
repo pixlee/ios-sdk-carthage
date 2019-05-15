@@ -16,5 +16,6 @@
 
 + (instancetype)albumViewControllerWithAlbumId:(NSString *)albumId;
 - (void)loadNextPageOfPhotos;
+- (void)loadNextPageOfPhotosFromSku;
 
 @end

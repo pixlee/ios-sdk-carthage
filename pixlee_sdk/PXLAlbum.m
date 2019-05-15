@@ -32,7 +32,7 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
     return album;
 }
 
-+ (instancetype)albumWithSkuIdentifier:(NSString *)sku {
++ (instancetype)albumWithSku:(NSString *)sku {
     PXLAlbum *album = [self new];
     album.sku = sku;
     return album;
@@ -133,14 +133,17 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
 }
 
 - (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock {
-    static NSString * const PXLAlbumGETRequestString = @"albums/%@";
+//    static NSString * const PXLAlbumGETRequestString = @"albums/from_sku";
     // make sure there's more content to load
     if (self.hasNextPage) {
         NSInteger nextPage = self.lastPageFetched == NSNotFound ? 1 : self.lastPageFetched + 1;
         // make sure we aren't already loading that page
         if (!self.loadingOperations[@(nextPage)]) {
-            NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, self.sku];
+            NSString *requestString = @"albums/from_sku";
             NSMutableDictionary *params = @{}.mutableCopy;
+            if(self.sku){
+                params[@"sku"] = self.sku;
+            }
             if (self.sortOptions) {
                 params[@"sort"] = [self.sortOptions urlParamString];
             }
