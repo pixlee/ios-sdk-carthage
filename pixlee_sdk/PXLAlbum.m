@@ -32,7 +32,7 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
     return album;
 }
 
-+ (instancetype)albumWithSku:(NSString *)sku {
++ (instancetype)albumWithSkuIdentifier:(NSString *)sku {
     PXLAlbum *album = [self new];
     album.sku = sku;
     return album;
