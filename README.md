@@ -10,7 +10,65 @@ This repo includes both the Pixlee iOS SDK and an example project to show you ho
 
 Before accessing the Pixlee API, you must initialize the `PXLClient`. To set the API key, call `setApiKey:` on `[PXLClient sharedClient]`. You can then use that singleton instance to make calls against the Pixlee API.
 
-To load the photos in an album, you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithIdentifier:<ALBUM ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotos:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotos:` successively will load each page in turn.
+To load the photos in an album there are two methods https://developers.pixlee.com/reference#get-approved-content-from-album or https://developers.pixlee.com/reference#get-approved-content-for-product. 
+
+If you are retriving the content for one album you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithIdentifier:<ALBUM ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotos:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotos:` successively will load each page in turn.
+
+Example
+```
+//Create an Instance of Album with the sku Identifier
+PXLAlbum *album = [PXLAlbum albumWithIdentifier:PXLSkuAlbumIdentifier];
+
+// Create and set filter options on the album.
+PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
+filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+album.filterOptions = filterOptions;
+
+// Create and set sort options on the album.
+PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
+sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+album.sortOptions = sortOptions;
+album.perPage = 100;
+
+[album loadNextPageOfPhotos:^(NSArray *photos, NSError *error) {
+    NSLog(@"%@",error);
+    if (photos.count) {
+        NSMutableArray *indexPaths = @[].mutableCopy;
+        NSInteger firstIndex = [album.photos indexOfObject:[photos firstObject]];
+        NSLog(@"%@", [album.photos objectAtIndex:0]);
+    }
+}];
+
+```
+
+If you are retriving the content for a sku you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithSkuIdentifier:<SKU ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotosFromSku:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotosFromSku:` successively will load each page in turn.
+
+Example
+```
+//Create an Instance of Album with the sku Identifier
+PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
+
+// Create and set filter options on the album.
+PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
+filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+album.filterOptions = filterOptions;
+
+// Create and set sort options on the album.
+PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
+sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+album.sortOptions = sortOptions;
+album.perPage = 100;
+
+[album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error) {
+    NSLog(@"%@",error);
+    if (photos.count) {
+        NSMutableArray *indexPaths = @[].mutableCopy;
+        NSInteger firstIndex = [album.photos indexOfObject:[photos firstObject]];
+        NSLog(@"%@", [album.photos objectAtIndex:0]);
+    }
+}];
+
+```
 
 Additionally, you can control how an album loads its data using `PXLAlbumFilterOptions` and `PXLAlbumSortOptions`. To use these, create a new instance with `[PXLAlbumFilterOptions new]` or `[PXLAlbumSortOptions new]`, set the necessary properties, and then set those objects to the `filterOptions` and `sortOptions` properties on your album. Make sure to set these before calling `loadNextPageOfPhotos:`.
 
