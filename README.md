@@ -120,6 +120,11 @@ To run the project, open example.xcodeproj in Xcode.
 
 Run the project and you should see a grid of photos from that album.
 
+## Troubleshooting
+
+If you get an error running `carthage update` on osx please clear your carthage cache by doing 
+`rm -rf ~/Library/Caches/org.carthage.CarthageKit`. 
+
 ## License
 
 pixlee-ios-sdk is available under the MIT license.

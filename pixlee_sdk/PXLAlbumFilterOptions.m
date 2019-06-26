@@ -19,6 +19,10 @@
     options[@"starred_photos"] = @(self.starredPhotos);
     options[@"deleted_photos"] = @(self.deletedPhotos);
     options[@"flagged_photos"] = @(self.flaggedPhotos);
+    options[@"has_permission"] = @(self.hasPermission);
+    options[@"has_product"] = @(self.hasProduct);
+    options[@"in_stock_only"] = @(self.inStockOnly);
+    
     if (self.contentSource) {
         options[@"content_source"] = self.contentSource;
     }
@@ -35,6 +39,19 @@
     if (self.submittedDateEnd) {
         options[@"submitted_date_end"] = @([self.submittedDateEnd timeIntervalSince1970] * 1000);
     }
+    if(self.inCategories){
+        options[@"in_categories"] = self.inCategories;
+    }
+    if(self.computerVision){
+        options[@"computer_vision"] = self.computerVision;
+    }
+    if(self.filterByLocation){
+        options[@"filter_by_location"] = self.filterByLocation;
+    }
+    if(self.filterByRadius){
+        options[@"filter_by_radius"] = self.filterByRadius;
+    }
+    
     
     NSData *optionsData = [NSJSONSerialization dataWithJSONObject:options options:0 error:nil];
     NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];

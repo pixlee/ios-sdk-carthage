@@ -20,13 +20,20 @@
 @property (nonatomic) BOOL starredPhotos;
 @property (nonatomic) BOOL deletedPhotos;
 @property (nonatomic) BOOL flaggedPhotos;
+@property (nonatomic) BOOL hasPermission;
+@property (nonatomic) BOOL hasProduct;
+@property (nonatomic) BOOL inStockOnly;
 @property (nonatomic, strong) NSMutableArray *contentSource;
 @property (nonatomic, strong) NSMutableArray *contentType;
+@property (nonatomic, strong) NSMutableArray *inCategories;
 @property (nonatomic, copy) NSString *filterBySubcaption;
+@property (nonatomic, copy) NSDictionary *filterByUserhandle;
 @property (nonatomic) BOOL hasActionLink;
 @property (nonatomic, strong) NSDate *submittedDateStart;
 @property (nonatomic, strong) NSDate *submittedDateEnd;
-
+@property (nonatomic, copy) NSDictionary *computerVision;
+@property (nonatomic, copy) NSDictionary *filterByLocation;
+@property (nonatomic, copy) NSString *filterByRadius;
 - (NSString *)urlParamString;
 
 @end
