@@ -35,6 +35,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
     filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+    filterOptions.hasPermission = true;
     filterOptions.hasProduct = true;
     
     album.filterOptions = filterOptions;
