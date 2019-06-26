@@ -19,6 +19,7 @@
     options[@"starred_photos"] = @(self.starredPhotos);
     options[@"deleted_photos"] = @(self.deletedPhotos);
     options[@"flagged_photos"] = @(self.flaggedPhotos);
+    options[@"has_permission"] = @(self.has_permission);
     if (self.contentSource) {
         options[@"content_source"] = self.contentSource;
     }
