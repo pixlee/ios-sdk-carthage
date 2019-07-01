@@ -18,7 +18,7 @@ Example
 ```
 
 //=========================================================
-// Please check the parameters if you are going to copy past
+//These parameters are examples. Please adjust, add or remove them during implementation.
 //=========================================================
 
 //Create an Instance of Album with the sku Identifier
@@ -26,13 +26,17 @@ PXLAlbum *album = [PXLAlbum albumWithIdentifier:PXLSkuAlbumIdentifier];
 
 // Create and set filter options on the album.
 PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
-//Get Date 2019 - 01 -01 Important please set the submitted date
+
+
 NSString *dateStr = @"20190101";
 // Convert string to date object
 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
 [dateFormat setDateFormat:@"yyyyMMdd"];
 NSDate *date = [dateFormat dateFromString:dateStr];  
-filterOptions.submittedDateStart = date; // submitted within the last 20 days
+filterOptions.submittedDateStart = date; 
+
+
+//These parameters are examples. Please adjust, add or remove them during implementation.
 album.filterOptions = filterOptions;
 
 // Create and set sort options on the album.
@@ -56,12 +60,29 @@ If you are retriving the content for a sku you'll want to use the `PXLAlbum` cla
 
 Example
 ```
+
+//=========================================================
+//These parameters are examples. Please adjust, add or remove them during implementation.
+//=========================================================
+
+
 //Create an Instance of Album with the sku Identifier
 PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
 
 // Create and set filter options on the album.
 PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
-filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+
+
+
+NSString *dateStr = @"20190101";
+// Convert string to date object
+NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+[dateFormat setDateFormat:@"yyyyMMdd"];
+NSDate *date = [dateFormat dateFromString:dateStr];  
+filterOptions.submittedDateStart = date; 
+
+
+//These parameters are examples. Please adjust, add or remove them during implementation.
 album.filterOptions = filterOptions;
 
 // Create and set sort options on the album.

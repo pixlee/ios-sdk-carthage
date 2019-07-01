@@ -34,9 +34,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
+
     NSString *dateStr = @"20190101";
-
-
     // Convert string to date object
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyyMMdd"];
