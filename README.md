@@ -16,12 +16,23 @@ If you are retriving the content for one album you'll want to use the `PXLAlbum`
 
 Example
 ```
+
+//=========================================================
+// Please check the parameters if you are going to copy past
+//=========================================================
+
 //Create an Instance of Album with the sku Identifier
 PXLAlbum *album = [PXLAlbum albumWithIdentifier:PXLSkuAlbumIdentifier];
 
 // Create and set filter options on the album.
 PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
-filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+//Get Date 2019 - 01 -01 Important please set the submitted date
+NSString *dateStr = @"20190101";
+// Convert string to date object
+NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+[dateFormat setDateFormat:@"yyyyMMdd"];
+NSDate *date = [dateFormat dateFromString:dateStr];  
+filterOptions.submittedDateStart = date; // submitted within the last 20 days
 album.filterOptions = filterOptions;
 
 // Create and set sort options on the album.
