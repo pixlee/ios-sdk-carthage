@@ -39,7 +39,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"2";
     [dateFormat setDateFormat:@"yyyyMMdd"];
     NSDate *date = [dateFormat dateFromString:dateStr]; 
     
-    filterOptions.submittedDateStart = date; // submitted within the last 20 days
+    filterOptions.submittedDateStart = date; 
     album.filterOptions = filterOptions;
     
     // Create and set sort options on the album.
