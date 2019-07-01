@@ -34,7 +34,19 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
-    filterOptions.submittedDateStart = [[NSDate date] dateByAddingTimeInterval:-60 * 60 * 24 * 20]; // submitted within the last 20 days
+
+
+
+    //These parameters are examples. Please adjust, add or remove them during implementation.
+    NSString *dateStr = @"20190101";
+    // Convert string to date object
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyyMMdd"];
+    NSDate *date = [dateFormat dateFromString:dateStr]; 
+    
+    filterOptions.submittedDateStart = date;
+
+    //These parameters are examples. Please adjust, add or remove them during implementation.
     filterOptions.hasPermission = true;
     filterOptions.hasProduct = true;
     
