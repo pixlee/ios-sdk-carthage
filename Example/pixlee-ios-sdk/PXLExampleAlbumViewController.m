@@ -35,6 +35,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
 
+
+
+    //These parameters are examples. Please adjust, add or remove them during implementation.
     NSString *dateStr = @"20190101";
     // Convert string to date object
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -42,6 +45,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     NSDate *date = [dateFormat dateFromString:dateStr]; 
     
     filterOptions.submittedDateStart = date;
+
+    //These parameters are examples. Please adjust, add or remove them during implementation.
     filterOptions.hasPermission = true;
     filterOptions.hasProduct = true;
     

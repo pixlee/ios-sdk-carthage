@@ -30,8 +30,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"2";
     
     // Create and set filter options on the album.
     PXLAlbumFilterOptions *filterOptions = [PXLAlbumFilterOptions new];
-    
-    // Important Please CHange Parameters
+
+    // These parameters are examples. Please adjust, add or remove them during implementation.
     NSString *dateStr = @"20190101";
     // Convert string to date object
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -44,6 +44,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"2";
     // Create and set sort options on the album.
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+    //These parameters are examples. Please adjust, add or remove them during implementation.
     album.sortOptions = sortOptions;
     album.perPage = 100;
     
