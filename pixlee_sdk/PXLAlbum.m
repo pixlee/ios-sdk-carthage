@@ -24,7 +24,7 @@
 
 @implementation PXLAlbum
 
-const NSInteger PXLAlbumDefaultPerPage = 30;
+const NSInteger PXLAlbumDefaultPerPage = 20;
 
 + (instancetype)albumWithIdentifier:(NSString *)identifier {
     PXLAlbum *album = [self new];
