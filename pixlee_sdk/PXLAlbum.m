@@ -83,7 +83,7 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
                 params[@"sort"] = [self.sortOptions urlParamString];
             }
             if (self.filterOptions) {
-                params[@"filter"] = [self.filterOptions urlParamString];
+                params[@"filters"] = [self.filterOptions urlParamString];
             }
             if (self.perPage) {
                 params[@"per_page"] = [NSString stringWithFormat:@"%li", self.perPage];
@@ -148,7 +148,7 @@ const NSInteger PXLAlbumDefaultPerPage = 30;
                 params[@"sort"] = [self.sortOptions urlParamString];
             }
             if (self.filterOptions) {
-                params[@"filter"] = [self.filterOptions urlParamString];
+                params[@"filters"] = [self.filterOptions urlParamString];
             }
             if (self.perPage) {
                 params[@"per_page"] = [NSString stringWithFormat:@"%li", self.perPage];
