@@ -48,14 +48,13 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
     filterOptions.hasPermission = @(1);
-    filterOptions.hasProduct = @(0);
+    filterOptions.hasProduct = @(1);
     
     album.filterOptions = filterOptions;
     
     // Create and set sort options on the album.
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypeRandom;
-    sortOptions.ascending = 1;
     album.sortOptions = sortOptions;
     album.perPage = 3;
     
