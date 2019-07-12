@@ -47,7 +47,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 //    filterOptions.submittedDateStart = date;
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
-    filterOptions.hasPermission = false;
+    filterOptions.hasPermission = true;
     filterOptions.hasProduct = true;
     
     album.filterOptions = filterOptions;
@@ -55,8 +55,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Create and set sort options on the album.
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypeRandom;
+    sortOptions.ascending = true;
     album.sortOptions = sortOptions;
-    album.perPage = 100;
+    album.perPage = 3;
     
     // Set the album to load.
     self.album = album;

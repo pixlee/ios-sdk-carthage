@@ -18,7 +18,7 @@
     if(self.minTwitterFollowers){
         options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
     }
-    if(self.deniedPhotos){
+    if([NSNumber numberWithBool:self.deniedPhotos]){
         options[@"denied_photos"] = @(self.deniedPhotos);
     }
     if(self.starredPhotos){
