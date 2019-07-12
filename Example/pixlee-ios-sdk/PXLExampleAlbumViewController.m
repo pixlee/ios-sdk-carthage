@@ -49,6 +49,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     //These parameters are examples. Please adjust, add or remove them during implementation.
     filterOptions.hasPermission = true;
     filterOptions.hasProduct = true;
+    filterOptions.deniedPhotos = false;
     
     album.filterOptions = filterOptions;
     

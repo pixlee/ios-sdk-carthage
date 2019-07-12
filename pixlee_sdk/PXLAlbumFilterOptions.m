@@ -18,27 +18,61 @@
     if(self.minTwitterFollowers){
         options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
     }
-    if([NSNumber numberWithBool:self.deniedPhotos]){
-        options[@"denied_photos"] = @(self.deniedPhotos);
+    if(self.deniedPhotos != nil){
+        if([self.deniedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"denied_photos"] = @(YES);
+        }
+        else if ([self.deniedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"denied_photos"] = @(NO);
+        }
     }
-    if(self.starredPhotos){
-        options[@"starred_photos"] = @(self.starredPhotos);
+    if(self.starredPhotos != nil){
+        if([self.starredPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"starred_photos"] = @(YES);
+        }
+        else if ([self.starredPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"starred_photos"] = @(NO);
+        }
     }
-    if(self.deletedPhotos){
-        options[@"deleted_photos"] = @(self.deletedPhotos);
+    if(self.deletedPhotos != nil){
+        if([self.deletedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"deleted_photos"] = @(YES);
+        }
+        else if ([self.deletedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"deleted_photos"] = @(NO);
+        }
     }
-    if(self.flaggedPhotos){
-        options[@"flagged_photos"] = @(self.flaggedPhotos);
+    if(self.flaggedPhotos != nil){
+        if([self.flaggedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"flagged_photos"] = @(YES);
+        }
+        else if ([self.flaggedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"flagged_photos"] = @(NO);
+        }
     }
-    if(self.hasPermission){
-         options[@"has_permission"] = @(self.hasPermission);
+    if(self.hasPermission != nil){
+        if([self.hasPermission isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"has_permission"] = @(YES);
+        }
+        else if ([self.hasPermission isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"has_permission"] = @(NO);
+        }
     }
-    if(self.hasProduct){
-        options[@"has_product"] = @(self.hasProduct);
+    if(self.hasProduct != nil){
+        if([self.hasProduct isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"has_product"] = @(YES);
+        }
+        else if ([self.hasProduct isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"has_product"] = @(NO);
+        }
     }
-    
-    if(self.inStockOnly){
-        options[@"in_stock_only"] = @(self.inStockOnly);
+    if(self.inStockOnly != nil){
+        if([self.inStockOnly isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"in_stock_only"] = @(YES);
+        }
+        else if ([self.inStockOnly isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"in_stock_only"] = @(NO);
+        }
     }
     
     if (self.contentSource) {
@@ -50,9 +84,15 @@
     if (self.filterBySubcaption) {
         options[@"filter_by_subcaption"] = self.filterBySubcaption;
     }
-    if(self.hasActionLink){
-        options[@"has_action_link"] = @(self.hasActionLink);
+    if(self.hasActionLink != nil){
+        if([self.hasActionLink isEqualToNumber:[NSNumber numberWithInt:1]]){
+            options[@"has_action_link"] = @(YES);
+        }
+        else if ([self.hasActionLink isEqualToNumber:[NSNumber numberWithInt:0]]){
+            options[@"has_action_link"] = @(NO);
+        }
     }
+    
     if (self.submittedDateStart) {
         options[@"submitted_date_start"] = @([self.submittedDateStart timeIntervalSince1970] * 1000);
     }
