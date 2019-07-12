@@ -10,6 +10,69 @@
 
 @implementation PXLAlbumFilterOptions
 
+@synthesize deniedPhotos = _deniedPhotose;
+@synthesize starredPhotos = _starredPhotos;
+@synthesize deletedPhotos = _deletedPhotos;
+@synthesize flaggedPhotos = _flaggedPhotos;
+@synthesize hasPermission = _hasPermission;
+@synthesize hasProduct = _hasProduct;
+@synthesize inStockOnly = _inStockOnly;
+@synthesize hasActionLink = _hasActionLink;
+
+
+
+- (void)setDeniedPhotos:(BOOL)deniedPhotos{
+    NSLog(@"Setting bool to %s", deniedPhotos ? "true" : "false");
+    _deniedPhotose = deniedPhotos;
+    self.flagDeniedPhotos = true;
+}
+
+
+
+- (void)setStarredPhotos:(BOOL)starredPhotos{
+    NSLog(@"Setting bool to %s", starredPhotos ? "true" : "false");
+    _starredPhotos = starredPhotos;
+    self.flagStarredPhotos = true;
+}
+
+- (void)setDeletedPhotos:(BOOL)deletedPhotos{
+    NSLog(@"Setting bool to %s", deletedPhotos ? "true" : "false");
+    _deletedPhotos = deletedPhotos;
+    self.flagDeletedPhotos = true;
+}
+
+- (void)setFlaggedPhotos:(BOOL)flaggedPhotos{
+    NSLog(@"Setting bool to %s", flaggedPhotos ? "true" : "false");
+    _flaggedPhotos = flaggedPhotos;
+    self.flagFlaggedPhotos = true;
+}
+
+
+- (void)setHasPermission:(BOOL)hasPermission{
+    NSLog(@"Setting bool to %s", hasPermission ? "true" : "false");
+    _hasPermission = hasPermission;
+    self.flagHasPermission = true;
+}
+
+
+- (void)setHasProduct:(BOOL)hasProduct{
+    NSLog(@"Setting bool to %s", hasProduct ? "true" : "false");
+    _hasProduct = hasProduct;
+    self.flagHasProduct = true;
+}
+
+- (void)setInStockOnly:(BOOL)inStockOnly{
+    NSLog(@"Setting bool to %s", inStockOnly ? "true" : "false");
+    _inStockOnly = inStockOnly;
+    self.flagInStockOnly = true;
+}
+
+- (void)setHasActionLink:(BOOL)hasActionLink{
+    NSLog(@"Setting bool to %s", hasActionLink ? "true" : "false");
+    _hasActionLink = hasActionLink;
+    self.flagHasActionLink = true;
+}
+
 - (NSString *)urlParamString {
     NSMutableDictionary *options = @{}.mutableCopy;
     if(self.minInstagramFollowers){
@@ -18,59 +81,59 @@
     if(self.minTwitterFollowers){
         options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
     }
-    if(self.deniedPhotos != nil){
-        if([self.deniedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagDeniedPhotos ){
+        if(self.deniedPhotos){
             options[@"denied_photos"] = @(YES);
         }
-        else if ([self.deniedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else {
             options[@"denied_photos"] = @(NO);
         }
     }
-    if(self.starredPhotos != nil){
-        if([self.starredPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagStarredPhotos){
+        if(self.starredPhotos){
             options[@"starred_photos"] = @(YES);
         }
-        else if ([self.starredPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else {
             options[@"starred_photos"] = @(NO);
         }
     }
-    if(self.deletedPhotos != nil){
-        if([self.deletedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagDeletedPhotos){
+        if(self.deletedPhotos){
             options[@"deleted_photos"] = @(YES);
         }
-        else if ([self.deletedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+           else {
             options[@"deleted_photos"] = @(NO);
         }
     }
-    if(self.flaggedPhotos != nil){
-        if([self.flaggedPhotos isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagFlaggedPhotos){
+        if(self.flaggedPhotos){
             options[@"flagged_photos"] = @(YES);
         }
-        else if ([self.flaggedPhotos isEqualToNumber:[NSNumber numberWithInt:0]]){
+           else{
             options[@"flagged_photos"] = @(NO);
         }
     }
-    if(self.hasPermission != nil){
-        if([self.hasPermission isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagHasPermission){
+        if(self.hasPermission){
             options[@"has_permission"] = @(YES);
         }
-        else if ([self.hasPermission isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else{
             options[@"has_permission"] = @(NO);
         }
     }
-    if(self.hasProduct != nil){
-        if([self.hasProduct isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagHasProduct){
+        if(self.hasProduct){
             options[@"has_product"] = @(YES);
         }
-        else if ([self.hasProduct isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else{
             options[@"has_product"] = @(NO);
         }
     }
-    if(self.inStockOnly != nil){
-        if([self.inStockOnly isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagInStockOnly){
+        if(self.inStockOnly){
             options[@"in_stock_only"] = @(YES);
         }
-        else if ([self.inStockOnly isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else {
             options[@"in_stock_only"] = @(NO);
         }
     }
@@ -84,11 +147,11 @@
     if (self.filterBySubcaption) {
         options[@"filter_by_subcaption"] = self.filterBySubcaption;
     }
-    if(self.hasActionLink != nil){
-        if([self.hasActionLink isEqualToNumber:[NSNumber numberWithInt:1]]){
+    if(self.flagHasActionLink){
+        if(self.hasActionLink){
             options[@"has_action_link"] = @(YES);
         }
-        else if ([self.hasActionLink isEqualToNumber:[NSNumber numberWithInt:0]]){
+        else {
             options[@"has_action_link"] = @(NO);
         }
     }
