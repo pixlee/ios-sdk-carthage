@@ -12,16 +12,34 @@
 
 - (NSString *)urlParamString {
     NSMutableDictionary *options = @{}.mutableCopy;
+    if(self.minInstagramFollowers){
+        options[@"min_instagram_followers"] = @(self.minInstagramFollowers);
+    }
+    if(self.minTwitterFollowers){
+        options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
+    }
+    if(self.deniedPhotos){
+        options[@"denied_photos"] = @(self.deniedPhotos);
+    }
+    if(self.starredPhotos){
+        options[@"starred_photos"] = @(self.starredPhotos);
+    }
+    if(self.deletedPhotos){
+        options[@"deleted_photos"] = @(self.deletedPhotos);
+    }
+    if(self.flaggedPhotos){
+        options[@"flagged_photos"] = @(self.flaggedPhotos);
+    }
+    if(self.hasPermission){
+         options[@"has_permission"] = @(self.hasPermission);
+    }
+    if(self.hasProduct){
+        options[@"has_product"] = @(self.hasProduct);
+    }
     
-    options[@"min_instagram_followers"] = @(self.minInstagramFollowers);
-    options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
-    options[@"denied_photos"] = @(self.deniedPhotos);
-    options[@"starred_photos"] = @(self.starredPhotos);
-    options[@"deleted_photos"] = @(self.deletedPhotos);
-    options[@"flagged_photos"] = @(self.flaggedPhotos);
-    options[@"has_permission"] = @(self.hasPermission);
-    options[@"has_product"] = @(self.hasProduct);
-    options[@"in_stock_only"] = @(self.inStockOnly);
+    if(self.inStockOnly){
+        options[@"in_stock_only"] = @(self.inStockOnly);
+    }
     
     if (self.contentSource) {
         options[@"content_source"] = self.contentSource;
