@@ -50,7 +50,9 @@
     if (self.filterBySubcaption) {
         options[@"filter_by_subcaption"] = self.filterBySubcaption;
     }
-    options[@"has_action_link"] = @(self.hasActionLink);
+    if(self.hasActionLink){
+        options[@"has_action_link"] = @(self.hasActionLink);
+    }
     if (self.submittedDateStart) {
         options[@"submitted_date_start"] = @([self.submittedDateStart timeIntervalSince1970] * 1000);
     }
