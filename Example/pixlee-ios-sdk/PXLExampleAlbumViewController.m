@@ -38,23 +38,23 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
-    NSString *dateStr = @"20190101";
+//    NSString *dateStr = @"20190101";
     // Convert string to date object
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyyMMdd"];
-    NSDate *date = [dateFormat dateFromString:dateStr]; 
+//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+//    [dateFormat setDateFormat:@"yyyyMMdd"];
+//    NSDate *date = [dateFormat dateFromString:dateStr];
     
-    filterOptions.submittedDateStart = date;
+//    filterOptions.submittedDateStart = date;
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
-    filterOptions.hasPermission = true;
+    filterOptions.hasPermission = false;
     filterOptions.hasProduct = true;
     
     album.filterOptions = filterOptions;
     
     // Create and set sort options on the album.
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
-    sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+    sortOptions.sortType = PXLAlbumSortTypeRandom;
     album.sortOptions = sortOptions;
     album.perPage = 100;
     
