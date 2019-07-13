@@ -28,7 +28,7 @@
                          @"pixlee_shares",
                          @"pixlee_likes",
                          @"popularity",
-                         @"photorank"
+                         @"dynamic"
                          ];
     });
     return sortTypeKeys;

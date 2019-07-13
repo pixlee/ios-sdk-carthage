@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, PXLAlbumSortType) {
     PXLAlbumSortTypePixleeShares,
     PXLAlbumSortTypePixleeLikes,
     PXLAlbumSortTypePopularity,
-    PXLAlbumSortTypePhotoRank,
+    PXLAlbumSortTypeDynamic,
     PXLAlbumSortTypeNone
 };
 
