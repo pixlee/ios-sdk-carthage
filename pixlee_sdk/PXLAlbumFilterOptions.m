@@ -166,21 +166,12 @@
         options[@"in_categories"] = self.inCategories;
     }
     if(self.computerVision){
-//        NSError * err;
-//        NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:NSJSONWritingPrettyPrinted error:&err];
-//        options[@"computer_vision"] = self.computerVision;
         [options setObject:self.computerVision forKey:@"computer_vision"];
     }
     if(self.filterByLocation){
-//        NSError * err;
-//        NSData * jsonDataFilterLocation = [NSJSONSerialization dataWithJSONObject:self.filterByLocation options:NSJSONWritingPrettyPrinted error:&err];
-//        options[@"filter_by_location"] = self.filterByLocation;
         [options setObject:self.filterByLocation forKey:@"filter_by_location"];
     }
     if(self.filterByUserhandle){
-//        NSError * err;
-//        NSData * jsonData = [NSJSONSerialization dataWithJSONObject:self.filterByUserhandle options:NSJSONWritingPrettyPrinted error:&err];
-//        options[@"filter_by_userhandle"] = self.filterByUserhandle;
         [options setObject:self.filterByUserhandle forKey:@"filter_by_userhandle"];
     }
     if(self.filterByRadius){
