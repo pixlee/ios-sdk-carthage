@@ -80,7 +80,7 @@ album.filterOptions = filterOptions;
 
 // Create and set sort options on the album.
 PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
-sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+sortOptions.sortType = PXLAlbumSortTypeRandom;
 album.sortOptions = sortOptions;
 album.perPage = 100;
 
@@ -126,7 +126,7 @@ album.filterOptions = filterOptions;
 
 // Create and set sort options on the album.
 PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
-sortOptions.sortType = PXLAlbumSortTypePhotoRank;
+sortOptions.sortType = PXLAlbumSortTypeRandom;
 album.sortOptions = sortOptions;
 album.perPage = 100;
 
