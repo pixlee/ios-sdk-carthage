@@ -14,7 +14,6 @@
     self = [super init];
     if (self) {
         self.sortType = PXLAlbumSortTypeNone;
-        self.ascending = YES;
     }
     return self;
 }
@@ -29,7 +28,7 @@
                          @"pixlee_shares",
                          @"pixlee_likes",
                          @"popularity",
-                         @"photorank"
+                         @"dynamic"
                          ];
     });
     return sortTypeKeys;
@@ -39,6 +38,8 @@
     NSMutableDictionary *options = @{}.mutableCopy;
     if (!self.ascending) {
         options[@"desc"] = @YES;
+    }else{
+        options[@"asc"] = @YES;
     }
     if (self.sortType != PXLAlbumSortTypeNone) {
         NSString *key = [self sortTypeKeys][self.sortType];

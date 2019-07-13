@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, PXLAlbumSortType) {
     PXLAlbumSortTypePixleeShares,
     PXLAlbumSortTypePixleeLikes,
     PXLAlbumSortTypePopularity,
-    PXLAlbumSortTypePhotoRank,
+    PXLAlbumSortTypeDynamic,
     PXLAlbumSortTypeNone
 };
 
@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, PXLAlbumSortType) {
 
 @property (nonatomic) PXLAlbumSortType sortType;
 @property (nonatomic) BOOL ascending;
+
 
 - (NSString *)urlParamString;
 

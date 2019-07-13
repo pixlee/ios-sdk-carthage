@@ -22,9 +22,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		76ED54F51E88709700B7E8F2 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F31E88709700B7E8F2 /* Default-568h.png */; };
 		76ED54F61E88709700B7E8F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */; };
-		CD1CCBBE1E8CA85100FF5B10 /* pixlee_sdk.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD1CCC1C1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */; };
-		CD1CCC1D1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */; };
 		CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */; };
 		CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */; };
@@ -64,7 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD1CCBBE1E8CA85100FF5B10 /* pixlee_sdk.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +72,6 @@
 			files = (
 				CDE8E2F61E8C2890004CF3E4 /* AFNetworking.framework in Embed Frameworks */,
 				CDE8E34E1E8C615A004CF3E4 /* WebImage.framework in Embed Frameworks */,
-				CD1CCC1D1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Embed Frameworks */,
 				CDE8E2F41E8C2890004CF3E4 /* FormatterKit.framework in Embed Frameworks */,
 				CDE8E2F21E8C2890004CF3E4 /* Masonry.framework in Embed Frameworks */,
 			);
@@ -107,8 +102,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		76ED54F31E88709700B7E8F2 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
-		CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
 		CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLAlbumViewController.h; sourceTree = "<group>"; };
 		CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLAlbumViewController.m; sourceTree = "<group>"; };
 		CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -132,7 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1CCC1C1E8CCB0C00FF5B10 /* pixlee_sdk.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				CDE8E2F51E8C2890004CF3E4 /* AFNetworking.framework in Frameworks */,
 				CDE8E2F11E8C2890004CF3E4 /* Masonry.framework in Frameworks */,
@@ -159,8 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				CD9647C31E8DBC7800A8818F /* assets */,
-				CD1CCC1B1E8CCB0C00FF5B10 /* pixlee_sdk.framework */,
-				CD1CCBBD1E8CA85100FF5B10 /* pixlee_sdk.framework */,
 				CDE8E2EB1E8C2890004CF3E4 /* WebImage.framework */,
 				CDE8E2EC1E8C2890004CF3E4 /* Masonry.framework */,
 				CDE8E2ED1E8C2890004CF3E4 /* FormatterKit.framework */,
