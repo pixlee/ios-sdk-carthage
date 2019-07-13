@@ -169,7 +169,7 @@
         NSError * err;
         NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:0 error:&err];
         
-        options[@"computer_vision"] = jsonDataComputerVision;
+        options[@"computer_vision"] = [[NSString alloc] initWithData:jsonDataComputerVision encoding:NSUTF8StringEncoding];
     }
     if(self.filterByLocation){
         NSError * err;
