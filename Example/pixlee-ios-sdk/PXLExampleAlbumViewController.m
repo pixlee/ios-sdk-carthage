@@ -61,9 +61,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     //NsDictionnary -> Json
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]initWithCapacity:10];
     
-    NSString *c1 = @"tonystark";
-    NSString *c2 = @"thanos";
-    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
+//    NSString *c1 = @"tonystark";
+//    NSString *c2 = @"thanos";
+//    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
     filterOptions.filterByUserhandle = dict;
 
     
