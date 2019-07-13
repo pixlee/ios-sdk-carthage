@@ -178,7 +178,7 @@
     if(self.filterByUserhandle){
         NSError * err;
         NSData * jsonData = [NSJSONSerialization dataWithJSONObject:self.filterByUserhandle options:0 error:&err];
-        options[@"filter_by_location"] = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        options[@"filter_by_userhandle"] = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     if(self.filterByRadius){
         options[@"filter_by_radius"] = self.filterByRadius;

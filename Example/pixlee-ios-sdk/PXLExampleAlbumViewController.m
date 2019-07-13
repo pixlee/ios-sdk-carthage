@@ -38,17 +38,33 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
-//    NSString *dateStr = @"20190101";
+    NSString *dateStr = @"20190101";
     // Convert string to date object
-//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//    [dateFormat setDateFormat:@"yyyyMMdd"];
-//    NSDate *date = [dateFormat dateFromString:dateStr];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyyMMdd"];
+    NSDate *date = [dateFormat dateFromString:dateStr];
     
-//    filterOptions.submittedDateStart = date;
+    filterOptions.submittedDateStart = date;
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
+    //Boolean tests
     filterOptions.hasPermission = true;
     filterOptions.hasProduct = false;
+    
+    //NsuInteger Test
+    filterOptions.minInstagramFollowers = 200;
+    
+    //NSMutableArray
+    NSString *source = @"instagram";
+    filterOptions.contentSource = [NSMutableArray arrayWithObjects:source,nil];
+    
+    //NsDictionnary -> Json
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]initWithCapacity:10];
+    
+    NSString *c1 = @"tonystark";
+    NSString *c2 = @"thanos";
+    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
+    filterOptions.filterByUserhandle = dict;
 
     
     album.filterOptions = filterOptions;
