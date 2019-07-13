@@ -157,10 +157,10 @@
     }
     
     if (self.submittedDateStart) {
-        options[@"submitted_date_start"] = @([self.submittedDateStart timeIntervalSince1970] * 1000);
+        options[@"submitted_date_start"] = @([self.submittedDateStart timeIntervalSince1970] );
     }
     if (self.submittedDateEnd) {
-        options[@"submitted_date_end"] = @([self.submittedDateEnd timeIntervalSince1970] * 1000);
+        options[@"submitted_date_end"] = @([self.submittedDateEnd timeIntervalSince1970] );
     }
     if(self.inCategories){
         options[@"in_categories"] = self.inCategories;
@@ -168,17 +168,17 @@
     if(self.computerVision){
         NSError * err;
         NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:0 error:&err];
-        options[@"computer_vision"] = [[NSString alloc] initWithData:jsonDataComputerVision encoding:NSUTF8StringEncoding];
+        options[@"computer_vision"] = jsonDataComputerVision;
     }
     if(self.filterByLocation){
         NSError * err;
         NSData * jsonDataFilterLocation = [NSJSONSerialization dataWithJSONObject:self.filterByLocation options:0 error:&err];
-        options[@"filter_by_location"] = [[NSString alloc] initWithData:jsonDataFilterLocation encoding:NSUTF8StringEncoding];
+        options[@"filter_by_location"] = jsonDataFilterLocation;
     }
     if(self.filterByUserhandle){
         NSError * err;
         NSData * jsonData = [NSJSONSerialization dataWithJSONObject:self.filterByUserhandle options:0 error:&err];
-        options[@"filter_by_userhandle"] = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        options[@"filter_by_userhandle"] = jsonData;
     }
     if(self.filterByRadius){
         options[@"filter_by_radius"] = self.filterByRadius;
