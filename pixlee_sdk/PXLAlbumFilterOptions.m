@@ -22,7 +22,6 @@
 
 
 - (void)setDeniedPhotos:(BOOL)deniedPhotos{
-    NSLog(@"Setting bool to %s", deniedPhotos ? "true" : "false");
     _deniedPhotos = deniedPhotos;
     self.flagDeniedPhotos = true;
 }
@@ -30,45 +29,39 @@
 
 
 - (void)setStarredPhotos:(BOOL)starredPhotos{
-    NSLog(@"Setting bool to %s", starredPhotos ? "true" : "false");
     _starredPhotos = starredPhotos;
     self.flagStarredPhotos = true;
 }
 
 - (void)setDeletedPhotos:(BOOL)deletedPhotos{
-    NSLog(@"Setting bool to %s", deletedPhotos ? "true" : "false");
     _deletedPhotos = deletedPhotos;
     self.flagDeletedPhotos = true;
 }
 
 - (void)setFlaggedPhotos:(BOOL)flaggedPhotos{
-    NSLog(@"Setting bool to %s", flaggedPhotos ? "true" : "false");
+
     _flaggedPhotos = flaggedPhotos;
     self.flagFlaggedPhotos = true;
 }
 
 
 - (void)setHasPermission:(BOOL)hasPermission{
-    NSLog(@"Setting bool to %s", hasPermission ? "true" : "false");
     _hasPermission = hasPermission;
     self.flagHasPermission = true;
 }
 
 
 - (void)setHasProduct:(BOOL)hasProduct{
-    NSLog(@"Setting bool to %s", hasProduct ? "true" : "false");
     _hasProduct = hasProduct;
     self.flagHasProduct = true;
 }
 
 - (void)setInStockOnly:(BOOL)inStockOnly{
-    NSLog(@"Setting bool to %s", inStockOnly ? "true" : "false");
     _inStockOnly = inStockOnly;
     self.flagInStockOnly = true;
 }
 
 - (void)setHasActionLink:(BOOL)hasActionLink{
-    NSLog(@"Setting bool to %s", hasActionLink ? "true" : "false");
     _hasActionLink = hasActionLink;
     self.flagHasActionLink = true;
 }
