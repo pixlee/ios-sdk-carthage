@@ -14,7 +14,42 @@ To load the photos in an album there are two methods https://developers.pixlee.c
 
 If you are retriving the content for one album you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithIdentifier:<ALBUM ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotos:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotos:` successively will load each page in turn.
 
-Example
+### Filtering and Sorting
+Information on the filters and sorts available are here: https://developers.pixlee.com/reference#consuming-content
+
+As of now, the following filters are supported by SDK:
+
+min_instagram_followers
+min_twitter_followers
+denied_photos
+starred_photos
+flagged_photos (Note: false is equivalent to null here.)
+deleted_photos
+has_permission (Note: false is equivalent to null here.)
+has_product
+in_stock_only (Note: false is equivalent to null here.)
+content_source
+content_type
+filter_by_subcaption
+has_action_link
+submitted_date_start
+submitted_date_end
+in_categories
+computer_vision
+filter_by_location
+filter_by_radius
+
+The following sorts are supported by SDK:
+
+recency - The date the content was collected.
+random - Randomized.
+pixlee_shares - Number of times the content was shared from a Pixlee widget.
+pixlee_likes - Number of likes the content received from a Pixlee widget.
+popularity - Popularity of the content on its native platform.
+dynamic - Our "secret sauce" -- a special sort that highlights high performance content and updates according to the continued performance of live content.
+
+### Example
+
 ```
 
 //=========================================================
