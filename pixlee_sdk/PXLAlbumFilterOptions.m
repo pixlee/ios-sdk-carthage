@@ -168,7 +168,8 @@
     if(self.computerVision){
         NSError * err;
         NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:0 error:&err];
-        options[@"computer_vision"] = jsonDataComputerVision;
+        
+        options[@"computer_vision"] = [[NSString alloc] initWithData:jsonDataComputerVision encoding:NSUTF8StringEncoding];
     }
     if(self.filterByLocation){
         NSError * err;
@@ -178,7 +179,7 @@
     if(self.filterByUserhandle){
         NSError * err;
         NSData * jsonData = [NSJSONSerialization dataWithJSONObject:self.filterByUserhandle options:0 error:&err];
-        options[@"filter_by_userhandle"] = jsonData;
+        options[@"filter_by_userhandle"] = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     if(self.filterByRadius){
         options[@"filter_by_radius"] = self.filterByRadius;
