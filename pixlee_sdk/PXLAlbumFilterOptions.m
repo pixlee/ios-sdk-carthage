@@ -166,20 +166,20 @@
         options[@"in_categories"] = self.inCategories;
     }
     if(self.computerVision){
-        NSError * err;
-        NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:0 error:&err];
+//        NSError * err;
+//        NSData * jsonDataComputerVision = [NSJSONSerialization dataWithJSONObject:self.computerVision options:0 error:&err];
         
-        options[@"computer_vision"] = [[NSString alloc] initWithData:jsonDataComputerVision encoding:NSUTF8StringEncoding];
+        options[@"computer_vision"] = self.computerVision;
     }
     if(self.filterByLocation){
         NSError * err;
         NSData * jsonDataFilterLocation = [NSJSONSerialization dataWithJSONObject:self.filterByLocation options:0 error:&err];
-        options[@"filter_by_location"] = jsonDataFilterLocation;
+        options[@"filter_by_location"] = self.filterByLocation;
     }
     if(self.filterByUserhandle){
         NSError * err;
         NSData * jsonData = [NSJSONSerialization dataWithJSONObject:self.filterByUserhandle options:0 error:&err];
-        options[@"filter_by_userhandle"] = jsonData;
+        options[@"filter_by_userhandle"] = self.filterByUserhandle;
     }
     if(self.filterByRadius){
         options[@"filter_by_radius"] = self.filterByRadius;
