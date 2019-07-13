@@ -19,6 +19,7 @@ Information on the filters and sorts available are here: https://developers.pixl
 
 As of now, the following filters are supported by SDK:
 
+```
 min_instagram_followers
 min_twitter_followers
 denied_photos
@@ -38,15 +39,18 @@ in_categories
 computer_vision
 filter_by_location
 filter_by_radius
+```
 
 The following sorts are supported by SDK:
 
+```
 recency - The date the content was collected.
 random - Randomized.
 pixlee_shares - Number of times the content was shared from a Pixlee widget.
 pixlee_likes - Number of likes the content received from a Pixlee widget.
 popularity - Popularity of the content on its native platform.
 dynamic - Our "secret sauce" -- a special sort that highlights high performance content and updates according to the continued performance of live content.
+```
 
 ### Example
 
