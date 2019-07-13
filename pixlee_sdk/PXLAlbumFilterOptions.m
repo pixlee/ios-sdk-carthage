@@ -76,10 +76,10 @@
 - (NSString *)urlParamString {
     NSMutableDictionary *options = @{}.mutableCopy;
     if(self.minInstagramFollowers){
-        options[@"min_instagram_followers"] = @(self.minInstagramFollowers);
+        options[@"min_instagram_followers"] = [NSString stringWithFormat:@"%li",  self.minInstagramFollowers];
     }
     if(self.minTwitterFollowers){
-        options[@"min_twitter_followers"] = @(self.minTwitterFollowers);
+        options[@"min_twitter_followers"] = [NSString stringWithFormat:@"%li",  self.minTwitterFollowers];
     }
     if(self.flagDeniedPhotos ){
         if(self.deniedPhotos){
