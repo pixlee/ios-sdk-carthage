@@ -10,7 +10,7 @@
 
 @implementation PXLAlbumFilterOptions
 
-@synthesize deniedPhotos = _deniedPhotose;
+@synthesize deniedPhotos = _deniedPhotos;
 @synthesize starredPhotos = _starredPhotos;
 @synthesize deletedPhotos = _deletedPhotos;
 @synthesize flaggedPhotos = _flaggedPhotos;
@@ -23,7 +23,7 @@
 
 - (void)setDeniedPhotos:(BOOL)deniedPhotos{
     NSLog(@"Setting bool to %s", deniedPhotos ? "true" : "false");
-    _deniedPhotose = deniedPhotos;
+    _deniedPhotos = deniedPhotos;
     self.flagDeniedPhotos = true;
 }
 
