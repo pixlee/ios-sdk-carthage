@@ -12,10 +12,16 @@
 
 #endif /* PXLAnalytics_h */
 
+typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
+    PXLEvent,
+};
+
 @interface PXLAnalytics : NSObject
 
 @property (nonatomic) NSUInteger minInstagramFollowers;
-
+@property (nonatomic) PXLAnalyticsType eventType;
+@property (nonatomic, copy) NSString *UDID;
+@property (nonatomic, copy) NSString *platform;
 - (NSString *)urlParamString;
 
 

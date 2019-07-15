@@ -113,4 +113,16 @@
 - (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock;
 
 
+
+
+- (NSURLSessionDataTask *)triggerEventOpenedWidget:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventOpenedLightboxt:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventActionClicked:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventLoadMore:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventNavRight:(void (^)(NSError *error))completionBlock;
+
+
+- (NSURLSessionDataTask *)triggerEventAddCart:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventConvertedPhoto:(void (^)(NSError *error))completionBlock;
+
 @end

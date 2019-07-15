@@ -9,13 +9,31 @@
 #import <Foundation/Foundation.h>
 #import "PXLAnalytics.h"
 
+
+
 @implementation PXLAnalytics
+
 
 - (instancetype)init {
     self = [super init];
     return self;
 }
 
+- (NSArray *)eventTypeKeys {
+    static NSArray *eventTypeKeys = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        eventTypeKeys = @[
+                         @"opened:widget",
+                         @"opened:lightbox",
+                         @"action:clicked",
+                         @"load:more",
+                         @"nav:right",
+                         @"add:to:cart"
+                         ];
+    });
+    return eventTypeKeys;
+}
 
 - (NSString *)urlParamString {
     NSMutableDictionary *options = @{}.mutableCopy;
