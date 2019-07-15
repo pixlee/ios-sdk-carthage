@@ -66,6 +66,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
     filterOptions.filterByUserhandle = dict;
 
+    NSString* identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
+    NSLog(@"output is : %@", identifier);
     
     album.filterOptions = filterOptions;
     
