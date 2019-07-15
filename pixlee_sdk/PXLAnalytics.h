@@ -11,3 +11,12 @@
 
 
 #endif /* PXLAnalytics_h */
+
+@interface PXLAnalytics : NSObject
+
+@property (nonatomic) NSUInteger minInstagramFollowers;
+
+- (NSString *)urlParamString;
+
+
+@end
