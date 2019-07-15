@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PXLAnalytics.h"
-
+#import <UIKit/UIKit.h>
 
 
 @implementation PXLAnalytics
@@ -16,6 +16,8 @@
 
 - (instancetype)init {
     self = [super init];
+    self.identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    self.platform = @"ios";
     return self;
 }
 

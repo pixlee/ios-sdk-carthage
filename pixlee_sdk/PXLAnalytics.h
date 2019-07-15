@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
 
 @property (nonatomic) NSUInteger minInstagramFollowers;
 @property (nonatomic) PXLAnalyticsType eventType;
-@property (nonatomic, copy) NSString *UDID;
+@property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *platform;
 - (NSString *)urlParamString;
 
