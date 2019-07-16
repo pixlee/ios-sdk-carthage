@@ -92,11 +92,15 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     //Analytics Events Example
     //openedLightbox
-    [self.album triggerEventOpenedWidget:<#(NSString *)#> :<#(NSMutableArray *)#> callback:<#^(NSError *error)completionBlock#>];
+    [self.album triggerEventOpenedWidget:@"photowall" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
 
     
     //openedWidget
-    
+    [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
     
     //conversion
     

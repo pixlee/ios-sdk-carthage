@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD659E5222DD030200BEF767 /* PXLAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = CD659E5122DD030200BEF767 /* PXLAnalytics.m */; };
+		CD659E5422DE790200BEF767 /* PXLAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = CD659E5322DD031F00BEF767 /* PXLAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8E3061E8C57A3004CF3E4 /* pixlee_sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8E3041E8C57A3004CF3E4 /* pixlee_sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8E3201E8C57C1004CF3E4 /* PXLAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE8E30C1E8C57C1004CF3E4 /* PXLAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDE8E3211E8C57C1004CF3E4 /* PXLAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE8E30D1E8C57C1004CF3E4 /* PXLAlbum.m */; };
@@ -177,6 +178,7 @@
 				CDE8E3241E8C57C1004CF3E4 /* PXLAlbumSortOptions.h in Headers */,
 				CDE8E3221E8C57C1004CF3E4 /* PXLAlbumFilterOptions.h in Headers */,
 				CDE8E3301E8C57C1004CF3E4 /* PXLProduct.h in Headers */,
+				CD659E5422DE790200BEF767 /* PXLAnalytics.h in Headers */,
 				CDE8E3061E8C57A3004CF3E4 /* pixlee_sdk.h in Headers */,
 				CDE8E3201E8C57C1004CF3E4 /* PXLAlbum.h in Headers */,
 			);
@@ -267,9 +269,9 @@
 				CDE8E3211E8C57C1004CF3E4 /* PXLAlbum.m in Sources */,
 				CDE8E3231E8C57C1004CF3E4 /* PXLAlbumFilterOptions.m in Sources */,
 				CDE8E3291E8C57C1004CF3E4 /* PXLClient.m in Sources */,
+				CD659E5222DD030200BEF767 /* PXLAnalytics.m in Sources */,
 				CDE8E3311E8C57C1004CF3E4 /* PXLProduct.m in Sources */,
 				CDE8E32B1E8C57C1004CF3E4 /* PXLPhoto.m in Sources */,
-				CD659E5222DD030200BEF767 /* PXLAnalytics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
