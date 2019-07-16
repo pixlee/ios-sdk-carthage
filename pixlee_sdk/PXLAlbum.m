@@ -202,7 +202,11 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
 - (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget  callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedWidget";
     NSMutableDictionary *params = @{}.mutableCopy;
-    [params setObject:self.identifier forKey:@"album_id"];
+    if(self.sku){
+        [params setObject:self.sku forKey:@"album_id"];
+    }else{
+        [params setObject:self.identifier forKey:@"album_id"];
+    }
     [params setObject:widget forKey:@"widget"];
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
@@ -222,7 +226,11 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
 -(NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedLightbox";
     NSMutableDictionary *params = @{}.mutableCopy;
-    [params setObject:self.identifier forKey:@"album_id"];
+    if(self.sku){
+        [params setObject:self.sku forKey:@"album_id"];
+    }else{
+        [params setObject:self.identifier forKey:@"album_id"];
+    }
     [params setObject:album_photo_id forKey:@"album_photo_id"];
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];

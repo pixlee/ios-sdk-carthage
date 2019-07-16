@@ -104,7 +104,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         NSLog(@"logged");
     }];
     
-    //conversion
+    //Conversion Analytics Events
+    //Setup some constants
     static NSString * const currency = @"USD";
     //Product_1
     static NSString * const product_sku = @"SL-BENJ";
@@ -121,7 +122,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         NSLog(@"logged");
     }];
     
-    //add_to_cart
+    //Add_to_cart Analytics Events
+    //Setup some constants
     NSMutableDictionary *cart1 = [[NSMutableDictionary alloc]initWithCapacity:10];
     [cart1 setObject:price forKey:@"price"];
     [cart1 setObject:product_sku forKey:@"product_sku"];
@@ -131,16 +133,11 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     [cart1 setObject:product_sku2 forKey:@"product_sku"];
     [cart1 setObject:quantity2 forKey:@"quantity"];
     
-    
-    
     NSNumber *  quantity_total = @7;
     static NSString * const order_id = @"234232";
     static NSString * const cart_total = @"18.00";
     
-    
     NSMutableArray *cart_contents =[NSMutableArray arrayWithObjects:cart1,cart2,nil];
-    
-    
     
     [PXLAnalytics triggerEventConvertedPhoto:cart_contents :cart_total :quantity_total :order_id :currency callback:^(NSError *error) {
         NSLog(@"logged");
