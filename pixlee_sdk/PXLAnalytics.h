@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
 @property (nonatomic, copy) NSString *platform;
 - (NSString *)urlParamString;
 
-+ (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSNumber *)quantity :(NSString *)price :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
++ (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSNumber *)quantity :(NSString *)price  callback:(void (^)(NSError *error))completionBlock;
 + (NSURLSessionDataTask *)triggerEventConvertedPhoto:(NSMutableArray *)cart_contents :(NSString *)cart_total :(NSNumber *)cart_total_quantity :(NSString *)order_id :(NSString *)currency callback:(void (^)(NSError *error))completionBlock;
 
 

@@ -12,6 +12,7 @@
 #import <pixlee_sdk/PXLAlbumFilterOptions.h>
 #import <pixlee_sdk/PXLAlbumSortOptions.h>
 #import <pixlee_sdk/PXLClient.h>
+#import <pixlee_sdk/PXLAnalytics.h>
 
 @interface PXLExampleAlbumViewController ()
 
@@ -103,10 +104,15 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     }];
     
     //conversion
-    
+    [PXLAnalytics triggerEventAddCart:@"SL-BENJ" :1 :@"USD" :@"13.00" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
     
     //add_to_cart
-    
+    NSMutableArray cart_contents = 
+    [PXLAnalytics triggerEventAddCart:@"SL-BENJ" :1 :@"USD" :@"13.00" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
 
     // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
 //    [self loadNextPageOfPhotos];
