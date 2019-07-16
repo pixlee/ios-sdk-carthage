@@ -119,8 +119,8 @@
 
 // Please refer to the Pixlee https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for more information
 
-- (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget callback:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
 
 
 @end

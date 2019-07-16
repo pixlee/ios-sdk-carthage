@@ -89,12 +89,24 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         NSLog(@"%@",error);
     }];
     
+    
+    //Analytics Events Example
+    //openedLightbox
+    [self.album triggerEventOpenedWidget:<#(NSString *)#> :<#(NSMutableArray *)#> callback:<#^(NSError *error)completionBlock#>];
 
+    
+    //openedWidget
+    
+    
+    //conversion
+    
+    
+    //add_to_cart
+    
 
     // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
 //    [self loadNextPageOfPhotos];
     // If you are using api/v2/album/sku_from
-     https://developers.pixlee.com/reference#get-approved-content-for-product.
     [self loadNextPageOfPhotosFromSku];
 
 }
