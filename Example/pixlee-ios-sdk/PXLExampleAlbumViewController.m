@@ -93,7 +93,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     //Analytics Events Example
     //openedLightbox
-    [self.album triggerEventOpenedWidget:@"photowall" callback:^(NSError *error) {
+    [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
         NSLog(@"logged");
     }];
 
@@ -134,8 +134,8 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     [cart2 setObject:quantity2 forKey:@"quantity"];
     
     NSNumber *  quantity_total = @7;
-    static NSString * const order_id = @"234232";
-    static NSString * const cart_total = @"18.00";
+    NSNumber * const order_id = @234232;
+    NSNumber * const cart_total = @18.00;
     
     NSMutableArray *cart_contents =[NSMutableArray arrayWithObjects:cart1,cart2,nil];
     
