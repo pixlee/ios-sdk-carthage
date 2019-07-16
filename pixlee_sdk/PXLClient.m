@@ -50,7 +50,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
         NSMutableDictionary *mutableParams = parameters ? ((NSDictionary *)parameters).mutableCopy : @{}.mutableCopy;
-        mutableParams[@"api_key"] = self._apiKey;
+        mutableParams[@"API_KEY"] = self._apiKey;
         parameters = mutableParams;
     }
     return [super POST:URLString parameters:parameters success:success failure:failure];

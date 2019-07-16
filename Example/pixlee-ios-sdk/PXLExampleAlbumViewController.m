@@ -129,9 +129,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     [cart1 setObject:product_sku forKey:@"product_sku"];
     [cart1 setObject:quantity forKey:@"quantity"];
     NSMutableDictionary *cart2 = [[NSMutableDictionary alloc]initWithCapacity:10];
-    [cart1 setObject:price2 forKey:@"price"];
-    [cart1 setObject:product_sku2 forKey:@"product_sku"];
-    [cart1 setObject:quantity2 forKey:@"quantity"];
+    [cart2 setObject:price2 forKey:@"price"];
+    [cart2 setObject:product_sku2 forKey:@"product_sku"];
+    [cart2 setObject:quantity2 forKey:@"quantity"];
     
     NSNumber *  quantity_total = @7;
     static NSString * const order_id = @"234232";
