@@ -120,13 +120,7 @@
 // Please refer to the Pixlee https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for more information
 
 - (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventOpenedLightboxt:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventLoadMore:(NSUInteger *)page :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventNavRight:(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
 
-
-- (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSString *)quantity :(NSString *)price :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
-- (NSURLSessionDataTask *)triggerEventConvertedPhoto:(NSMutableArray *)cart_contents :(NSString *)cart_total :(NSUInteger *) cart_total_quantity  :(NSMutableArray *)payload callback:(void (^)(NSError *error))completionBlock;
 
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PXLAnalytics.h"
 #import <UIKit/UIKit.h>
-
+#import "PXLClient.h"
 
 @implementation PXLAnalytics
 
@@ -45,4 +45,53 @@
     return optionsString;
 }
 
++ (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSNumber *)quantity :(NSString *)price :(NSString *)currency callback:(void (^)(NSError *))completionBlock{
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:product_sku forKey:@"product_sku"];
+    [params setObject:quantity forKey:@"quantity"];
+    [params setObject:price forKey:@"price"];
+    [params setObject:@"ios" forKey:@"platform"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    if(currency){
+        [params setObject:currency forKey:@"currency"];
+    }
+    
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/addToCart";
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
++ (NSURLSessionDataTask *)triggerEventConvertedPhoto:(NSMutableArray *)cart_contents :(NSString *)cart_total :(NSNumber *)cart_total_quantity :(NSString *)order_id :(NSString *)currency callback:(void (^)(NSError *))completionBlock{
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:cart_contents forKey:@"cart_contents"];
+    [params setObject:cart_total_quantity forKey:@"cart_total_quantity"];
+    [params setObject:cart_total forKey:@"cart_total"];
+    [params setObject:@"ios" forKey:@"platform"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    if(order_id){
+        [params setObject:order_id forKey:@"order_id"];
+    }
+    if(currency){
+        [params setObject:currency forKey:@"currency"];
+    }
+    
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/conversion";
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
 @end

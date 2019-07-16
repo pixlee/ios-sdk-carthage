@@ -197,4 +197,46 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     }
 }
 
+
+
+- (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget  callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedWidget";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:self.identifier forKey:@"album_id"];
+    [params setObject:widget forKey:@"widget"];
+    [params setObject:@"ios" forKey:@"platform"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
+-(NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedLightbox";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:self.identifier forKey:@"album_id"];
+    [params setObject:album_photo_id forKey:@"album_photo_id"];
+    [params setObject:@"ios" forKey:@"platform"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
 @end
