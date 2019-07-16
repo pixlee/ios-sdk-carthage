@@ -57,7 +57,12 @@
     }
     
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/addToCart";
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    
+    NSData *optionsData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
+    NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];
+    
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:optionsData success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
@@ -83,7 +88,11 @@
     }
     
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/conversion";
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSData *optionsData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
+    NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];
+    
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:optionsString success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
