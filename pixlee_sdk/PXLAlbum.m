@@ -211,11 +211,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
     
-    
-    NSData *optionsData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
-    NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];
-    
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:optionsString success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
@@ -239,11 +235,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
     
-    NSData *optionsData = [NSJSONSerialization dataWithJSONObject:params options:0 error:nil];
-    NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];
-    
-    
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:optionsString success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
