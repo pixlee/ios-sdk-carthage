@@ -223,7 +223,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     return dataTask;
 }
 
--(NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id :(NSMutableArray *)payload callback:(void (^)(NSError *))completionBlock{
+-(NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedLightbox";
     NSMutableDictionary *params = @{}.mutableCopy;
     if(self.sku){
