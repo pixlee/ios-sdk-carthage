@@ -91,18 +91,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     }];
     
     
-    //Analytics Events Example
-    //openedLightbox
-    [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
-        NSLog(@"logged");
-    }];
 
-    
-    
-    //openedWidget
-    [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
-        NSLog(@"logged");
-    }];
     
     //Conversion Analytics Events
     //Setup some constants
@@ -148,6 +137,19 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // If you are using api/v2/album/sku_from
     [self loadNextPageOfPhotosFromSku];
 
+    
+    //Analytics Events Example
+    //openedLightbox
+    [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
+    
+    
+    
+    //openedWidget
+    [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
 }
 
 @end

@@ -157,6 +157,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
                 params[@"page"] = @(self.lastPageFetched + 1);
             }
             NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+                self.identifier = responseObject[@"album_id"];
                 NSArray *responsePhotos = responseObject[@"data"];
                 NSArray *photos = [PXLPhoto photosFromArray:responsePhotos inAlbum:self];
                 if (self.lastPageFetched == NSNotFound) {
