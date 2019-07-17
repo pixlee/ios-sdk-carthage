@@ -48,7 +48,7 @@
 + (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSNumber *)quantity :(NSString *)price :(NSString *)currency callback:(void (^)(NSError *))completionBlock{
     NSMutableDictionary *params = @{}.mutableCopy;
     [params setObject:product_sku forKey:@"product_sku"];
-    [params setObject:quantity forKey:@"quantity"];
+    [params setObject:[quantity stringValue] forKey:@"quantity"];
     [params setObject:price forKey:@"price"];
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
