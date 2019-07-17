@@ -210,7 +210,10 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     }
     [params setObject:widget forKey:@"widget"];
     [params setObject:@"ios" forKey:@"platform"];
-    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    NSString *  udid_bs = @"jeff_is_a_demi_god_hercules_and_goat";
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid_bs forKey:@"uid"];
     
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
@@ -234,7 +237,10 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     }
     [params setObject:album_photo_id forKey:@"album_photo_id"];
     [params setObject:@"ios" forKey:@"platform"];
-    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    NSString *  udid_bs = @"jeff_is_a_demi_god_hercules_and_goat";
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid_bs forKey:@"uid"];
     
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
