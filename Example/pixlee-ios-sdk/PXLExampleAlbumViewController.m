@@ -109,7 +109,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     NSNumber * const quantity2 = @5;
     
     
-    //EVENT add:cart refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    //EVENT add:cart refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [PXLAnalytics triggerEventAddCart:product_sku :quantity :price :currency callback:^(NSError *error) {
         NSLog(@"logged");
     }];
@@ -133,27 +133,34 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     
     
-     //EVENT converted:photo refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+     //EVENT converted:photo refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [PXLAnalytics triggerEventConvertedPhoto:cart_contents :cart_total :quantity_total :order_id :currency callback:^(NSError *error) {
         NSLog(@"logged");
     }];
 
     // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
     // If you are using api/v2/album/sku_from
-    [self loadNextPageOfPhotosFromSku];
+    // Refer to pixlee_sdk PXLAbum.h
+    [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+        //It's important to trigger these events after the LoadNextPage event
+    
+        
+        //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+        [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
+            NSLog(@"logged");
+        }];
+        
+        
+        
+        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+        [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+            NSLog(@"logged");
+        }];
+    }];
 
     
     
-    //Analytics Events Example
-    //EVENT opened:widget refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-    [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
-        NSLog(@"logged");
-    }];
-    
-    //EVENT opened:lightbox refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-    [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
-        NSLog(@"logged");
-    }];
+
 }
 
 @end
