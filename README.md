@@ -97,7 +97,7 @@ album.perPage = 100;
 
 If you are retriving the content for a sku you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithSkuIdentifier:<SKU ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotosFromSku:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotosFromSku:` successively will load each page in turn.
 
-Example
+### Example
 ```
 
 //=========================================================
@@ -140,6 +140,7 @@ album.perPage = 100;
 }];
 
 ```
+### Notes
 
 Additionally, you can control how an album loads its data using `PXLAlbumFilterOptions` and `PXLAlbumSortOptions`. To use these, create a new instance with `[PXLAlbumFilterOptions new]` or `[PXLAlbumSortOptions new]`, set the necessary properties, and then set those objects to the `filterOptions` and `sortOptions` properties on your album. Make sure to set these before calling `loadNextPageOfPhotos:`.
 
@@ -154,6 +155,111 @@ If a user taps on a photo in the `PXLAlbumViewController`, we present a detail v
 * the platform source of the photo (e.g. Instagram)
 * the photo's caption (if one is available)
 * any products associated with that photo (displayed as a horizontal list of products)
+
+### Analytics
+
+The following events are supported by the sdk:
+```
+Add to Cart : Call this whenever and wherever an add to cart event happens
+User Completes Checkout: Call this whenever a user completes a checkout and makes a purchase
+User Visits a Page with a Pixlee Widget: Call this whenever a user visits a page which as a Pixlee Widget on it
+User Clicks on the Pixlee Widget : Call this whenever a user clicks on an item in the Pixlee widget
+
+```
+#### Example Add to Cart
+```
+
+    //Setup some constants
+    static NSString * const currency = @"USD";
+    //Product 1 example
+    static NSString * const product_sku = @"SL-BENJ";
+    static NSString * const price = @"13.00";
+    NSNumber * const quantity = @2;
+    
+    
+    //EVENT add:cart refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    [PXLAnalytics triggerEventAddCart:product_sku :quantity :price :currency callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
+```
+#### User Completes Checkout
+```
+    //Setup some constants
+    static NSString * const currency = @"USD";
+    //Product 1 example
+    static NSString * const product_sku = @"SL-BENJ";
+    static NSString * const price = @"13.00";
+    NSNumber * const quantity = @2;
+    //product 2 example
+    static NSString * const product_sku2 = @"AD-1324S";
+    static NSString * const price2 = @"53.07";
+    NSNumber * const quantity2 = @5;
+    
+    NSMutableDictionary *cart1 = [[NSMutableDictionary alloc]initWithCapacity:10];
+    [cart1 setObject:price forKey:@"price"];
+    [cart1 setObject:product_sku forKey:@"product_sku"];
+    [cart1 setObject:quantity forKey:@"quantity"];
+    NSMutableDictionary *cart2 = [[NSMutableDictionary alloc]initWithCapacity:10];
+    [cart2 setObject:price2 forKey:@"price"];
+    [cart2 setObject:product_sku2 forKey:@"product_sku"];
+    [cart2 setObject:quantity2 forKey:@"quantity"];
+    
+    NSNumber *  quantity_total = @7;
+    NSNumber * const order_id = @234232;
+    NSNumber * const cart_total = @18.00;
+    
+    NSMutableArray *cart_contents =[NSMutableArray arrayWithObjects:cart1,cart2,nil];
+    
+    
+    
+     //EVENT converted:photo refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    [PXLAnalytics triggerEventConvertedPhoto:cart_contents :cart_total :quantity_total :order_id :currency callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
+```
+#### Example User Visits a Page with a Pixlee Widget
+#### Notes
+It's important to trigger this event after the LoadNextPage event
+```
+    PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
+    
+    
+    // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
+    // If you are using api/v2/album/sku_from
+    // Refer to pixlee_sdk PXLAbum.h
+    [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+    //It's important to trigger these events after the LoadNextPage event
+        
+        //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+        [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
+            NSLog(@"logged");
+        }];
+
+    }];
+
+
+```
+#### Example User Clicks on the Pixlee Widget
+#### Notes
+It's important to trigger this event after the LoadNextPage event
+```
+    PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
+    
+    
+    // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
+    // If you are using api/v2/album/sku_from
+    // Refer to pixlee_sdk PXLAbum.h
+    [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+    //It's important to trigger these events after the LoadNextPage event
+        
+        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+        [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+            NSLog(@"logged");
+        }];
+    }];
+
+
+```
 
 ### Including Pixlee SDK
 ##### If you're building for iOS, tvOS, or watchOS
