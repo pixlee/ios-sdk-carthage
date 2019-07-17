@@ -51,11 +51,10 @@
     [params setObject:[quantity stringValue] forKey:@"quantity"];
     [params setObject:price forKey:@"price"];
     [params setObject:@"ios" forKey:@"platform"];
-    NSString *  udid_bs = @"jeff_is_a_demi_god_hercules_and_goat";
     NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    [params setObject:udid_bs forKey:@"uid"];
-    [params setObject:udid_bs forKey:@"distinct_user_hash"];
-    [params setObject:udid_bs forKey:@"fingerprint"];
+    [params setObject:udid forKey:@"uid"];
+    [params setObject:udid forKey:@"distinct_user_hash"];
+    [params setObject:udid forKey:@"fingerprint"];
     
     if(currency){
         [params setObject:currency forKey:@"currency"];
@@ -79,9 +78,9 @@
     [params setObject:cart_total_quantity forKey:@"cart_total_quantity"];
     [params setObject:cart_total forKey:@"cart_total"];
     [params setObject:@"ios" forKey:@"platform"];
-    NSString *  udid_bs = @"jeff_is_a_demi_god_hercules_and_goat";
+
     NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    [params setObject:udid_bs forKey:@"uid"];
+    [params setObject:udid forKey:@"uid"];
     if(order_id){
         [params setObject:order_id forKey:@"order_id"];
     }
