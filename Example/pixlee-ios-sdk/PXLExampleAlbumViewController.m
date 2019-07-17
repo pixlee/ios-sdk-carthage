@@ -39,36 +39,35 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
-    NSString *dateStr = @"20190101";
+//    NSString *dateStr = @"20190101";
     // Convert string to date object
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyyMMdd"];
-    NSDate *date = [dateFormat dateFromString:dateStr];
+//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+//    [dateFormat setDateFormat:@"yyyyMMdd"];
+//    NSDate *date = [dateFormat dateFromString:dateStr];
     
-    filterOptions.submittedDateStart = date;
+//    filterOptions.submittedDateStart = date;
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
     //Boolean tests
-    filterOptions.hasPermission = false;
-    filterOptions.hasProduct = false;
+//    filterOptions.hasPermission = false;
+//    filterOptions.hasProduct = false;
     
     //NsuInteger Test
-    filterOptions.minInstagramFollowers = 200;
+//    filterOptions.minInstagramFollowers = 200;
     
     //NSMutableArray
-    NSString *source = @"instagram";
-    filterOptions.contentSource = [NSMutableArray arrayWithObjects:source,nil];
+//    NSString *source = @"instagram";
+//    filterOptions.contentSource = [NSMutableArray arrayWithObjects:source,nil];
     
     //NsDictionnary -> Json
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]initWithCapacity:10];
     
-    NSString *c1 = @"tonystark";
-    NSString *c2 = @"thanos";
-    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
-    filterOptions.filterByUserhandle = dict;
+//    NSString *c1 = @"tonystark";
+//    NSString *c2 = @"thanos";
+//    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
+//    filterOptions.filterByUserhandle = dict;
 
-    NSString* identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
-    NSLog(@"output is : %@", identifier);
+    
     
     album.filterOptions = filterOptions;
     
@@ -142,6 +141,19 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // If you are using api/v2/album/sku_from
     // Refer to pixlee_sdk PXLAbum.h
     [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+        NSLog(@"%@",error);
+        if (photos.count) {
+            NSMutableArray *indexPaths = @[].mutableCopy;
+            NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+            NSLog(@"%@", [self.album.photos objectAtIndex:0]);
+            [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                NSInteger itemNum = firstIndex + idx;
+                NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];
+                [indexPaths addObject:indexPath];
+            }];
+            [self.albumCollectionView insertItemsAtIndexPaths:indexPaths];
+        }
+        
         //It's important to trigger these events after the LoadNextPage event
         //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
         [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
@@ -151,12 +163,14 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         
         
         //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-        [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+        [self.album triggerEventOpenedLightbox:@187542438 callback:^(NSError *error) {
             NSLog(@"logged");
         }];
         
 
     }];
+    
+    
 
     
   

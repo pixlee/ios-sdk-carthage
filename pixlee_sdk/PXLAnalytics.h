@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
 
-+ (NSURLSessionDataTask *)triggerEventConvertedPhoto:(NSMutableArray *)cart_contents :(NSNumber *)cart_total :(NSNumber *)cart_total_quantity :(NSString *)order_id :(NSString *)currency callback:(void (^)(NSError *error))completionBlock;
++ (NSURLSessionDataTask *)triggerEventConvertedPhoto:(NSMutableArray *)cart_contents :(NSNumber *)cart_total :(NSNumber *)cart_total_quantity :(NSNumber *)order_id :(NSString *)currency callback:(void (^)(NSError *error))completionBlock;
 
 
 @end
