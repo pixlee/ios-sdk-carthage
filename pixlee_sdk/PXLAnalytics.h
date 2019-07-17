@@ -29,7 +29,9 @@ typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
 /**
  Trigger lightbox opened widget to the Pixlee backend.
  
- @param product_sku string. quantity number. price string. currency string. callback A block called after the photos have been loaded or an error has occurred. refer to https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for details.
+ @param product_sku string. quantity number. price string. currency string. 
+ callback A block called after the photos have been loaded or an error has occurred.
+ refer to https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for details.
  
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
@@ -43,7 +45,9 @@ typedef NS_ENUM(NSInteger, PXLAnalyticsType) {
 /**
  Trigger lightbox opened widget to the Pixlee backend.
  
- @param cart_contents array. cart_total number. cart_total_quantity number. order_id number. currency string. callback A block called after the photos have been loaded or an error has occurred. refer to https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for details.
+ @param cart_contents array. cart_total number. cart_total_quantity number. order_id number. currency string.
+ callback A block called after the photos have been loaded or an error has occurred. 
+ refer to https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for details.
  
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
