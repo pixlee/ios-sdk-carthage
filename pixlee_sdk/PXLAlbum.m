@@ -204,7 +204,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedWidget";
     NSMutableDictionary *params = @{}.mutableCopy;
     if(self.sku){
-        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event. refer to Readme ");
         [params setObject:@"" forKey:@"album_id"];
     }else{
         [params setObject:self.identifier forKey:@"album_id"];

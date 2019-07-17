@@ -119,7 +119,31 @@
 
 // Please refer to the Pixlee https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for more information
 
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ Trigger opened widget to the Pixlee backend.
+ 
+ @param widget type 'photowall','horizontal'... callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
 - (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget callback:(void (^)(NSError *error))completionBlock;
+
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ Trigger lightbox opened widget to the Pixlee backend.
+ 
+ @param album_photo_id from PXLPhoto class. callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
 - (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
 
 

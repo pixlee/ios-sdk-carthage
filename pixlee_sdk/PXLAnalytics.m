@@ -14,36 +14,6 @@
 @implementation PXLAnalytics
 
 
-- (instancetype)init {
-    self = [super init];
-    self.identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    self.platform = @"ios";
-    return self;
-}
-
-- (NSArray *)eventTypeKeys {
-    static NSArray *eventTypeKeys = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        eventTypeKeys = @[
-                         @"opened:widget",
-                         @"opened:lightbox",
-                         @"action:clicked",
-                         @"load:more",
-                         @"nav:right",
-                         @"add:to:cart"
-                         ];
-    });
-    return eventTypeKeys;
-}
-
-- (NSString *)urlParamString {
-    NSMutableDictionary *options = @{}.mutableCopy;
-
-    NSData *optionsData = [NSJSONSerialization dataWithJSONObject:options options:0 error:nil];
-    NSString *optionsString = [[NSString alloc] initWithData:optionsData encoding:NSUTF8StringEncoding];
-    return optionsString;
-}
 
 + (NSURLSessionDataTask *)triggerEventAddCart:(NSString *)product_sku :(NSNumber *)quantity :(NSString *)price :(NSString *)currency callback:(void (^)(NSError *))completionBlock{
     NSMutableDictionary *params = @{}.mutableCopy;

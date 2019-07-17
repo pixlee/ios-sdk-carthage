@@ -135,7 +135,13 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
 //    [self loadNextPageOfPhotos];
     // If you are using api/v2/album/sku_from
-    [self loadNextPageOfPhotosFromSku ];
+    [self loadNextPageOfPhotosFromSku callback:^(PXLPhoto *photo, NSError *error) {
+        NSLog(@"%@", photo.cdnOriginalUrl);
+        NSLog(@"%@", photo.cdnLargeUrl);
+        NSLog(@"%@", photo.cdnMediumUrl);
+        NSLog(@"%@", photo.cdnSmallUrl);
+        NSLog(@"%@",error);
+    }];
 
     
     //Analytics Events Example
