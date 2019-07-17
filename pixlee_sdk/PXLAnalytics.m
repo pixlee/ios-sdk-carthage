@@ -52,6 +52,9 @@
     [params setObject:price forKey:@"price"];
     [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"uid"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"distinct_user_hash"];
+    [params setObject:[[[UIDevice currentDevice] identifierForVendor] UUIDString] forKey:@"fingerprint"];
+    
     if(currency){
         [params setObject:currency forKey:@"currency"];
     }
