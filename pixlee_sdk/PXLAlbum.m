@@ -214,6 +214,14 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     [params setObject:udid forKey:@"uid"];
+    NSMutableArray *photoIds = [NSMutableArray array];
+    for (PXLPhoto* photo in self.photos)
+    {
+        [photoIds addObject:photo.albumPhotoId];
+    }
+    NSString *joinedComponentsPhotoIds = [photoIds componentsJoinedByString:@","];
+    
+    [params setObject:joinedComponentsPhotoIds forKey:@"photos"];
     
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
