@@ -91,9 +91,7 @@
 
 + (NSURLSessionDataTask *)getPhotoWithId:(NSString *)identifier callback:(void (^)(PXLPhoto *photo, NSError *error))completionBlock {
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
-    NSLog(@"%@", identifier);
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
-    NSLog(@"%@", requestString);
     NSMutableDictionary *params = @{}.mutableCopy;
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];

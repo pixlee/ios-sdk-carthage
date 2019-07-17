@@ -145,21 +145,21 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         //It's important to trigger these events after the LoadNextPage event
     
         
-        //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-        [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
-            NSLog(@"logged");
-        }];
-        
-        
-        
-        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-        [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
-            NSLog(@"logged");
-        }];
+
     }];
 
     
+    //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
     
+    
+    
+    //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+        NSLog(@"logged");
+    }];
 
 }
 
