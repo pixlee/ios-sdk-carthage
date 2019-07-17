@@ -12,7 +12,9 @@
 #import "PXLAlbumFilterOptions.h"
 
 /**
- `PXLAlbum` represents an album on the Pixlee platform. It handles the loading of data from the Pixlee server for you (as long as your `PXLClient` has been initialized). The `PXLAlbum` supports infinite scroll UI by calling `loadNextPageOfPhotos:`.
+ `PXLAlbum` represents an album on the Pixlee platform. 
+ It handles the loading of data from the Pixlee server for you (as long as your `PXLClient` has been initialized).
+ The `PXLAlbum` supports infinite scroll UI by calling `loadNextPageOfPhotos:`.
  */
 
 @interface PXLAlbum : NSObject
@@ -54,7 +56,8 @@
 @property (nonatomic, strong) PXLAlbumSortOptions *sortOptions;
 
 /**
- Create and set a `PXLAlbumFilterOptions` object to specify how the photos should be filtered when making a server request. Changing this will clear all existing photos and require a reload of the album.
+ Create and set a `PXLAlbumFilterOptions` object to specify how the photos should be filtered when making a server request.
+ Changing this will clear all existing photos and require a reload of the album.
  */
 @property (nonatomic, strong) PXLAlbumFilterOptions *filterOptions;
 
@@ -129,7 +132,8 @@
 /**
  Trigger opened widget to the Pixlee backend.
  
- @param widget type 'photowall','horizontal'... callback A block called after the photos have been loaded or an error has occurred.
+ @param widget type 'photowall','horizontal'....
+callback A block called after the photos have been loaded or an error has occurred.
  
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
