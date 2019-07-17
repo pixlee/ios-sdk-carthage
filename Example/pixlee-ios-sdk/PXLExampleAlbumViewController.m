@@ -93,20 +93,23 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
 
     
-    //Conversion Analytics Events
+    ///---------------------------------------------------------------
+    /// Analytics events refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+    ///---------------------------------------------------------------
+    
     //Setup some constants
     static NSString * const currency = @"USD";
-    //Product_1
+    //Product 1 example
     static NSString * const product_sku = @"SL-BENJ";
     static NSString * const price = @"13.00";
     NSNumber * const quantity = @2;
-    //product_2
+    //product 2 example
     static NSString * const product_sku2 = @"AD-1324S";
     static NSString * const price2 = @"53.07";
     NSNumber * const quantity2 = @5;
     
     
-    
+    //EVENT add:cart refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [PXLAnalytics triggerEventAddCart:product_sku :quantity :price :currency callback:^(NSError *error) {
         NSLog(@"logged");
     }];
@@ -128,31 +131,26 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     
     NSMutableArray *cart_contents =[NSMutableArray arrayWithObjects:cart1,cart2,nil];
     
+    
+    
+     //EVENT converted:photo refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [PXLAnalytics triggerEventConvertedPhoto:cart_contents :cart_total :quantity_total :order_id :currency callback:^(NSError *error) {
         NSLog(@"logged");
     }];
 
     // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
-//    [self loadNextPageOfPhotos];
     // If you are using api/v2/album/sku_from
-    [self loadNextPageOfPhotosFromSku callback:^(PXLPhoto *photo, NSError *error) {
-        NSLog(@"%@", photo.cdnOriginalUrl);
-        NSLog(@"%@", photo.cdnLargeUrl);
-        NSLog(@"%@", photo.cdnMediumUrl);
-        NSLog(@"%@", photo.cdnSmallUrl);
-        NSLog(@"%@",error);
-    }];
+    [self loadNextPageOfPhotosFromSku];
 
     
+    
     //Analytics Events Example
-    //openedLightbox
+    //EVENT opened:widget refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
         NSLog(@"logged");
     }];
     
-    
-    
-    //openedWidget
+    //EVENT opened:lightbox refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
         NSLog(@"logged");
     }];

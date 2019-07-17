@@ -48,7 +48,8 @@
 @property (nonatomic, readonly) BOOL hasNextPage;
 
 /**
- Create and set a `PXLAlbumSortOptions` object to specify how the photos should be sorted. Changing this will clear all existing photos and require a reload of the album.
+ Create and set a `PXLAlbumSortOptions` object to specify how the photos should be sorted.
+ Changing this will clear all existing photos and require a reload of the album.
  */
 @property (nonatomic, strong) PXLAlbumSortOptions *sortOptions;
 
@@ -93,7 +94,8 @@
 /**
  Loads the next page of photos from the server. Each page will only be loaded once.
  
- @param completionBlock A block called after the photos have been loaded or an error has occurred. `photos` will contain the photos loaded in this network call.
+ @param completionBlock A block called after the photos have been loaded or an error has occurred.
+ `photos` will contain the photos loaded in this network call.
  
  @return The `NSURLSessionDataTask` used to load the data from the server.
  */
@@ -106,7 +108,8 @@
 /**
  Loads the next page of photos from the server. Each page will only be loaded once.
  
- @param completionBlock A block called after the photos have been loaded or an error has occurred. `photos` will contain the photos loaded in this network call.
+ @param completionBlock A block called after the photos have been loaded or an error has occurred.
+ `photos` will contain the photos loaded in this network call.
  
  @return The `NSURLSessionDataTask` used to load the data from the server.
  */
