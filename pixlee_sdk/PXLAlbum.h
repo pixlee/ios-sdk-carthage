@@ -151,7 +151,7 @@ callback A block called after the photos have been loaded or an error has occurr
  
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
-- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSString *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
+- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSNumber *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
 
 
 @end
