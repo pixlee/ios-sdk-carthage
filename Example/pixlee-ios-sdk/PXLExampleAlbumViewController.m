@@ -49,7 +49,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 
     //These parameters are examples. Please adjust, add or remove them during implementation.
     //Boolean tests
-    filterOptions.hasPermission = true;
+    filterOptions.hasPermission = false;
     filterOptions.hasProduct = false;
     
     //NsuInteger Test
@@ -142,7 +142,6 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // If you are using api/v2/album/sku_from
     // Refer to pixlee_sdk PXLAbum.h
     [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
-        NSLog(@"%@", self.album.identifier);
         //It's important to trigger these events after the LoadNextPage event
         //EVENT opened:widget refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
         [self.album triggerEventOpenedWidget:@"horizontal" callback:^(NSError *error) {
