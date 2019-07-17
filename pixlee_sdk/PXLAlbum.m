@@ -157,6 +157,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
                 params[@"page"] = @(self.lastPageFetched + 1);
             }
             NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+                self.identifier = responseObject[@"album_id"];
                 NSArray *responsePhotos = responseObject[@"data"];
                 NSArray *photos = [PXLPhoto photosFromArray:responsePhotos inAlbum:self];
                 if (self.lastPageFetched == NSNotFound) {
@@ -195,6 +196,70 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
         completionBlock(nil, nil);
         return nil;
     }
+}
+
+
+
+- (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget  callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedWidget";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.identifier){
+        [params setObject:self.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event. refer to Readme ");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:widget forKey:@"widget"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    NSMutableArray *photoIds = [NSMutableArray array];
+    for (PXLPhoto* photo in self.photos)
+    {
+        [photoIds addObject:photo.albumPhotoId];
+    }
+    NSString *joinedComponentsPhotoIds = [photoIds componentsJoinedByString:@","];
+    
+    [params setObject:joinedComponentsPhotoIds forKey:@"photos"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
+-(NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSNumber *)album_photo_id callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/openedLightbox";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.identifier){
+        [params setObject:self.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:album_photo_id forKey:@"album_photo_id"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
 }
 
 @end

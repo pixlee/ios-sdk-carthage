@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, PXLAlbumViewControllerDisplayMode) {
 
 @interface PXLAlbumViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) UICollectionView *albumCollectionView;
+
 @property (nonatomic, strong) UICollectionViewFlowLayout *gridLayout, *listLayout;
 @property (nonatomic) PXLAlbumViewControllerDisplayMode albumDisplayMode;
 @property (nonatomic, strong) UIButton *gridButton, *listButton;

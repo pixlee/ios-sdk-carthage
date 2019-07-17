@@ -12,7 +12,9 @@
 #import "PXLAlbumFilterOptions.h"
 
 /**
- `PXLAlbum` represents an album on the Pixlee platform. It handles the loading of data from the Pixlee server for you (as long as your `PXLClient` has been initialized). The `PXLAlbum` supports infinite scroll UI by calling `loadNextPageOfPhotos:`.
+ `PXLAlbum` represents an album on the Pixlee platform. 
+ It handles the loading of data from the Pixlee server for you (as long as your `PXLClient` has been initialized).
+ The `PXLAlbum` supports infinite scroll UI by calling `loadNextPageOfPhotos:`.
  */
 
 @interface PXLAlbum : NSObject
@@ -48,12 +50,14 @@
 @property (nonatomic, readonly) BOOL hasNextPage;
 
 /**
- Create and set a `PXLAlbumSortOptions` object to specify how the photos should be sorted. Changing this will clear all existing photos and require a reload of the album.
+ Create and set a `PXLAlbumSortOptions` object to specify how the photos should be sorted.
+ Changing this will clear all existing photos and require a reload of the album.
  */
 @property (nonatomic, strong) PXLAlbumSortOptions *sortOptions;
 
 /**
- Create and set a `PXLAlbumFilterOptions` object to specify how the photos should be filtered when making a server request. Changing this will clear all existing photos and require a reload of the album.
+ Create and set a `PXLAlbumFilterOptions` object to specify how the photos should be filtered when making a server request.
+ Changing this will clear all existing photos and require a reload of the album.
  */
 @property (nonatomic, strong) PXLAlbumFilterOptions *filterOptions;
 
@@ -93,7 +97,8 @@
 /**
  Loads the next page of photos from the server. Each page will only be loaded once.
  
- @param completionBlock A block called after the photos have been loaded or an error has occurred. `photos` will contain the photos loaded in this network call.
+ @param completionBlock A block called after the photos have been loaded or an error has occurred.
+ `photos` will contain the photos loaded in this network call.
  
  @return The `NSURLSessionDataTask` used to load the data from the server.
  */
@@ -106,11 +111,47 @@
 /**
  Loads the next page of photos from the server. Each page will only be loaded once.
  
- @param completionBlock A block called after the photos have been loaded or an error has occurred. `photos` will contain the photos loaded in this network call.
+ @param completionBlock A block called after the photos have been loaded or an error has occurred.
+ `photos` will contain the photos loaded in this network call.
  
  @return The `NSURLSessionDataTask` used to load the data from the server.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock;
+
+
+///---------------------
+/// Analytics Events
+///---------------------
+
+// Please refer to the Pixlee https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide for more information
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ Trigger opened widget to the Pixlee backend.
+ 
+ @param widget type 'photowall','horizontal'....
+callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget callback:(void (^)(NSError *error))completionBlock;
+
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ Trigger lightbox opened widget to the Pixlee backend.
+ 
+ @param album_photo_id from PXLPhoto class. callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSNumber *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
 
 
 @end
