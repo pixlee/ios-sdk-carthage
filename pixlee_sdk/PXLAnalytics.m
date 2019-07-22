@@ -31,7 +31,7 @@
     }
     
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/addToCart";
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
@@ -61,7 +61,7 @@
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/conversion";
     
     
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }

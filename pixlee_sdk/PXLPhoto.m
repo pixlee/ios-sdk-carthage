@@ -93,7 +93,7 @@
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
         if (completionBlock) {
             completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
