@@ -262,4 +262,61 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     return dataTask;
 }
 
+
+
+- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/actionClicked";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.identifier){
+        [params setObject:self.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:action_link forKey:@"action_link"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
+
+- (NSURLSessionDataTask *)triggerEventLoadMoreClicked:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/loadMore";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.identifier){
+        [params setObject:self.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:[@(self.lastPageFetched) stringValue] forKey:@"page"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+    
+}
 @end
