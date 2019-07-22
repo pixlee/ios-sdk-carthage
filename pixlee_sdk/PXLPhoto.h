@@ -91,4 +91,17 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 
 - (UIImage *)sourceIconImage;
 
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ User takes an Action after Clicking on an Item.
+ 
+ @param action_link from PXLPhoto class. callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *error))completionBlock;
+
 @end

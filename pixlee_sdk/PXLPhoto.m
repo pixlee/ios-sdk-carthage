@@ -154,4 +154,33 @@
     return nil;
 }
 
+- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/actionClicked";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.album.id){
+        [params setObject:self.album.id forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:action_link forKey:@"action_link_url"];
+    [params setObject:self.albumPhotoId forKey:@"album_photo_id"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
+
 @end
