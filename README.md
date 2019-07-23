@@ -261,6 +261,51 @@ It's important to trigger this event after the LoadNextPage event
 
 ```
 
+#### Example User make an action after clicking on an Item 
+```
+[PXLPhoto getPhotoWithId:@"299469263" callback:^(PXLPhoto *photo, NSError *error) {
+    
+
+    PXLProduct *p = [photo.products objectAtIndex:0];
+    NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@",url);
+
+    [photo triggerEventActionClicked:url callback:^(NSError *error) {
+    NSLog(@"triggered");
+    }];
+
+}];
+
+```
+
+#### Example User click Load more
+```
+[self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+NSLog(@"%@",error);
+if (photos.count) {
+    NSMutableArray *indexPaths = @[].mutableCopy;
+    NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+    NSLog(@"%@", [self.album.photos objectAtIndex:0]);
+    [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSInteger itemNum = firstIndex + idx;
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];
+        [indexPaths addObject:indexPath];
+    }];
+    [self.albumCollectionView insertItemsAtIndexPaths:indexPaths];
+}
+
+
+[self.album triggerEventLoadMoreClicked:^(NSError *error) {
+NSLog(@"logged");
+}];
+
+
+
+
+}];
+
+```
+
 ### Including Pixlee SDK
 ##### If you're building for iOS, tvOS, or watchOS
 1. Create a Cartfile that lists the frameworks you’d like to use in your project.
