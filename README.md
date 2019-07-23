@@ -164,6 +164,9 @@ Add to Cart : Call this whenever and wherever an add to cart event happens
 User Completes Checkout: Call this whenever a user completes a checkout and makes a purchase
 User Visits a Page with a Pixlee Widget: Call this whenever a user visits a page which as a Pixlee Widget on it
 User Clicks on the Pixlee Widget : Call this whenever a user clicks on an item in the Pixlee widget
+PXLAlbums →  Load More: Call this whenever a user clicks 'Load More' button on the widget
+
+PXLPhoto → Action Link Clicked: Call this whenever a user make an action after clicking on an item in the Pixlee widget
 
 ```
 #### Example Add to Cart
@@ -258,6 +261,51 @@ It's important to trigger this event after the LoadNextPage event
         }];
     }];
 
+
+```
+
+#### Example User make an action after clicking on an Item 
+```
+[PXLPhoto getPhotoWithId:@"299469263" callback:^(PXLPhoto *photo, NSError *error) {
+    
+
+    PXLProduct *p = [photo.products objectAtIndex:0];
+    NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@",url);
+
+    [photo triggerEventActionClicked:url callback:^(NSError *error) {
+    NSLog(@"triggered");
+    }];
+
+}];
+
+```
+
+#### Example User click Load more
+```
+[self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
+NSLog(@"%@",error);
+if (photos.count) {
+    NSMutableArray *indexPaths = @[].mutableCopy;
+    NSInteger firstIndex = [self.album.photos indexOfObject:[photos firstObject]];
+    NSLog(@"%@", [self.album.photos objectAtIndex:0]);
+    [photos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSInteger itemNum = firstIndex + idx;
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemNum inSection:0];
+        [indexPaths addObject:indexPath];
+    }];
+    [self.albumCollectionView insertItemsAtIndexPaths:indexPaths];
+}
+
+
+[self.album triggerEventLoadMoreClicked:^(NSError *error) {
+NSLog(@"logged");
+}];
+
+
+
+
+}];
 
 ```
 

@@ -33,7 +33,9 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
     self._apiKey = apiKey;
 }
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+
+
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
@@ -41,11 +43,11 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         mutableParams[@"api_key"] = self._apiKey;
         parameters = mutableParams;
     }
-    return [super GET:URLString parameters:parameters success:success failure:failure];
+    return [super GET:URLString parameters:parameters progress:nil success:success failure:failure];
 }
 
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure{
     self.requestSerializer = [AFJSONRequestSerializer serializer];
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
@@ -53,7 +55,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         mutableParams[@"API_KEY"] = self._apiKey;
         parameters = mutableParams;
     }
-    return [super POST:URLString parameters:parameters success:success failure:failure];
+    return [super POST:URLString parameters:parameters progress:nil success:success failure:failure];
 }
 
 

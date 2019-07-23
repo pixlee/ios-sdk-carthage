@@ -211,7 +211,7 @@
 		CDE8E2F81E8C57A3004CF3E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Pixlee;
 				TargetAttributes = {
 					CDE8E3001E8C57A3004CF3E4 = {

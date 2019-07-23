@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
+#import "PXLAlbum.h"
 
 typedef NS_ENUM(NSInteger, PXLPhotoSize) {
     PXLPhotoSizeThumbnail,
@@ -16,7 +17,6 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
     PXLPhotoSizeBig
 };
 
-@class PXLAlbum;
 
 /**
  `PXLPhoto` represents a photo object in the Pixlee API. `PXLPhoto` objects are created by their parent `PXLAlbum` when loaded from the server.
@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 @property (nonatomic) NSInteger existIn;
 @property (nonatomic, copy) NSString *collectTerm;
 @property (nonatomic, copy) NSString *albumPhotoId;
+@property (nonatomic, copy) NSString *albumId;
 @property (nonatomic) NSInteger likeCount;
 @property (nonatomic) NSInteger shareCount;
 @property (nonatomic, strong) NSURL *actionLink;
@@ -90,5 +91,18 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 - (NSURL *)photoUrlForSize:(PXLPhotoSize)photoSize;
 
 - (UIImage *)sourceIconImage;
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ User takes an Action after Clicking on an Item.
+ 
+ @param action_link from PXLPhoto class. callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *error))completionBlock;
 
 @end

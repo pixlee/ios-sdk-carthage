@@ -76,17 +76,28 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     sortOptions.sortType = PXLAlbumSortTypeRandom;
     sortOptions.ascending = true;
     album.sortOptions = sortOptions;
-    album.perPage = 3;
+    album.perPage = 1;
     
     // Set the album to load.
     self.album = album;
     // Example of loading a photo with an identifier
-    [PXLPhoto getPhotoWithId:@"299209785" callback:^(PXLPhoto *photo, NSError *error) {
-        NSLog(@"%@", photo.cdnOriginalUrl);
-        NSLog(@"%@", photo.cdnLargeUrl);
-        NSLog(@"%@", photo.cdnMediumUrl);
-        NSLog(@"%@", photo.cdnSmallUrl);
-        NSLog(@"%@",error);
+    [PXLPhoto getPhotoWithId:@"299469263" callback:^(PXLPhoto *photo, NSError *error) {
+        NSLog(@"hello there" );
+        NSLog(@"%@",photo.album.identifier);
+        
+        
+        
+        
+        PXLProduct *p = [photo.products objectAtIndex:0];
+        NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSLog(@"%@",url);
+        
+        
+        
+        [photo triggerEventActionClicked:url callback:^(NSError *error) {
+            NSLog(@"triggered");
+        }];
+        
     }];
     
     
@@ -160,7 +171,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
             NSLog(@"logged");
         }];
         
-        
+        [self.album triggerEventLoadMoreClicked:^(NSError *error) {
+            NSLog(@"logged");
+        }];
         
         //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
         [self.album triggerEventOpenedLightbox:@187542438 callback:^(NSError *error) {

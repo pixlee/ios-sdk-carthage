@@ -154,4 +154,18 @@ callback A block called after the photos have been loaded or an error has occurr
 - (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSNumber *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
 
 
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+Call this whenever a user clicks 'Load More' button on the widget
+ 
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventLoadMoreClicked:(void (^)(NSError *error))completionBlock;
+
+
 @end

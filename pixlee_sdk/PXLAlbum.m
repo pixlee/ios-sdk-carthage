@@ -91,7 +91,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
             if (self.lastPageFetched != NSNotFound) {
                 params[@"page"] = @(self.lastPageFetched + 1);
             }
-            NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+            NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
                 NSArray *responsePhotos = responseObject[@"data"];
                 NSArray *photos = [PXLPhoto photosFromArray:responsePhotos inAlbum:self];
                 if (self.lastPageFetched == NSNotFound) {
@@ -156,7 +156,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
             if (self.lastPageFetched != NSNotFound) {
                 params[@"page"] = @(self.lastPageFetched + 1);
             }
-            NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+            NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
                 self.identifier = responseObject[@"album_id"];
                 NSArray *responsePhotos = responseObject[@"data"];
                 NSArray *photos = [PXLPhoto photosFromArray:responsePhotos inAlbum:self];
@@ -223,7 +223,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     
     [params setObject:joinedComponentsPhotoIds forKey:@"photos"];
     
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
@@ -250,7 +250,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     
     [params setObject:udid forKey:@"uid"];
     
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
             completionBlock(nil);
         }
@@ -262,4 +262,42 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     return dataTask;
 }
 
+
+
+- (NSURLSessionDataTask *)triggerEventLoadMoreClicked:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/loadMore";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.identifier){
+        [params setObject:self.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:[@(self.lastPageFetched) stringValue] forKey:@"page"];
+    [params setObject:[@(self.perPage) stringValue] forKey:@"per_page"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    NSMutableArray *photoIds = [NSMutableArray array];
+    for (PXLPhoto* photo in self.photos)
+    {
+        [photoIds addObject:photo.albumPhotoId];
+    }
+    NSString *joinedComponentsPhotoIds = [photoIds componentsJoinedByString:@","];
+    
+    [params setObject:joinedComponentsPhotoIds forKey:@"photos"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+    
+}
 @end

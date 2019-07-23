@@ -163,6 +163,7 @@
 
 - (void)handleActionButtonPressedForProdcut:(PXLProduct *)product {
     if (product.link) {
+
         const NSString *url = [product.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         [[UIApplication sharedApplication] openURL: [[NSURL alloc] initWithString:url]];
     }

@@ -86,6 +86,7 @@
     photo.cdnMediumUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"medium_url"];
     photo.cdnLargeUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"large_url"];
     photo.cdnOriginalUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"original_url"];
+    photo.albumId = dict[@"album_id"];
     return photo;
 }
 
@@ -93,7 +94,7 @@
     static NSString * const PXLAlbumGETRequestString = @"media/%@";
     NSString *requestString = [NSString stringWithFormat:PXLAlbumGETRequestString, identifier];
     NSMutableDictionary *params = @{}.mutableCopy;
-    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] GET:requestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         NSDictionary *responsePhoto = responseObject[@"data"];
         if (completionBlock) {
             completionBlock([PXLPhoto singlePhotoFromDict:responsePhoto], nil);
@@ -153,5 +154,34 @@
     }
     return nil;
 }
+
+- (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/actionClicked";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if(self.album.identifier){
+        [params setObject:self.album.identifier forKey:@"album_id"];
+    }else{
+        NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
+        [params setObject:@"" forKey:@"album_id"];
+    }
+    [params setObject:action_link forKey:@"action_link_url"];
+    [params setObject:self.albumPhotoId forKey:@"album_photo_id"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    [params setObject:udid forKey:@"uid"];
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLAnalyticsPOSTRequestString parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
 
 @end
