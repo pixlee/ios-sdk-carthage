@@ -87,6 +87,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         NSLog(@"%@", photo.cdnMediumUrl);
         NSLog(@"%@", photo.cdnSmallUrl);
         NSLog(@"%@",error);
+    
     }];
     
     

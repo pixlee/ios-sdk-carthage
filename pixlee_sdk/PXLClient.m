@@ -34,7 +34,8 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
 }
 
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
@@ -46,7 +47,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
 }
 
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure{
     self.requestSerializer = [AFJSONRequestSerializer serializer];
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
