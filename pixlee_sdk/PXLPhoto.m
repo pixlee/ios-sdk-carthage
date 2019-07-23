@@ -86,7 +86,7 @@
     photo.cdnMediumUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"medium_url"];
     photo.cdnLargeUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"large_url"];
     photo.cdnOriginalUrl = [self nilSafeUrlFromDict:dict[@"pixlee_cdn_photos"] forKey:@"original_url"];
-    photo.album = [PXLAlbum albumWithIdentifier:dict[@"album_id"]];
+    photo.albumId = dict[@"album_id"];
     return photo;
 }
 

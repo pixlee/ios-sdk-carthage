@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 @property (nonatomic) NSInteger existIn;
 @property (nonatomic, copy) NSString *collectTerm;
 @property (nonatomic, copy) NSString *albumPhotoId;
+@property (nonatomic, copy) NSString *albumId;
 @property (nonatomic) NSInteger likeCount;
 @property (nonatomic) NSInteger shareCount;
 @property (nonatomic, strong) NSURL *actionLink;

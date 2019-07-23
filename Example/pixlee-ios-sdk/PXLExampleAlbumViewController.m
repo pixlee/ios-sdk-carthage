@@ -83,9 +83,16 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Example of loading a photo with an identifier
     [PXLPhoto getPhotoWithId:@"299469263" callback:^(PXLPhoto *photo, NSError *error) {
         NSLog(@"hello there" );
+        NSLog(@"%@",photo.album.identifier);
+        
+        
+        
+        
         PXLProduct *p = [photo.products objectAtIndex:0];
-        const NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSLog(@"%@",url);
+        
+        
         
         [photo triggerEventActionClicked:url callback:^(NSError *error) {
             NSLog(@"triggered");
