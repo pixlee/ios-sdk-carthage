@@ -163,10 +163,7 @@
 
 - (void)handleActionButtonPressedForProdcut:(PXLProduct *)product {
     if (product.link) {
-        [self.photo triggerEventActionClicked:product.link.absoluteString callback:^(NSError *error) {
-            NSLog(@"triggered");
-        }];
-        
+
         const NSString *url = [product.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         [[UIApplication sharedApplication] openURL: [[NSURL alloc] initWithString:url]];
     }

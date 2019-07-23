@@ -76,18 +76,21 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     sortOptions.sortType = PXLAlbumSortTypeRandom;
     sortOptions.ascending = true;
     album.sortOptions = sortOptions;
-    album.perPage = 20;
+    album.perPage = 1;
     
     // Set the album to load.
     self.album = album;
     // Example of loading a photo with an identifier
-    [PXLPhoto getPhotoWithId:@"299209785" callback:^(PXLPhoto *photo, NSError *error) {
-        NSLog(@"%@", photo.cdnOriginalUrl);
-        NSLog(@"%@", photo.cdnLargeUrl);
-        NSLog(@"%@", photo.cdnMediumUrl);
-        NSLog(@"%@", photo.cdnSmallUrl);
-        NSLog(@"%@",error);
-    
+    [PXLPhoto getPhotoWithId:@"299469263" callback:^(PXLPhoto *photo, NSError *error) {
+        NSLog(@"hello there" );
+        PXLProduct *p = [photo.products objectAtIndex:0];
+        const NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSLog(@"%@",url);
+        
+        [photo triggerEventActionClicked:url callback:^(NSError *error) {
+            NSLog(@"triggered");
+        }];
+        
     }];
     
     
