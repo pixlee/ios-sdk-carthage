@@ -164,6 +164,9 @@ Add to Cart : Call this whenever and wherever an add to cart event happens
 User Completes Checkout: Call this whenever a user completes a checkout and makes a purchase
 User Visits a Page with a Pixlee Widget: Call this whenever a user visits a page which as a Pixlee Widget on it
 User Clicks on the Pixlee Widget : Call this whenever a user clicks on an item in the Pixlee widget
+PXLAlbums →  Load More: Call this whenever a user clicks 'Load More' button on the widget
+
+PXLPhoto → Action Link Clicked: Call this whenever a user make an action after clicking on an item in the Pixlee widget
 
 ```
 #### Example Add to Cart
