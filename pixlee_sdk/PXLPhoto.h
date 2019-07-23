@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
+#import "PXLAlbum.h"
 
 typedef NS_ENUM(NSInteger, PXLPhotoSize) {
     PXLPhotoSizeThumbnail,
@@ -16,7 +17,6 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
     PXLPhotoSizeBig
 };
 
-@class PXLAlbum;
 
 /**
  `PXLPhoto` represents a photo object in the Pixlee API. `PXLPhoto` objects are created by their parent `PXLAlbum` when loaded from the server.

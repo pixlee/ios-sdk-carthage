@@ -157,8 +157,8 @@
 - (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLAnalyticsPOSTRequestString = @"https://inbound-analytics.pixlee.com/events/actionClicked";
     NSMutableDictionary *params = @{}.mutableCopy;
-    if(self.album.id){
-        [params setObject:self.album.id forKey:@"album_id"];
+    if(self.album.identifier){
+        [params setObject:self.album.identifier forKey:@"album_id"];
     }else{
         NSLog(@"Warning you are sending the event without having an album_id. Please wait for the loadMore to return before triggering this event");
         [params setObject:@"" forKey:@"album_id"];
