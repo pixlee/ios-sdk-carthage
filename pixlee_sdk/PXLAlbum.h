@@ -162,7 +162,6 @@ callback A block called after the photos have been loaded or an error has occurr
 /**
 Call this whenever a user clicks 'Load More' button on the widget
  
- @param A block called after the photos have been loaded or an error has occurred.
  
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */

@@ -76,7 +76,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     sortOptions.sortType = PXLAlbumSortTypeRandom;
     sortOptions.ascending = true;
     album.sortOptions = sortOptions;
-    album.perPage = 3;
+    album.perPage = 20;
     
     // Set the album to load.
     self.album = album;
@@ -160,7 +160,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
             NSLog(@"logged");
         }];
         
-        
+        [self.album triggerEventLoadMoreClicked:^(NSError *error) {
+            NSLog(@"logged");
+        }];
         
         //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
         [self.album triggerEventOpenedLightbox:@187542438 callback:^(NSError *error) {
