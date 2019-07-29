@@ -106,6 +106,7 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
 - (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *error))completionBlock;
 
 
+
 ///---------------------
 /// @name Analytics Event
 ///---------------------
@@ -118,6 +119,7 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
  @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
  */
 - (NSURLSessionDataTask *)triggerEventOpenedLightbox:(void (^)(NSError *error))completionBlock;
+
 
 
 
