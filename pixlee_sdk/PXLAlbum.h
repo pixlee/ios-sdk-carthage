@@ -140,20 +140,6 @@ callback A block called after the photos have been loaded or an error has occurr
 - (NSURLSessionDataTask *)triggerEventOpenedWidget:(NSString *)widget callback:(void (^)(NSError *error))completionBlock;
 
 
-///---------------------
-/// @name Analytics Event
-///---------------------
-
-/**
- Trigger lightbox opened widget to the Pixlee backend.
- 
- @param album_photo_id from PXLPhoto class. callback A block called after the photos have been loaded or an error has occurred.
- 
- @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
- */
-- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(NSNumber *)album_photo_id callback:(void (^)(NSError *error))completionBlock;
-
-
 
 ///---------------------
 /// @name Analytics Event

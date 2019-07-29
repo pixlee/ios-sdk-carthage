@@ -105,4 +105,20 @@ typedef NS_ENUM(NSInteger, PXLPhotoSize) {
  */
 - (NSURLSessionDataTask *)triggerEventActionClicked:(NSString *)action_link callback:(void (^)(NSError *error))completionBlock;
 
+
+///---------------------
+/// @name Analytics Event
+///---------------------
+
+/**
+ Trigger lightbox opened widget to the Pixlee backend.
+ 
+ @param callback A block called after the photos have been loaded or an error has occurred.
+ 
+ @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
+ */
+- (NSURLSessionDataTask *)triggerEventOpenedLightbox:(void (^)(NSError *error))completionBlock;
+
+
+
 @end
