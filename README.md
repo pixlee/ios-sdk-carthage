@@ -243,23 +243,15 @@ It's important to trigger this event after the LoadNextPage event
 
 ```
 #### Example User Clicks on the Pixlee Widget
-#### Notes
-It's important to trigger this event after the LoadNextPage event
 ```
-    PXLAlbum *album = [PXLAlbum albumWithSkuIdentifier:PXLSkuAlbumIdentifier];
+       // photo being the PXLPhoto that been clicked 
+    PXLPhoto *photo = photo
     
-    
-    // If you are using  https://developers.pixlee.com/reference#get-approved-content-from-album // api/v2/album/@album_id/Photos
-    // If you are using api/v2/album/sku_from
-    // Refer to pixlee_sdk PXLAbum.h
-    [self.album loadNextPageOfPhotosFromSku:^(NSArray *photos, NSError *error){
-    //It's important to trigger these events after the LoadNextPage event
-        
-        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-        [self.album triggerEventOpenedLightbox:@"187542438" callback:^(NSError *error) {
+       //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+
+     [photo triggerEventOpenedLightbox:^(NSError *error) {
             NSLog(@"logged");
-        }];
-    }];
+     }];
 
 
 ```
