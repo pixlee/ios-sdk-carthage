@@ -33,10 +33,18 @@ class FirstViewController: UIViewController {
             if let error = error {
                 print("\(error)")
             }
+            print(type(of: photos))
             if photos?.count != nil {
                 var indexPaths: [AnyHashable] = []
                 var firstIndex: Int? = nil
-//                print(photos?[0])
+                if let arr = photos as? Array<PXLPhoto> {
+                    for p in arr{
+                        print(p.cdnLargeUrl)
+                        
+                    }
+                    print(arr)
+                }
+
             }
             
         })
