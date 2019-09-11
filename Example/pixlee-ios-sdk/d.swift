@@ -9,9 +9,10 @@
 //  Created by Tim Shi on 04/30/2015.
 //
 
-import pixlee_sdk
 
-#warning("Replace with your Pixlee album identifier.")
+
+
+
 let PXLAlbumIdentifier = "4515393"
 let PXLSkuAlbumIdentifier = "300152"
 
@@ -39,10 +40,12 @@ class PXLExampleAlbumViewController {
     // If you are using api/v2/album/@album_id/Photos
     // PXLAlbum *album = [PXLAlbum albumWithIdentifier:<#(NSString *)#>:PXLAlbumIdentifier];
     // If you are using api/v2/album/sku_from
-    let album = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
+    var album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
+    
+    
     
     // Create and set filter options on the album.
-    let filterOptions = PXLAlbumFilterOptions()
+    var filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
     
     
     
@@ -74,8 +77,7 @@ class PXLExampleAlbumViewController {
     //    NSString *c2 = @"thanos";
     //    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
     //    filterOptions.filterByUserhandle = dict;
-    
-
+        
     album.filtereOPtions = filterOptions
     
     // Create and set sort options on the album.

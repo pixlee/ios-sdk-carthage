@@ -22,7 +22,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		76ED54F51E88709700B7E8F2 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F31E88709700B7E8F2 /* Default-568h.png */; };
 		76ED54F61E88709700B7E8F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */; };
-		CD926DE523283082005F2C42 /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD926DE423283082005F2C42 /* d.swift */; };
 		CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */; };
 		CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */; };
 		CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */; };
@@ -104,7 +103,6 @@
 		76ED54F31E88709700B7E8F2 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CD926DE323283081005F2C42 /* example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Bridging-Header.h"; sourceTree = "<group>"; };
-		CD926DE423283082005F2C42 /* d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
 		CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLAlbumViewController.h; sourceTree = "<group>"; };
 		CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLAlbumViewController.m; sourceTree = "<group>"; };
 		CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */,
 				6003F5A5195388D20070C39A /* PXLExampleAlbumViewController.h */,
 				6003F5A6195388D20070C39A /* PXLExampleAlbumViewController.m */,
-				CD926DE423283082005F2C42 /* d.swift */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				CD926DE323283081005F2C42 /* example-Bridging-Header.h */,
@@ -412,7 +409,6 @@
 				CD9647B41E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */,
-				CD926DE523283082005F2C42 /* d.swift in Sources */,
 				CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +608,6 @@
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pixlee-ios-sdk.app/pixlee-ios-sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -637,7 +632,6 @@
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pixlee-ios-sdk.app/pixlee-ios-sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
