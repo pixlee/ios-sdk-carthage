@@ -16,19 +16,24 @@
 let PXLAlbumIdentifier = "4515393"
 let PXLSkuAlbumIdentifier = "300152"
 
-class PXLExampleAlbumViewController {
+import UIKit
+
+class PXLExampleAlbumViewController : UIViewController {
     ///---------------------------------------------------------------
     /// Analytics events refer to pixlee_sdk PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
     ///---------------------------------------------------------------
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
     //Setup some constants
-    static let viewDidLoadCurrency = "USD"
+     let viewDidLoadCurrency = "USD"
     //Product 1 example
-    static let viewDidLoadProduct_sku = "SL-BENJ"
-    static let viewDidLoadPrice = "13.00"
+     let viewDidLoadProduct_sku = "SL-BENJ"
+     let viewDidLoadPrice = "13.00"
     //product 2 example
-    static let viewDidLoadProduct_sku2 = "AD-1324S"
-    static let viewDidLoadPrice2 = "53.07"
+     let viewDidLoadProduct_sku2 = "AD-1324S"
+     let viewDidLoadPrice2 = "53.07"
     
     //  Converted to Swift 5.1 by Swiftify v5.1.27756 - https://objectivec2swift.com/
     // Create a new album instance.
@@ -41,7 +46,7 @@ class PXLExampleAlbumViewController {
     // PXLAlbum *album = [PXLAlbum albumWithIdentifier:<#(NSString *)#>:PXLAlbumIdentifier];
     // If you are using api/v2/album/sku_from
     var album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
-    
+
     
     
     // Create and set filter options on the album.
@@ -77,12 +82,13 @@ class PXLExampleAlbumViewController {
     //    NSString *c2 = @"thanos";
     //    [dict setObject:[NSMutableArray arrayWithObjects:c1,c2,nil] forKey:@"contains"];
     //    filterOptions.filterByUserhandle = dict;
-        
-    album.filtereOPtions = filterOptions
+    
+
+    album.filterOptions = filterOptions
     
     // Create and set sort options on the album.
     let sortOptions = PXLAlbumSortOptions()
-    sortOptions.sortType = PXLAlbumSortTypeRandom
+    sortOptions.sortType = PXLAlbumSortType.random
     sortOptions.ascending = true
     album.sortOptions = sortOptions
     album.perPage = 1
@@ -110,5 +116,5 @@ class PXLExampleAlbumViewController {
 //    })
 //
 //    })
-
+    }
 }

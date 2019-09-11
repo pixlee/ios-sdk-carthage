@@ -13,7 +13,30 @@
 		CD1C0D8823274C2D0099D28E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8623274C2D0099D28E /* Main.storyboard */; };
 		CD1C0D8A23274C2F0099D28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8923274C2F0099D28E /* Assets.xcassets */; };
 		CD1C0D8D23274C2F0099D28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8B23274C2F0099D28E /* LaunchScreen.storyboard */; };
+		CD2402D523298523004F6A46 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CC232984CC004F6A46 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2402D723298523004F6A46 /* FormatterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CF232984CC004F6A46 /* FormatterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2402D923298523004F6A46 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CD232984CC004F6A46 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2402DB23298523004F6A46 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CE232984CC004F6A46 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2402DD23298523004F6A46 /* pixlee_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD2402DE23298523004F6A46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD2402D723298523004F6A46 /* FormatterKit.framework in Embed Frameworks */,
+				CD2402D523298523004F6A46 /* AFNetworking.framework in Embed Frameworks */,
+				CD2402DD23298523004F6A46 /* pixlee_sdk.framework in Embed Frameworks */,
+				CD2402D923298523004F6A46 /* Masonry.framework in Embed Frameworks */,
+				CD2402DB23298523004F6A46 /* WebImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD1C0D7D23274C2D0099D28E /* pixlee_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pixlee_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +47,12 @@
 		CD1C0D8923274C2F0099D28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1C0D8C23274C2F0099D28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1C0D8E23274C2F0099D28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2402C5232980FA004F6A46 /* pixlee_example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixlee_example-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
+		CD2402CC232984CC004F6A46 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		CD2402CD232984CC004F6A46 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
+		CD2402CE232984CC004F6A46 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		CD2402CF232984CC004F6A46 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +71,8 @@
 			children = (
 				CD1C0D7F23274C2D0099D28E /* pixlee_example */,
 				CD1C0D7E23274C2D0099D28E /* Products */,
+				CD2402C5232980FA004F6A46 /* pixlee_example-Bridging-Header.h */,
+				CD2402C9232984B3004F6A46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +98,18 @@
 			path = pixlee_example;
 			sourceTree = "<group>";
 		};
+		CD2402C9232984B3004F6A46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD2402CC232984CC004F6A46 /* AFNetworking.framework */,
+				CD2402CF232984CC004F6A46 /* FormatterKit.framework */,
+				CD2402CD232984CC004F6A46 /* Masonry.framework */,
+				CD2402CE232984CC004F6A46 /* WebImage.framework */,
+				CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +120,8 @@
 				CD1C0D7923274C2D0099D28E /* Sources */,
 				CD1C0D7A23274C2D0099D28E /* Frameworks */,
 				CD1C0D7B23274C2D0099D28E /* Resources */,
+				CD2402C823298378004F6A46 /* ShellScript */,
+				CD2402DE23298523004F6A46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +144,7 @@
 				TargetAttributes = {
 					CD1C0D7C23274C2D0099D28E = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -132,6 +178,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD2402C823298378004F6A46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/pixlee_sdk.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD1C0D7923274C2D0099D28E /* Sources */ = {
@@ -286,8 +353,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q28M29YQL8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pixlee_example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +367,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Pixlee.pixlee-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee_example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,8 +378,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q28M29YQL8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pixlee_example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Pixlee.pixlee-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee_example-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

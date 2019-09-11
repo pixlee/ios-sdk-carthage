@@ -13,6 +13,33 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let PXLAlbumIdentifier = "4515393"
+        let PXLSkuAlbumIdentifier = "300152"
+
+        
+        let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
+        let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
+        var dict = [AnyHashable : Any](minimumCapacity: 10)
+        album.filterOptions = filterOptions
+        
+        // Create and set sort options on the album.
+        let sortOptions = PXLAlbumSortOptions()
+        sortOptions.sortType = PXLAlbumSortType.random
+        sortOptions.ascending = true
+        album.sortOptions = sortOptions
+        album.perPage = 1
+        
+        album.loadNextPageOfPhotos(fromSku:  { photos, error in
+            if let error = error {
+                print("\(error)")
+            }
+            if photos?.count != nil {
+                var indexPaths: [AnyHashable] = []
+                var firstIndex: Int? = nil
+//                print(photos?[0])
+            }
+            
+        })
     }
 
 
