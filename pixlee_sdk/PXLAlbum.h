@@ -100,7 +100,7 @@
  @param completionBlock A block called after the photos have been loaded or an error has occurred.
  `photos` will contain the photos loaded in this network call.
  
- @return The `NSURLSessionDataTask` used to load the data from the server. With two parmeters NSarray<PXLPhoto>  and NSerror if using swift cast it to the correct type Check Readme.
+ @return The `NSURLSessionDataTask` used to load the data from the server. With two parameters NSarray<PXLPhoto>  and NSerror, if using swift cast it to the correct type Check Readme.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotos:(void (^)(NSArray *photos, NSError *error))completionBlock;
 
@@ -114,7 +114,7 @@
  @param completionBlock A block called after the photos have been loaded or an error has occurred.
  `photos` will contain the photos loaded in this network call.
  
- @return The `NSURLSessionDataTask` used to load the data from the server. With two parmeters NSarray<PXLPhoto>  and NSerror if using swift cast it to the correct type Check Readme.
+ @return The `NSURLSessionDataTask` used to load the data from the server. With two parameters NSarray<PXLPhoto>  and NSerror, if using swift cast it to the correct type Check Readme.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock;
 
