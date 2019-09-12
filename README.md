@@ -328,7 +328,7 @@ When archiving your application for submission to the App Store or TestFlight, X
 
 ### Swift
 
-If you are trying to use the Objective-C Pixlee API with a Swift project please follow these steps, you can also view the sample project available at ~swift_example/:
+If you are trying to use the Objective-C Pixlee API with a Swift project please follow these steps, you can also view the sample project available at ~example_swift/:
 
 1. Create a Cartfile that lists the frameworks you’d like to use in your project.
 1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
@@ -354,7 +354,7 @@ If you are trying to use the Objective-C Pixlee API with a Swift project please 
 
 ### Swift example
 
-To load an album from a sku number you can run the following Swift code, please check the swift_example project directory:
+To load an album from a sku number you can run the following Swift code, please check the example_swift project directory:
 ```
 let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
 let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
@@ -390,7 +390,7 @@ print(arr)
 
 #### Swift type casting 
 
-Unfortunately the type casting is not fully working when using Objective-C libraries. You will have to cast the return object from the PIxlee API manually like so ``` let arr = photos as? Array<PXLPhoto>```
+Unfortunately the type casting is not fully working when using Objective-C libraries. You will have to cast the return object from the Pixlee API manually like so ``` let arr = photos as? Array<PXLPhoto>```
 
 Check the snipet of code for a full version: 
 
@@ -409,7 +409,7 @@ if let arr = photos as? Array<PXLPhoto> {
 
 
 ### Important 
-If you are using xcode 10, the new build system doesn't work with the example project. A temporary workaround seems to be switching to the legacy build system by going to (in Xcode) File -> Workspace Settings -> Build System -> Legacy Build System. But compiling with the CLI still doesnt work.
+If you are using Xcode 10, the new build system doesn't work with the example project. A temporary workaround seems to be switching to the legacy build system by going to (in Xcode) File -> Workspace Settings -> Build System -> Legacy Build System. But compiling with the CLI still doesnt work.
 
 
 ### Example
