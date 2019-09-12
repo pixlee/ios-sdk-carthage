@@ -328,7 +328,7 @@ When archiving your application for submission to the App Store or TestFlight, X
 
 ### Swift
 
-If you are trying to use the objective c Pixlee API with a swift project please follow these steps, you can also view the sample project available at ~siwft_example/:
+If you are trying to use the Objective-C Pixlee API with a Swift project please follow these steps, you can also view the sample project available at ~swift_example/:
 
 1. Create a Cartfile that lists the frameworks you’d like to use in your project.
 1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
@@ -349,7 +349,7 @@ If you are trying to use the objective c Pixlee API with a swift project please 
 #import <pixlee_sdk/PXLAlbum.h>
 
 ```
-1. These files are now accessible across all your swift code and can be use the same way as before.
+1. These files are now accessible across all your Swift code and can be use the same way as before.
 
 
 ### Important 
