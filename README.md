@@ -350,11 +350,11 @@ If you are trying to use the Objective-C Pixlee API with a Swift project please 
 
 ```
 
-1. These files are now accessible across all your swift code and can be use the same way as before.
+1. These files are now accessible across all your Swift code and can be use the same way as before.
 
 ### Swift example
 
-To load an album from a sku number you can run the following swift code, please check the swift_example project directory:
+To load an album from a sku number you can run the following Swift code, please check the swift_example project directory:
 ```
 let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
 let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
