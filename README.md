@@ -351,6 +351,61 @@ If you are trying to use the objective c Pixlee API with a swift project please 
 ```
 1. These files are now accessible across all your swift code and can be use the same way as before.
 
+### Swift example
+
+To load an album from a sku number you can run the following swift code, please check the swift_example project directory:
+```
+let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
+let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
+album.filterOptions = filterOptions
+
+// Create and set sort options on the album.
+let sortOptions = PXLAlbumSortOptions()
+sortOptions.sortType = PXLAlbumSortType.random
+sortOptions.ascending = true
+album.sortOptions = sortOptions
+album.perPage = 1
+
+album.loadNextPageOfPhotos(fromSku:  { photos, error in
+if let error = error {
+print("\(error)")
+}
+print(type(of: photos))
+if photos?.count != nil {
+//                var indexPaths: [AnyHashable] = []
+//                var firstIndex: Int? = nil
+if let arr = photos as? Array<PXLPhoto> {
+for p in arr{
+print(p.cdnLargeUrl)
+
+}
+print(arr)
+}
+
+}
+
+})
+```
+
+#### Swift type casting 
+
+Unfortunately the type casting is not fully working when using objective C library. You will have to cast the return object from the PIxlee API manually like so ``` let arr = photos as? Array<PXLPhoto>```
+
+Check the snipet of code for a full version: 
+
+```
+album.loadNextPageOfPhotos(fromSku:  { photos, error in
+if let error = error {
+print("\(error)")
+}
+print(type(of: photos)) # Optional<Array<Any>>
+if let arr = photos as? Array<PXLPhoto> {
+
+}
+})
+
+```
+
 
 ### Important 
 If you are using xcode 10, the new build system doesn't work with the example project. A temporary workaround seems to be switching to the legacy build system by going to (in Xcode) File -> Workspace Settings -> Build System -> Legacy Build System. But compiling with the CLI still doesnt work.

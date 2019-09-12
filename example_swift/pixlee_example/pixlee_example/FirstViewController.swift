@@ -13,13 +13,13 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let PXLAlbumIdentifier = "4515393"
+//        let PXLAlbumIdentifier = "4515393"
         let PXLSkuAlbumIdentifier = "300152"
 
         
         let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
         let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
-        var dict = [AnyHashable : Any](minimumCapacity: 10)
+//        var dict = [AnyHashable : Any](minimumCapacity: 10)
         album.filterOptions = filterOptions
         
         // Create and set sort options on the album.
@@ -35,8 +35,8 @@ class FirstViewController: UIViewController {
             }
             print(type(of: photos))
             if photos?.count != nil {
-                var indexPaths: [AnyHashable] = []
-                var firstIndex: Int? = nil
+//                var indexPaths: [AnyHashable] = []
+//                var firstIndex: Int? = nil
                 if let arr = photos as? Array<PXLPhoto> {
                     for p in arr{
                         print(p.cdnLargeUrl)
