@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		76ED54F51E88709700B7E8F2 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F31E88709700B7E8F2 /* Default-568h.png */; };
 		76ED54F61E88709700B7E8F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */; };
+		CD2402E023298569004F6A46 /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2402DF23298569004F6A46 /* d.swift */; };
 		CD9647B11E8DAEFA00A8818F /* PXLAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */; };
 		CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */; };
 		CD9647B31E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */; };
@@ -102,6 +103,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		76ED54F31E88709700B7E8F2 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		76ED54F41E88709700B7E8F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CD2402DF23298569004F6A46 /* d.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
+		CD926DE323283081005F2C42 /* example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLAlbumViewController.h; sourceTree = "<group>"; };
 		CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLAlbumViewController.m; sourceTree = "<group>"; };
 		CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLPhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 				6003F5A6195388D20070C39A /* PXLExampleAlbumViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				CD926DE323283081005F2C42 /* example-Bridging-Header.h */,
 			);
 			path = "pixlee-ios-sdk";
 			sourceTree = "<group>";
@@ -231,6 +235,7 @@
 		CD9647C21E8DBC4000A8818F /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CD2402DF23298569004F6A46 /* d.swift */,
 				CD9647A91E8DAEFA00A8818F /* PXLAlbumViewController.h */,
 				CD9647AA1E8DAEFA00A8818F /* PXLAlbumViewController.m */,
 				CD9647AB1E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.h */,
@@ -322,6 +327,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = Q28M29YQL8;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
@@ -406,6 +412,7 @@
 				CD9647B41E8DAEFA00A8818F /* PXLPhotoCollectionViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				CD9647B21E8DAEFA00A8818F /* PXLAlbumViewController.m in Sources */,
+				CD2402E023298569004F6A46 /* d.swift in Sources */,
 				CD9647B61E8DAEFA00A8818F /* PXLPhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q28M29YQL8;
@@ -563,6 +571,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pixlee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee-ios-sdk/example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -573,6 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +602,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "65ae6e91-64c4-4925-bd75-2036d79b4f37";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee-ios-sdk/example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -598,6 +612,7 @@
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pixlee-ios-sdk.app/pixlee-ios-sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -622,6 +637,7 @@
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/pixlee-ios-sdk.app/pixlee-ios-sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

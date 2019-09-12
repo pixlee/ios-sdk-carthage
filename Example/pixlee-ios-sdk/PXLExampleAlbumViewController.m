@@ -94,9 +94,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         
         
         
-        [photo triggerEventActionClicked:url callback:^(NSError *error) {
-            NSLog(@"triggered");
-        }];
+//        [photo triggerEventActionClicked:url callback:^(NSError *error) {
+//            NSLog(@"triggered");
+//        }];
         
     }];
     
@@ -171,9 +171,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
             NSLog(@"logged");
         }];
         
-        [self.album triggerEventLoadMoreClicked:^(NSError *error) {
-            NSLog(@"logged");
-        }];
+//        [self.album triggerEventLoadMoreClicked:^(NSError *error) {
+//            NSLog(@"logged");
+//        }];
         
         //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
         [self.album triggerEventOpenedLightbox:@187542438 callback:^(NSError *error) {

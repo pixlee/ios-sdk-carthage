@@ -325,6 +325,33 @@ With the debug information copied into the built products directory, Xcode will 
 
 When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
+
+### Swift
+
+If you are trying to use the objective c Pixlee API with a swift project please follow these steps, you can also view the sample project available at ~siwft_example/:
+
+1. Create a Cartfile that lists the frameworks you’d like to use in your project.
+1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
+1. On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the Carthage/Build folder on disk.
+1. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+1. Add a bridging_header.h to your current project, follow these steps to create one https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis/importing_objective-c_into_swift
+1. Import the Pixlee sdk header files like this
+
+```
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+#import <pixlee_sdk/PXLPhoto.h>
+#import <pixlee_sdk/PXLAlbumFilterOptions.h>
+#import <pixlee_sdk/PXLAlbumSortOptions.h>
+#import <pixlee_sdk/PXLClient.h>
+#import <pixlee_sdk/PXLAlbum.h>
+
+```
+1. These files are now accessible across all your swift code and can be use the same way as before.
+
+
 ### Important 
 If you are using xcode 10, the new build system doesn't work with the example project. A temporary workaround seems to be switching to the legacy build system by going to (in Xcode) File -> Workspace Settings -> Build System -> Legacy Build System. But compiling with the CLI still doesnt work.
 
