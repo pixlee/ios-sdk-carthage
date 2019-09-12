@@ -100,7 +100,7 @@
  @param completionBlock A block called after the photos have been loaded or an error has occurred.
  `photos` will contain the photos loaded in this network call.
  
- @return The `NSURLSessionDataTask` used to load the data from the server.
+ @return The `NSURLSessionDataTask` used to load the data from the server. With two parameters NSarray<PXLPhoto>  and NSerror, if using swift cast it to the correct type Check Readme.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotos:(void (^)(NSArray *photos, NSError *error))completionBlock;
 
@@ -114,7 +114,7 @@
  @param completionBlock A block called after the photos have been loaded or an error has occurred.
  `photos` will contain the photos loaded in this network call.
  
- @return The `NSURLSessionDataTask` used to load the data from the server.
+ @return The `NSURLSessionDataTask` used to load the data from the server. With two parameters NSarray<PXLPhoto>  and NSerror, if using swift cast it to the correct type Check Readme.
  */
 - (NSURLSessionDataTask *)loadNextPageOfPhotosFromSku:(void (^)(NSArray *photos, NSError *error))completionBlock;
 
@@ -155,17 +155,6 @@ Call this whenever a user clicks 'Load More' button on the widget
 
 
 
-///---------------------
-/// @name Analytics Event
-///---------------------
-
-/**
-Call this whenever a user clicks 'Load More' button on the widget
- 
- 
- @return The `NSURLSessionDataTask` the server will retun 'OK' if accepted.
- */
-- (NSURLSessionDataTask *)triggerEventLoadMoreClicked:(void (^)(NSError *error))completionBlock;
 
 
 @end

@@ -349,7 +349,63 @@ If you are trying to use the Objective-C Pixlee API with a Swift project please 
 #import <pixlee_sdk/PXLAlbum.h>
 
 ```
+
 1. These files are now accessible across all your Swift code and can be use the same way as before.
+
+### Swift example
+
+To load an album from a sku number you can run the following Swift code, please check the swift_example project directory:
+```
+let album: PXLAlbum = PXLAlbum(skuIdentifier: PXLSkuAlbumIdentifier)
+let filterOptions:PXLAlbumFilterOptions = PXLAlbumFilterOptions()
+album.filterOptions = filterOptions
+
+// Create and set sort options on the album.
+let sortOptions = PXLAlbumSortOptions()
+sortOptions.sortType = PXLAlbumSortType.random
+sortOptions.ascending = true
+album.sortOptions = sortOptions
+album.perPage = 1
+
+album.loadNextPageOfPhotos(fromSku:  { photos, error in
+if let error = error {
+print("\(error)")
+}
+print(type(of: photos))
+if photos?.count != nil {
+//                var indexPaths: [AnyHashable] = []
+//                var firstIndex: Int? = nil
+if let arr = photos as? Array<PXLPhoto> {
+for p in arr{
+print(p.cdnLargeUrl)
+
+}
+print(arr)
+}
+
+}
+
+})
+```
+
+#### Swift type casting 
+
+Unfortunately the type casting is not fully working when using Objective-C libraries. You will have to cast the return object from the PIxlee API manually like so ``` let arr = photos as? Array<PXLPhoto>```
+
+Check the snipet of code for a full version: 
+
+```
+album.loadNextPageOfPhotos(fromSku:  { photos, error in
+if let error = error {
+print("\(error)")
+}
+print(type(of: photos)) # Optional<Array<Any>>
+if let arr = photos as? Array<PXLPhoto> {
+
+}
+})
+
+```
 
 
 ### Important 
