@@ -44,15 +44,25 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     NSMutableDictionary *params = @{}.mutableCopy;
     [params setObject:albumId forKey:@"album_id"];
     [params setObject:title forKey:@"title"];
-    [params setObject:email forKey:@"email"];
-    [params setObject:username forKey:@"username"];
+    if(email){
+        [params setObject:email forKey:@"email"];
+    }else{
+        [NSException raise:@"email is a required parameters"];
+    }
+    if(username){
+        [params setObject:username forKey:@"username"];
+    }else{
+        [NSException raise:@"username is a required parameters"];
+    }
     [params setObject:photo_uri forKey:@"photo_uri"];
     if(approved){
         [params setObject:@"True" forKey:@"approved"];
     }else{
         [params setObject:@"False" forKey:@"approved"];
     }
-    [params setObject:connected_user_id forKey:@"connected_user_id"];
+    if(connected_user_id){
+        [params setObject:connected_user_id forKey:@"connected_user_id"];
+    }
     [params setObject:@"ios" forKey:@"platform"];
     NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     [params setObject:udid forKey:@"uid"];
