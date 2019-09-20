@@ -47,12 +47,22 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     if(email){
         [params setObject:email forKey:@"email"];
     }else{
-        [NSException raise:@"email is a required parameters"];
+        NSException* myException = [NSException
+                                    exceptionWithName:@"Parameters missing"
+                                    reason:@"email is a required parameters"
+                                    userInfo:nil
+                                    ];
+        @throw myException;
     }
     if(username){
         [params setObject:username forKey:@"username"];
     }else{
-        [NSException raise:@"username is a required parameters"];
+        NSException* myException = [NSException
+                                    exceptionWithName:@"Parameters missing"
+                                    reason:@"username is a required parameters"
+                                    userInfo:nil
+                                    ];
+        @throw myException;
     }
     [params setObject:photo_uri forKey:@"photo_uri"];
     if(approved){
