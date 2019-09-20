@@ -38,6 +38,38 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     return album;
 }
 
+
++ (NSURLSessionDataTask *)uploadImage:(NSString *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLMediaPost = @"https://distillery.pixlee.com/api/v2/media";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    [params setObject:albumId forKey:@"album_id"];
+    [params setObject:title forKey:@"title"];
+    [params setObject:email forKey:@"email"];
+    [params setObject:username forKey:@"username"];
+    [params setObject:photo_uri forKey:@"photo_uri"];
+    if(approved){
+        [params setObject:@"True" forKey:@"approved"];
+    }else{
+        [params setObject:@"False" forKey:@"approved"];
+    }
+    [params setObject:connected_user_id forKey:@"connected_user_id"];
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    [params setObject:udid forKey:@"uid"];
+    
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLMediaPost parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
 - (instancetype)init {
     self = [super init];
     self.perPage = PXLAlbumDefaultPerPage;
