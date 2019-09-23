@@ -69,7 +69,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         parameters = mutableParams;
     }
     if(self._secretKey){
-        URLString= [NSString stringWithFormat:@"%@/%@/%@", URLString, @"?api_key=", self._apiKey];
+        URLString= [NSString stringWithFormat:@"%@%@%@", URLString, @"?api_key=", self._apiKey];
         //Conver the params into json string -> the payload
         NSError *error;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters

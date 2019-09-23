@@ -17,7 +17,7 @@
 #warning Replace with your Pixlee API key.
 static NSString * const PXLClientAPIKey = @"Hz7VLPHt7ow-oY992rJi";
 #warning Replace with your Secret Key if you are making POST requests.
-static NSString * const PXLCLIENTSECRETKEY = @"";
+static NSString * const PXLCLIENTSECRETKEY = @"secret";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
