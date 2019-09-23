@@ -78,6 +78,12 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         
+        /*There is no quick fix for this weird issue https://stackoverflow.com/questions/19651009/how-to-prevent-nsjsonserialization-from-adding-extra-escapes-in-url
+         */
+        
+        jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\/"
+                                             withString:@"/"];
+        
         //Conver the params into json string -> the payload
         const char *cKey  = [self._secretKey cStringUsingEncoding:NSASCIIStringEncoding];
         const char *cData = [jsonString cStringUsingEncoding:NSASCIIStringEncoding];
