@@ -17,9 +17,12 @@
 #warning Replace with your Pixlee API key.
 static NSString * const PXLClientAPIKey = @"Hz7VLPHt7ow-oY992rJi";
 
+static NSString * const PXLCLIENTSECRETKEY = @"secret";
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[PXLClient sharedClient] setApiKey:PXLClientAPIKey];
+    [[PXLClient sharedClient] setSecretKey:PXLCLIENTSECRETKEY];
     return YES;
 }
 

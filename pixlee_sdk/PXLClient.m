@@ -90,11 +90,8 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         // NSTimeInterval is defined as double
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
         
-        NSLog(@"Hash: %@", hash);
-        
-        [self.requestSerializer setValue:[[NSString alloc] initWithData:HMAC encoding:NSUTF8StringEncoding] forHTTPHeaderField:@"Authorization"];
+        [self.requestSerializer setValue:hash forHTTPHeaderField:@"Authorization"];
         [self.requestSerializer setValue: [timeStampObj stringValue] forHTTPHeaderField:@"X-Authorization-Timestamp"];
-        [self.requestSerializer setValue:hash forHTTPHeaderField:@"X-Authorization-Content-SHA256"];
     
     }
     return [super POST:URLString parameters:parameters progress:nil success:success failure:failure];
