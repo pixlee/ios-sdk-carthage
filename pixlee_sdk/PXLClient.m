@@ -93,7 +93,6 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         
         [self.requestSerializer setValue:hash forHTTPHeaderField:@"Signature"];
         [self.requestSerializer setValue: [timeStampObj stringValue] forHTTPHeaderField:@"X-Authorization-Timestamp"];
-        [self.requestSerializer setValue: jsonString forHTTPHeaderField:@"X-Authorization"];
     
     }
     return [super POST:URLString parameters:parameters progress:nil success:success failure:failure];
