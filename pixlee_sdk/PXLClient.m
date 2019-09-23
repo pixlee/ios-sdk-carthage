@@ -86,11 +86,14 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
                                               length:sizeof(cHMAC)];
         
         NSString *hash = [HMAC base64EncodedStringWithOptions:0];
+        NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+        // NSTimeInterval is defined as double
+        NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
         
         NSLog(@"Hash: %@", hash);
-        CFAbsoluteTime timeInSeconds = CFAbsoluteTimeGetCurrent();
-        [self.requestSerializer setValue:HMAC forHTTPHeaderField:@"Authorization"];
-        [self.requestSerializer setValue:[NSString stringWithFormat:@"%", timeInSeconds] forHTTPHeaderField:@"X-Authorization-Timestamp"];
+        
+        [self.requestSerializer setValue:[[NSString alloc] initWithData:HMAC encoding:NSUTF8StringEncoding] forHTTPHeaderField:@"Authorization"];
+        [self.requestSerializer setValue: [timeStampObj stringValue] forHTTPHeaderField:@"X-Authorization-Timestamp"];
         [self.requestSerializer setValue:hash forHTTPHeaderField:@"X-Authorization-Content-SHA256"];
     
     }
