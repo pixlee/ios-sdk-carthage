@@ -180,7 +180,9 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 //            NSLog(@"logged");
 //        }];
         
-//        [self.album uploadImage]
+        [PXLAlbum uploadImage:PXLAlbumIdentifier :@"tes" :@"test@email" :@"test" :@"https://o.aolcdn.com/images/dims3/GLOB/crop/2333x1313+0+61/resize/800x450!/format/jpg/quality/85/https://s.yimg.com/os/creatr-images/2019-03/1a9578e0-45a3-11e9-bfaf-cca800499787" :true :@"" callback:^(NSError *error) {
+            NSLog(@"logged");
+        }];
 
     }];
     
