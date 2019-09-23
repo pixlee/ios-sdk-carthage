@@ -56,9 +56,9 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     
     [params setObject:photo_uri forKey:@"photo_uri"];
     if(approved){
-        [params setObject:@"True" forKey:@"approved"];
+        [params setObject:true forKey:@"approved"];
     }else{
-        [params setObject:@"False" forKey:@"approved"];
+        [params setObject:false forKey:@"approved"];
     }
     if(connected_user_id){
         [params setObject:connected_user_id forKey:@"connected_user_id"];
