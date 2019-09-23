@@ -7,10 +7,14 @@
 //
 
 #import "PXLClient.h"
+#include <CommonCrypto/CommonDigest.h>
+#include <CommonCrypto/CommonHMAC.h>
+
 
 @interface PXLClient ()
 
 @property (nonatomic, copy) NSString *_apiKey;
+@property (nonatomic, copy) NSString *_secretKey;
 
 @end
 
@@ -31,6 +35,10 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
 
 - (void)setApiKey:(NSString *)apiKey {
     self._apiKey = apiKey;
+}
+
+- (void)setSecretKey:(NSString *)secretKey {
+    self._secretKey = secretKey;
 }
 
 
@@ -54,6 +62,37 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         NSMutableDictionary *mutableParams = parameters ? ((NSDictionary *)parameters).mutableCopy : @{}.mutableCopy;
         mutableParams[@"API_KEY"] = self._apiKey;
         parameters = mutableParams;
+    }
+    if(self._secretKey){
+        //Conver the params into json string -> the payload
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters
+                                                           options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                             error:&error];
+        
+        
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        const char *cKey  = [self._secretKey cStringUsingEncoding:NSASCIIStringEncoding];
+        
+        //Conver the params into json string -> the payload
+        const char *cData = [jsonString cStringUsingEncoding:NSASCIIStringEncoding];
+        
+        unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+        
+        CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+        
+        NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC
+                                              length:sizeof(cHMAC)];
+        
+        NSString *hash = [HMAC base64EncodedStringWithOptions:0];
+        
+        NSLog(@"Hash: %@", hash);
+        CFAbsoluteTime timeInSeconds = CFAbsoluteTimeGetCurrent();
+        [self.requestSerializer setValue:HMAC forHTTPHeaderField:@"Authorization"];
+        [self.requestSerializer setValue:[NSString stringWithFormat:@"%", timeInSeconds] forHTTPHeaderField:@"X-Authorization-Timestamp"];
+        [self.requestSerializer setValue:hash forHTTPHeaderField:@"X-Authorization-Content-SHA256"];
+    
     }
     return [super POST:URLString parameters:parameters progress:nil success:success failure:failure];
 }

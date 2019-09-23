@@ -29,4 +29,13 @@
  */
 - (void)setApiKey:(NSString *)apiKey;
 
+
+/**
+ Sets the Secret Key for communicating with the Pixlee servers.
+ 
+ @warning If you are making POST Request to the Pixlee API You must set the Secret Key.
+ 
+ @param secretKey The secret key used to sign your payloads for POST calls.
+ */
+- (void)setSecretKey:(NSString *)secretKey;
 @end

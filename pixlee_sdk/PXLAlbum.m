@@ -42,28 +42,18 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
 + (NSURLSessionDataTask *)uploadImage:(NSString *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLMediaPost = @"https://distillery.pixlee.com/api/v2/media";
     NSMutableDictionary *params = @{}.mutableCopy;
+    
+    NSAssert(albumId,@"album_id is a required parameter");
     [params setObject:albumId forKey:@"album_id"];
+    
     [params setObject:title forKey:@"title"];
-    if(email){
-        [params setObject:email forKey:@"email"];
-    }else{
-        NSException* myException = [NSException
-                                    exceptionWithName:@"Parameters missing"
-                                    reason:@"email is a required parameters"
-                                    userInfo:nil
-                                    ];
-        @throw myException;
-    }
-    if(username){
-        [params setObject:username forKey:@"username"];
-    }else{
-        NSException* myException = [NSException
-                                    exceptionWithName:@"Parameters missing"
-                                    reason:@"username is a required parameters"
-                                    userInfo:nil
-                                    ];
-        @throw myException;
-    }
+    
+    NSAssert(email,@"email is a required parameter");
+    [params setObject:email forKey:@"email"];
+    
+    NSAssert(username,@"username is a required parameter");
+    [params setObject:username forKey:@"username"];
+    
     [params setObject:photo_uri forKey:@"photo_uri"];
     if(approved){
         [params setObject:@"True" forKey:@"approved"];
@@ -77,6 +67,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     [params setObject:udid forKey:@"uid"];
     
+ 
     
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLMediaPost parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
