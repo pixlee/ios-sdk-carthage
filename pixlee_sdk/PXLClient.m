@@ -70,24 +70,19 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
                                                            options:0
                                                              error:&error];
         
-        
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         
-        const char *cKey  = [self._secretKey cStringUsingEncoding:NSASCIIStringEncoding];
-        
         //Conver the params into json string -> the payload
+        const char *cKey  = [self._secretKey cStringUsingEncoding:NSASCIIStringEncoding];
         const char *cData = [jsonString cStringUsingEncoding:NSASCIIStringEncoding];
+        unsigned char cHMAC[CC_SHA1_DIGEST_LENGTH];
         
-        unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
-        
-        CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
-        
+        CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
         NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC
                                               length:sizeof(cHMAC)];
         
         NSString *hash = [HMAC base64EncodedStringWithOptions:0];
         NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
-        // NSTimeInterval is defined as double
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
         
         [self.requestSerializer setValue:hash forHTTPHeaderField:@"Signature"];
