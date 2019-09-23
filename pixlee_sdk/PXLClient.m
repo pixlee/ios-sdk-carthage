@@ -56,7 +56,12 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
 
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters  progress:(void (^)(NSProgress * _Nonnull))downloadProgress  success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure{
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    self.requestSerializer = serializer;
+    
     NSAssert(self._apiKey != nil, @"Your Pixlee API Key must be set before making API calls.");
     if (parameters == nil || [parameters isKindOfClass:[NSDictionary class]]) {
         NSMutableDictionary *mutableParams = parameters ? ((NSDictionary *)parameters).mutableCopy : @{}.mutableCopy;
@@ -82,11 +87,13 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
                                               length:sizeof(cHMAC)];
         
         NSString *hash = [HMAC base64EncodedStringWithOptions:0];
+        
         NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
         
         [self.requestSerializer setValue:hash forHTTPHeaderField:@"Signature"];
         [self.requestSerializer setValue: [timeStampObj stringValue] forHTTPHeaderField:@"X-Authorization-Timestamp"];
+        [self.requestSerializer setValue: jsonString forHTTPHeaderField:@"X-TEST"];
     
     }
     return [super POST:URLString parameters:parameters progress:nil success:success failure:failure];
