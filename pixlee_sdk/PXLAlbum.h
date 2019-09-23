@@ -100,7 +100,7 @@
  
  @return A new `PXLAlbum` object.
  */
-+ (NSURLSessionDataTask *)uploadImage:(NSString *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock;
++ (NSURLSessionDataTask *)uploadImage:(NSNumber *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock;
 
 ///---------------------
 /// @name Photo Loading

@@ -39,7 +39,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
 }
 
 
-+ (NSURLSessionDataTask *)uploadImage:(NSString *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock{
++ (NSURLSessionDataTask *)uploadImage:(NSNumber *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock{
     static NSString * const PXLMediaPost = @"https://beta-distillery.pixlee.com/api/v2/media";
     NSMutableDictionary *params = @{}.mutableCopy;
     
