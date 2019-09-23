@@ -180,6 +180,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 //            NSLog(@"logged");
 //        }];
         
+//        [self.album uploadImage]
 
     }];
     
