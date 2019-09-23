@@ -67,7 +67,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         //Conver the params into json string -> the payload
         NSError *error;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters
-                                                           options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                           options:0
                                                              error:&error];
         
         
@@ -90,7 +90,7 @@ static NSString * const PXLClientBaseUrlString = @"https://distillery.pixlee.com
         // NSTimeInterval is defined as double
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
         
-        [self.requestSerializer setValue:hash forHTTPHeaderField:@"Authorization"];
+        [self.requestSerializer setValue:hash forHTTPHeaderField:@"Signature"];
         [self.requestSerializer setValue: [timeStampObj stringValue] forHTTPHeaderField:@"X-Authorization-Timestamp"];
     
     }
