@@ -300,6 +300,26 @@ NSLog(@"logged");
 }];
 
 ```
+#### Uploading an Image to an album
+
+To upload an Image to an album use the class function uploadImage available on PXLALbum class. Do not forget to set your PXLCLIENTSECRETKEY. 
+
+```
+
+///---------------------
+/// @name Initialization
+///---------------------
+
+/**
+ Creates and returns an album with the specified sku identifier.
+ 
+ @param photo_uri image url.albumId is the Pixlee id to upload the image. email the user email. Username of the user uploading the email. approved photo state. connected_user_id optional. callback function.
+ 
+ @return A new `PXLAlbum` object.
+ */
++ (NSURLSessionDataTask *)uploadImage:(NSNumber *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock;
+```
+
 
 ### Including Pixlee SDK
 ##### If you're building for iOS, tvOS, or watchOS
