@@ -183,7 +183,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         f.numberStyle = NSNumberFormatterDecimalStyle;
         NSNumber *albumId = [f numberFromString:PXLAlbumIdentifier];
         
-        [PXLAlbum uploadImage:albumId :@"tes" :@"test@email" :@"test" :@"https://o.aolcdn.com/images/dims3/GLOB/crop/2333x1313+0+61/resize/800x450!/format/jpg/quality/85/https://s.yimg.com/os/creatr-images/2019-03/1a9578e0-45a3-11e9-bfaf-cca800499787" :true :@"" callback:^(NSError *error) {
+        [PXLAlbum uploadImage:albumId :@"tes" :@"test@email" :@"test" :@"https://cdn.pixabay.com/photo/2016/09/01/10/23/image-1635747_1280.jpg" :true :@"" callback:^(NSError *error) {
             NSLog(@"logged");
         }];
 
