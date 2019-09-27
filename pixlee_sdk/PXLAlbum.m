@@ -38,6 +38,49 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     return album;
 }
 
+
++ (NSURLSessionDataTask *)uploadImage:(NSNumber *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock{
+    static NSString * const PXLMediaPost = @"https://distillery.pixlee.com/api/v2/media";
+    NSMutableDictionary *params = @{}.mutableCopy;
+    
+    NSAssert(albumId,@"album_id is a required parameter");
+    [params setObject:albumId forKey:@"album_id"];
+    
+    [params setObject:title forKey:@"title"];
+    
+    NSAssert(email,@"email is a required parameter");
+    [params setObject:email forKey:@"email"];
+    
+    NSAssert(username,@"username is a required parameter");
+    [params setObject:username forKey:@"username"];
+    
+    [params setObject:photo_uri forKey:@"photo_uri"];
+    if(approved){
+        [params setObject:[NSNumber numberWithBool:true] forKey:@"approved"];
+    }else{
+        [params setObject:[NSNumber numberWithBool:false] forKey:@"approved"];
+    }
+    if(connected_user_id){
+        [params setObject:connected_user_id forKey:@"connected_user_id"];
+    }
+    [params setObject:@"ios" forKey:@"platform"];
+    NSString *udid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    [params setObject:udid forKey:@"uid"];
+    
+ 
+    
+    NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLMediaPost parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
+        if (completionBlock) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
+        if (completionBlock) {
+            completionBlock(error);
+        }
+    }];
+    return dataTask;
+}
+
 - (instancetype)init {
     self = [super init];
     self.perPage = PXLAlbumDefaultPerPage;

@@ -87,6 +87,10 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
         
         
         
+        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
+        [photo triggerEventOpenedLightbox:^(NSError *error) {
+            NSLog(@"logged");
+        }];
         
         PXLProduct *p = [photo.products objectAtIndex:0];
         NSString *url = [p.link.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -175,11 +179,14 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
 //            NSLog(@"logged");
 //        }];
         
-        //EVENT opened:lightbox refer to pixlee_sdk/PXLAbum.h or The Readme or https://developers.pixlee.com/docs/analytics-events-tracking-pixel-guide
-        [self.album triggerEventOpenedLightbox:@187542438 callback:^(NSError *error) {
+
+        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+        f.numberStyle = NSNumberFormatterDecimalStyle;
+        NSNumber *albumId = [f numberFromString:PXLAlbumIdentifier];
+        
+        [PXLAlbum uploadImage:albumId :@"tes" :@"test@email" :@"test" :@"https://cdn.pixabay.com/photo/2016/09/01/10/23/image-1635747_1280.jpg" :true :@"" callback:^(NSError *error) {
             NSLog(@"logged");
         }];
-        
 
     }];
     
