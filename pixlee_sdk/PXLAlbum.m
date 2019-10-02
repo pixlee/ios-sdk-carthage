@@ -71,7 +71,7 @@ const NSInteger PXLAlbumDefaultPerPage = 20;
     
     NSURLSessionDataTask *dataTask = [[PXLClient sharedClient] POST:PXLMediaPost parameters:params progress:nil success:^(NSURLSessionDataTask * __unused task, id responseObject) {
         if (completionBlock) {
-            completionBlock(nil);
+            completionBlock(responseObject);
         }
     } failure:^(NSURLSessionDataTask * __unused task, NSError *error) {
         if (completionBlock) {

@@ -18,7 +18,25 @@
 		CD2402D923298523004F6A46 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CD232984CC004F6A46 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD2402DB23298523004F6A46 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CE232984CC004F6A46 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD2402DD23298523004F6A46 /* pixlee_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD68EA202343CB89000A382A /* PixleeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA1F2343CB89000A382A /* PixleeSdk.swift */; };
+		CD68EA232343CD3B000A382A /* ad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA222343CD3B000A382A /* ad.m */; };
+		CD68EA242343CD3B000A382A /* ad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA222343CD3B000A382A /* ad.m */; };
+		CD68EA272343CFB1000A382A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CC232984CC004F6A46 /* AFNetworking.framework */; };
+		CD68EA282343CFB1000A382A /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CF232984CC004F6A46 /* FormatterKit.framework */; };
+		CD68EA292343CFB1000A382A /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CD232984CC004F6A46 /* Masonry.framework */; };
+		CD68EA2A2343CFB1000A382A /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CE232984CC004F6A46 /* WebImage.framework */; };
+		CD68EA2B2343CFB1000A382A /* pixlee_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD68EA062343C2EF000A382A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1C0D7523274C2D0099D28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1C0D7C23274C2D0099D28E;
+			remoteInfo = pixlee_example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CD2402DE23298523004F6A46 /* Embed Frameworks */ = {
@@ -47,12 +65,17 @@
 		CD1C0D8923274C2F0099D28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1C0D8C23274C2F0099D28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1C0D8E23274C2F0099D28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD2402C5232980FA004F6A46 /* pixlee_example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixlee_example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
 		CD2402CC232984CC004F6A46 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		CD2402CD232984CC004F6A46 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		CD2402CE232984CC004F6A46 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		CD2402CF232984CC004F6A46 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
+		CD68EA012343C2EF000A382A /* pixlee_exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pixlee_exampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD68EA052343C2EF000A382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD68EA1F2343CB89000A382A /* PixleeSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixleeSdk.swift; sourceTree = "<group>"; };
+		CD68EA222343CD3B000A382A /* ad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ad.m; sourceTree = "<group>"; };
+		CD68EA252343CD98000A382A /* pixlee_example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixlee_example-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD68EA262343CDE3000A382A /* pixlee_exampleTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixlee_exampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +86,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD68E9FE2343C2EF000A382A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD68EA272343CFB1000A382A /* AFNetworking.framework in Frameworks */,
+				CD68EA282343CFB1000A382A /* FormatterKit.framework in Frameworks */,
+				CD68EA292343CFB1000A382A /* Masonry.framework in Frameworks */,
+				CD68EA2A2343CFB1000A382A /* WebImage.framework in Frameworks */,
+				CD68EA2B2343CFB1000A382A /* pixlee_sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,8 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				CD1C0D7F23274C2D0099D28E /* pixlee_example */,
+				CD68EA022343C2EF000A382A /* pixlee_exampleTests */,
 				CD1C0D7E23274C2D0099D28E /* Products */,
-				CD2402C5232980FA004F6A46 /* pixlee_example-Bridging-Header.h */,
+				CD68EA252343CD98000A382A /* pixlee_example-Bridging-Header.h */,
+				CD68EA262343CDE3000A382A /* pixlee_exampleTests-Bridging-Header.h */,
+				CD68EA222343CD3B000A382A /* ad.m */,
 				CD2402C9232984B3004F6A46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1C0D7D23274C2D0099D28E /* pixlee_example.app */,
+				CD68EA012343C2EF000A382A /* pixlee_exampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +133,7 @@
 				CD1C0D8923274C2F0099D28E /* Assets.xcassets */,
 				CD1C0D8B23274C2F0099D28E /* LaunchScreen.storyboard */,
 				CD1C0D8E23274C2F0099D28E /* Info.plist */,
+				CD68E9FC2343C0B3000A382A /* New Group */,
 			);
 			path = pixlee_example;
 			sourceTree = "<group>";
@@ -108,6 +148,22 @@
 				CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD68E9FC2343C0B3000A382A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CD68EA022343C2EF000A382A /* pixlee_exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD68EA1F2343CB89000A382A /* PixleeSdk.swift */,
+				CD68EA052343C2EF000A382A /* Info.plist */,
+			);
+			path = pixlee_exampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,19 +188,42 @@
 			productReference = CD1C0D7D23274C2D0099D28E /* pixlee_example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CD68EA002343C2EF000A382A /* pixlee_exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD68EA0A2343C2EF000A382A /* Build configuration list for PBXNativeTarget "pixlee_exampleTests" */;
+			buildPhases = (
+				CD68E9FD2343C2EF000A382A /* Sources */,
+				CD68E9FE2343C2EF000A382A /* Frameworks */,
+				CD68E9FF2343C2EF000A382A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD68EA072343C2EF000A382A /* PBXTargetDependency */,
+			);
+			name = pixlee_exampleTests;
+			productName = pixlee_exampleTests;
+			productReference = CD68EA012343C2EF000A382A /* pixlee_exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CD1C0D7523274C2D0099D28E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = Pixlee;
 				TargetAttributes = {
 					CD1C0D7C23274C2D0099D28E = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
+					};
+					CD68EA002343C2EF000A382A = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+						TestTargetID = CD1C0D7C23274C2D0099D28E;
 					};
 				};
 			};
@@ -162,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				CD1C0D7C23274C2D0099D28E /* pixlee_example */,
+				CD68EA002343C2EF000A382A /* pixlee_exampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -174,6 +254,13 @@
 				CD1C0D8D23274C2F0099D28E /* LaunchScreen.storyboard in Resources */,
 				CD1C0D8A23274C2F0099D28E /* Assets.xcassets in Resources */,
 				CD1C0D8823274C2D0099D28E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD68E9FF2343C2EF000A382A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,13 +292,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD68EA232343CD3B000A382A /* ad.m in Sources */,
 				CD1C0D8523274C2D0099D28E /* SecondViewController.swift in Sources */,
 				CD1C0D8123274C2D0099D28E /* AppDelegate.swift in Sources */,
 				CD1C0D8323274C2D0099D28E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD68E9FD2343C2EF000A382A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD68EA242343CD3B000A382A /* ad.m in Sources */,
+				CD68EA202343CB89000A382A /* PixleeSdk.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD68EA072343C2EF000A382A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1C0D7C23274C2D0099D28E /* pixlee_example */;
+			targetProxy = CD68EA062343C2EF000A382A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD1C0D8623274C2D0099D28E /* Main.storyboard */ = {
@@ -398,6 +503,61 @@
 			};
 			name = Release;
 		};
+		CD68EA082343C2EF000A382A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q28M29YQL8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = pixlee_exampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Pixlee.pixlee-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee_exampleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixlee_example.app/pixlee_example";
+			};
+			name = Debug;
+		};
+		CD68EA092343C2EF000A382A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q28M29YQL8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = pixlee_exampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Pixlee.pixlee-exampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "pixlee_exampleTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixlee_example.app/pixlee_example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +575,15 @@
 			buildConfigurations = (
 				CD1C0D9223274C2F0099D28E /* Debug */,
 				CD1C0D9323274C2F0099D28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD68EA0A2343C2EF000A382A /* Build configuration list for PBXNativeTarget "pixlee_exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD68EA082343C2EF000A382A /* Debug */,
+				CD68EA092343C2EF000A382A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

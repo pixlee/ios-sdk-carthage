@@ -407,6 +407,10 @@ print(arr)
 
 })
 ```
+### Swift Unit tests
+
+To run the tests please go the swift_example project and run the tests on xcode.
+Note: Do not forget to set the secret_key and api_key before running the tests.
 
 #### Swift type casting 
 
