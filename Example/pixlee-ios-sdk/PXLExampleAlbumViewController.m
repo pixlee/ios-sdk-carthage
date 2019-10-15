@@ -5,7 +5,7 @@
 //  Created by Tim Shi on 04/30/2015.
 //
 
-#import "PXLExampleAlbumViewController.h"\
+#import "PXLExampleAlbumViewController.h"
 
 #import <pixlee_sdk/PXLAlbum.h>
 #import <pixlee_sdk/PXLPhoto.h>
@@ -74,7 +74,7 @@ static NSString * const PXLSkuAlbumIdentifier = @"300152";
     // Create and set sort options on the album.
     PXLAlbumSortOptions *sortOptions = [PXLAlbumSortOptions new];
     sortOptions.sortType = PXLAlbumSortTypeRandom;
-    sortOptions.ascending = true;
+    sortOptions.ascending = false;
     album.sortOptions = sortOptions;
     album.perPage = 1;
     
