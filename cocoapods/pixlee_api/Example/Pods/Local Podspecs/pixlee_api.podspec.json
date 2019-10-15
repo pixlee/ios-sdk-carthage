@@ -1,0 +1,30 @@
+{
+  "name": "pixlee_api",
+  "version": "0.1.0",
+  "summary": "A short description of pixlee_api.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pixlee/ios-sdk-carthage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pixlee-accounts": "rachidi29@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pixlee/ios-sdk-carthage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "pixlee_api/Classes/**/*",
+  "dependencies": {
+    "AFNetworking": [
+      "~> 3.2"
+    ],
+    "Masonry": [
+      "~> 1.1"
+    ]
+  }
+}
