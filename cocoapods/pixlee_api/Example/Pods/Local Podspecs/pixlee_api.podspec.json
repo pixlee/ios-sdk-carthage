@@ -1,7 +1,7 @@
 {
   "name": "pixlee_api",
   "version": "0.1.0",
-  "summary": "A short description of pixlee_api.",
+  "summary": "An API Wrapper for Pixlee API",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/pixlee/ios-sdk-carthage",
   "license": {
@@ -16,15 +16,12 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "13.1"
   },
   "source_files": "pixlee_api/Classes/**/*",
   "dependencies": {
     "AFNetworking": [
       "~> 3.2"
-    ],
-    "Masonry": [
-      "~> 1.1"
     ]
   }
 }
