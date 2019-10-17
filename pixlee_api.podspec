@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'pixlee_api'
-  s.version          = '1.74.25'
+  s.version          = '1.74.26'
   s.summary          = 'An API Wrapper for Pixlee API'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/pixlee/ios-sdk-carthage.git', :tag => s.version.to_s}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '13.1'
+  s.ios.deployment_target = '8.0'
 
-  s.source_files = 'pixlee_api/Classes/**/*'
+  s.source_files = 'pixlee_sdk/**/*'
   
   # s.resource_bundles = {
   #   'pixlee_api' => ['pixlee_api/Assets/*.png']

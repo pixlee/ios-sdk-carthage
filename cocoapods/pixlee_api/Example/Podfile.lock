@@ -45,7 +45,7 @@ PODS:
   - FormatterKit/URLRequestFormatter (1.8.2):
     - FormatterKit/Resources
   - Masonry (1.1.0)
-  - pixlee_api (0.1.0):
+  - pixlee_api (1.74.25):
     - AFNetworking (~> 3.2)
   - SDWebImage (3.8.3):
     - SDWebImage/Core (= 3.8.3)
@@ -54,27 +54,24 @@ PODS:
 DEPENDENCIES:
   - FormatterKit (~> 1.8.2)
   - Masonry (~> 1.1)
-  - pixlee_api (from `../`)
+  - pixlee_api (~> 1.74.25)
   - SDWebImage (~> 3.8.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - FormatterKit
     - Masonry
+    - pixlee_api
     - SDWebImage
-
-EXTERNAL SOURCES:
-  pixlee_api:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FormatterKit: 4b8f29acc9b872d5d12a63efb560661e8f2e1b98
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  pixlee_api: e87c0097381abc23655ec67b544bef2ecc85d400
+  pixlee_api: d681fb6d3aa5039002f08fa5640521b21e5b926e
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
 
-PODFILE CHECKSUM: 5c38fed81c5ddcbba5b510da633ab7ef04ea5fc9
+PODFILE CHECKSUM: e5ffadf113970ae205e9d5d71e371a6ffcb9c4b6
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
