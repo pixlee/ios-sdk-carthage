@@ -16,7 +16,7 @@ class PixleeSdk: XCTestCase {
         
         
         #warning("Replace with your Secret Key if you are making POST requests.")
-        let api_key = "api_key"
+        let api_key = "Hz7VLPHt7ow-oY992rJi"
         let secret_key = "secret"
 
         PXLClient.shared().setApiKey(api_key)
