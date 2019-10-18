@@ -23,4 +23,9 @@ Carthage/Build
 Carthage/
 Cartfile.resolved
 Example/Carthage.pkg
+
+example_swift/pixlee_example/Podfile
+example_swift/pixlee_example/Podfile.lock
+example_swift/pixlee_example/Pods/**/*
+
 Example/Carthage/Build
