@@ -326,13 +326,13 @@ To upload an Image to an album use the class function uploadImage available on P
 ```
 
 target 'MyApp' do
-  pod 'pixlee_api', '~> Replace with current version'
+  pod 'pixlee_api', '~> 1.74.32' (Replace with current version, you can find the current version at https://github.com/pixlee/ios-sdk-carthage/releases)
 end
 
 ```
 1. Run Pod install
 
-If you are using swift there is one more step to do please refer to the swift section or contact us hello@pixleeteam.com
+If you are using swift there is one more step to do please refer to the swift section or contact us support@pixleeteam.com
 
 ### Including Pixlee SDK With Carthage 
 ##### If you're building for iOS, tvOS, or watchOS
