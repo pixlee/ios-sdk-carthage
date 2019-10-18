@@ -3,29 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A20BB4E2559A6A40AB2E197 /* Pods_pixlee_exampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC2778F04A8D3C8BA78BCB /* Pods_pixlee_exampleTests.framework */; };
 		CD1C0D8123274C2D0099D28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C0D8023274C2D0099D28E /* AppDelegate.swift */; };
 		CD1C0D8323274C2D0099D28E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C0D8223274C2D0099D28E /* FirstViewController.swift */; };
 		CD1C0D8523274C2D0099D28E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C0D8423274C2D0099D28E /* SecondViewController.swift */; };
 		CD1C0D8823274C2D0099D28E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8623274C2D0099D28E /* Main.storyboard */; };
 		CD1C0D8A23274C2F0099D28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8923274C2F0099D28E /* Assets.xcassets */; };
 		CD1C0D8D23274C2F0099D28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C0D8B23274C2F0099D28E /* LaunchScreen.storyboard */; };
-		CD2402D523298523004F6A46 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CC232984CC004F6A46 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD2402D723298523004F6A46 /* FormatterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CF232984CC004F6A46 /* FormatterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD2402D923298523004F6A46 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CD232984CC004F6A46 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD2402DB23298523004F6A46 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CE232984CC004F6A46 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD2402DD23298523004F6A46 /* pixlee_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD68EA202343CB89000A382A /* PixleeSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA1F2343CB89000A382A /* PixleeSdk.swift */; };
 		CD68EA232343CD3B000A382A /* ad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA222343CD3B000A382A /* ad.m */; };
 		CD68EA242343CD3B000A382A /* ad.m in Sources */ = {isa = PBXBuildFile; fileRef = CD68EA222343CD3B000A382A /* ad.m */; };
-		CD68EA272343CFB1000A382A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CC232984CC004F6A46 /* AFNetworking.framework */; };
-		CD68EA282343CFB1000A382A /* FormatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CF232984CC004F6A46 /* FormatterKit.framework */; };
-		CD68EA292343CFB1000A382A /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CD232984CC004F6A46 /* Masonry.framework */; };
-		CD68EA2A2343CFB1000A382A /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CE232984CC004F6A46 /* WebImage.framework */; };
-		CD68EA2B2343CFB1000A382A /* pixlee_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */; };
+		E600956F83D3370B6F7BF070 /* Pods_pixlee_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE41573BA026B6B75013575E /* Pods_pixlee_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,25 +30,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CD2402DE23298523004F6A46 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CD2402D723298523004F6A46 /* FormatterKit.framework in Embed Frameworks */,
-				CD2402D523298523004F6A46 /* AFNetworking.framework in Embed Frameworks */,
-				CD2402DD23298523004F6A46 /* pixlee_sdk.framework in Embed Frameworks */,
-				CD2402D923298523004F6A46 /* Masonry.framework in Embed Frameworks */,
-				CD2402DB23298523004F6A46 /* WebImage.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		0DDC2778F04A8D3C8BA78BCB /* Pods_pixlee_exampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixlee_exampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BF2EB46E57600BCAFF748C /* Pods-pixlee_exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixlee_exampleTests.debug.xcconfig"; path = "Target Support Files/Pods-pixlee_exampleTests/Pods-pixlee_exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		909BBA00219BADF43C6AB95A /* Pods-pixlee_example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixlee_example.debug.xcconfig"; path = "Target Support Files/Pods-pixlee_example/Pods-pixlee_example.debug.xcconfig"; sourceTree = "<group>"; };
+		B08B07F9D0D0DE2C28D8B2B3 /* Pods-pixlee_exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixlee_exampleTests.release.xcconfig"; path = "Target Support Files/Pods-pixlee_exampleTests/Pods-pixlee_exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD1C0D7D23274C2D0099D28E /* pixlee_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pixlee_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1C0D8023274C2D0099D28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD1C0D8223274C2D0099D28E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -65,17 +43,14 @@
 		CD1C0D8923274C2F0099D28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1C0D8C23274C2F0099D28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1C0D8E23274C2F0099D28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pixlee_sdk.framework; path = Carthage/Build/iOS/pixlee_sdk.framework; sourceTree = "<group>"; };
-		CD2402CC232984CC004F6A46 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
-		CD2402CD232984CC004F6A46 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
-		CD2402CE232984CC004F6A46 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
-		CD2402CF232984CC004F6A46 /* FormatterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormatterKit.framework; path = Carthage/Build/iOS/FormatterKit.framework; sourceTree = "<group>"; };
 		CD68EA012343C2EF000A382A /* pixlee_exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pixlee_exampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD68EA052343C2EF000A382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD68EA1F2343CB89000A382A /* PixleeSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixleeSdk.swift; sourceTree = "<group>"; };
 		CD68EA222343CD3B000A382A /* ad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ad.m; sourceTree = "<group>"; };
 		CD68EA252343CD98000A382A /* pixlee_example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixlee_example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD68EA262343CDE3000A382A /* pixlee_exampleTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixlee_exampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3C8AFAA2D04F7A0270A2151 /* Pods-pixlee_example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixlee_example.release.xcconfig"; path = "Target Support Files/Pods-pixlee_example/Pods-pixlee_example.release.xcconfig"; sourceTree = "<group>"; };
+		EE41573BA026B6B75013575E /* Pods_pixlee_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixlee_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E600956F83D3370B6F7BF070 /* Pods_pixlee_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,17 +66,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD68EA272343CFB1000A382A /* AFNetworking.framework in Frameworks */,
-				CD68EA282343CFB1000A382A /* FormatterKit.framework in Frameworks */,
-				CD68EA292343CFB1000A382A /* Masonry.framework in Frameworks */,
-				CD68EA2A2343CFB1000A382A /* WebImage.framework in Frameworks */,
-				CD68EA2B2343CFB1000A382A /* pixlee_sdk.framework in Frameworks */,
+				0A20BB4E2559A6A40AB2E197 /* Pods_pixlee_exampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C9E8448AE21911CF814B4FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				909BBA00219BADF43C6AB95A /* Pods-pixlee_example.debug.xcconfig */,
+				D3C8AFAA2D04F7A0270A2151 /* Pods-pixlee_example.release.xcconfig */,
+				51BF2EB46E57600BCAFF748C /* Pods-pixlee_exampleTests.debug.xcconfig */,
+				B08B07F9D0D0DE2C28D8B2B3 /* Pods-pixlee_exampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD1C0D7423274C2D0099D28E = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +94,7 @@
 				CD68EA262343CDE3000A382A /* pixlee_exampleTests-Bridging-Header.h */,
 				CD68EA222343CD3B000A382A /* ad.m */,
 				CD2402C9232984B3004F6A46 /* Frameworks */,
+				5C9E8448AE21911CF814B4FB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,11 +125,8 @@
 		CD2402C9232984B3004F6A46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD2402CC232984CC004F6A46 /* AFNetworking.framework */,
-				CD2402CF232984CC004F6A46 /* FormatterKit.framework */,
-				CD2402CD232984CC004F6A46 /* Masonry.framework */,
-				CD2402CE232984CC004F6A46 /* WebImage.framework */,
-				CD2402CA232984B3004F6A46 /* pixlee_sdk.framework */,
+				EE41573BA026B6B75013575E /* Pods_pixlee_example.framework */,
+				0DDC2778F04A8D3C8BA78BCB /* Pods_pixlee_exampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,11 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD1C0D9123274C2F0099D28E /* Build configuration list for PBXNativeTarget "pixlee_example" */;
 			buildPhases = (
+				F691D6F295D1D57AD157B639 /* [CP] Check Pods Manifest.lock */,
 				CD1C0D7923274C2D0099D28E /* Sources */,
 				CD1C0D7A23274C2D0099D28E /* Frameworks */,
 				CD1C0D7B23274C2D0099D28E /* Resources */,
-				CD2402C823298378004F6A46 /* ShellScript */,
-				CD2402DE23298523004F6A46 /* Embed Frameworks */,
+				EE29CD05E6A5F650EDCBF0BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD68EA0A2343C2EF000A382A /* Build configuration list for PBXNativeTarget "pixlee_exampleTests" */;
 			buildPhases = (
+				83B8F6E7A891DE33222CFC5C /* [CP] Check Pods Manifest.lock */,
 				CD68E9FD2343C2EF000A382A /* Sources */,
 				CD68E9FE2343C2EF000A382A /* Frameworks */,
 				CD68E9FF2343C2EF000A382A /* Resources */,
@@ -267,7 +249,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CD2402C823298378004F6A46 /* ShellScript */ = {
+		83B8F6E7A891DE33222CFC5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,15 +257,58 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/pixlee_sdk.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pixlee_exampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE29CD05E6A5F650EDCBF0BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pixlee_example/Pods-pixlee_example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pixlee_example/Pods-pixlee_example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pixlee_example/Pods-pixlee_example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F691D6F295D1D57AD157B639 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pixlee_example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -456,6 +481,7 @@
 		};
 		CD1C0D9223274C2F0099D28E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 909BBA00219BADF43C6AB95A /* Pods-pixlee_example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -481,6 +507,7 @@
 		};
 		CD1C0D9323274C2F0099D28E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3C8AFAA2D04F7A0270A2151 /* Pods-pixlee_example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -505,6 +532,7 @@
 		};
 		CD68EA082343C2EF000A382A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51BF2EB46E57600BCAFF748C /* Pods-pixlee_exampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -533,6 +561,7 @@
 		};
 		CD68EA092343C2EF000A382A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08B07F9D0D0DE2C28D8B2B3 /* Pods-pixlee_exampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
