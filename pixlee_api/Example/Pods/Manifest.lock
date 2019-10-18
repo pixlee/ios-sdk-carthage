@@ -1,0 +1,16 @@
+PODS:
+  - pixlee_api (0.1.0)
+
+DEPENDENCIES:
+  - pixlee_api (from `../`)
+
+EXTERNAL SOURCES:
+  pixlee_api:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  pixlee_api: 24d7e00352c716532291149f548d12e88ae2d6bf
+
+PODFILE CHECKSUM: d3cc765fe531784b8da6acffa12fa2954ae3fbe3
+
+COCOAPODS: 1.8.4

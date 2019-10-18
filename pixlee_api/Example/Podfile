@@ -1,0 +1,6 @@
+use_frameworks!
+target 'pixlee_api_Tests' do
+  pod 'pixlee_api', :path => '../'
+  
+  
+end

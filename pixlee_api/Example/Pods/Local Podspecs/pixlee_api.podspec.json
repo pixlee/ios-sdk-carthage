@@ -1,0 +1,22 @@
+{
+  "name": "pixlee_api",
+  "version": "0.1.0",
+  "summary": "A short description of pixlee_api.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pixlee-accounts/pixlee_api",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pixlee-accounts": "rachidi29@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pixlee-accounts/pixlee_api.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "pixlee_api/Classes/**/*"
+}
