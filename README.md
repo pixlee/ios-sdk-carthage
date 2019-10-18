@@ -14,6 +14,46 @@ To load the photos in an album there are two methods https://developers.pixlee.c
 
 If you are retriving the content for one album you'll want to use the `PXLAlbum` class. Create an instance by calling `[PXLAlbum albumWithIdentifier:<ALBUM ID HERE>]`. You can then set `sortOptions` and `filterOptions` as necessary (see the header files for more details) before calling `loadNextPageOfPhotos:` to load photos. An album will load its photos as pages, and calling `loadNextPageOfPhotos:` successively will load each page in turn.
 
+
+### Including Pixlee SDK with Cocoapods
+1. install and setup cocoapods with your projects https://guides.cocoapods.org/using/getting-started.html
+1. Add https://cocoapods.org/pods/pixlee_api to your Podfile by adding 
+```
+
+target 'MyApp' do
+  pod 'pixlee_api', '~> 1.74.32' (Replace with current version, you can find the current version at https://github.com/pixlee/ios-sdk-carthage/releases)
+end
+
+```
+1. Run Pod install
+
+If you are using swift there is one more step to do please refer to the swift section or contact us support@pixleeteam.com
+
+### Including Pixlee SDK With Carthage 
+##### If you're building for iOS, tvOS, or watchOS
+1. Create a Cartfile that lists the frameworks you’d like to use in your project.
+1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
+1. On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the Carthage/Build folder on disk.
+1. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+
+  ```sh
+  /usr/local/bin/carthage copy-frameworks
+  ```
+
+  and add the paths to the frameworks you want to use under “Input Files”, e.g.:
+
+  ```
+  $(SRCROOT)/Carthage/Build/iOS/Box.framework
+  $(SRCROOT)/Carthage/Build/iOS/Result.framework
+  $(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework
+  ```
+  This script works around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
+
+With the debug information copied into the built products directory, Xcode will be able to symbolicate the stack trace whenever you stop at a breakpoint. This will also enable you to step through third-party code in the debugger.
+
+When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
+
+
 ### Filtering and Sorting
 Information on the filters and sorts available are here: https://developers.pixlee.com/reference#consuming-content
 
@@ -319,44 +359,6 @@ To upload an Image to an album use the class function uploadImage available on P
  */
 + (NSURLSessionDataTask *)uploadImage:(NSNumber *)albumId :(NSString *)title :(NSString *)email :(NSString *)username  :(NSString *)photo_uri :(BOOL *)approved :(NSString *)connected_user_id callback:(void (^)(NSError *))completionBlock;
 ```
-
-### Including Pixlee SDK with Cocoapods
-1. install and setup cocoapods with your projects https://guides.cocoapods.org/using/getting-started.html
-1. Add https://cocoapods.org/pods/pixlee_api to your Podfile by adding 
-```
-
-target 'MyApp' do
-  pod 'pixlee_api', '~> 1.74.32' (Replace with current version, you can find the current version at https://github.com/pixlee/ios-sdk-carthage/releases)
-end
-
-```
-1. Run Pod install
-
-If you are using swift there is one more step to do please refer to the swift section or contact us support@pixleeteam.com
-
-### Including Pixlee SDK With Carthage 
-##### If you're building for iOS, tvOS, or watchOS
-1. Create a Cartfile that lists the frameworks you’d like to use in your project.
-1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
-1. On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the Carthage/Build folder on disk.
-1. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
-
-  ```sh
-  /usr/local/bin/carthage copy-frameworks
-  ```
-
-  and add the paths to the frameworks you want to use under “Input Files”, e.g.:
-
-  ```
-  $(SRCROOT)/Carthage/Build/iOS/Box.framework
-  $(SRCROOT)/Carthage/Build/iOS/Result.framework
-  $(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework
-  ```
-  This script works around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
-
-With the debug information copied into the built products directory, Xcode will be able to symbolicate the stack trace whenever you stop at a breakpoint. This will also enable you to step through third-party code in the debugger.
-
-When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
 
 
