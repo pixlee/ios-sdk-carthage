@@ -323,7 +323,6 @@ To upload an Image to an album use the class function uploadImage available on P
 ### Including Pixlee SDK with Cocoapods
 1. install and setup cocoapods with your projects https://guides.cocoapods.org/using/getting-started.html
 1. Add https://cocoapods.org/pods/pixlee_api to your Podfile by adding 
-
 ```
 
 target 'MyApp' do
