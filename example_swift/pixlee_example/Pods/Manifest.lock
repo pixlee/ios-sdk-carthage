@@ -54,7 +54,7 @@ PODS:
 DEPENDENCIES:
   - FormatterKit (~> 1.8.2)
   - Masonry (~> 1.1)
-  - pixlee_api (~> 1.74.25)
+  - pixlee_api (~> 1.74)
   - SDWebImage (~> 3.8.2)
 
 SPEC REPOS:
@@ -72,6 +72,6 @@ SPEC CHECKSUMS:
   pixlee_api: d681fb6d3aa5039002f08fa5640521b21e5b926e
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
 
-PODFILE CHECKSUM: 6a1b64ea8b10e6d649108cb9e61a9eddf22732da
+PODFILE CHECKSUM: e62b4ecbdffe9f440277fd219625e0ae1036f145
 
 COCOAPODS: 1.8.4

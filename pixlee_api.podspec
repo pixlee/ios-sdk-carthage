@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'pixlee_api'
-  s.version          = '1.74.31'
+  s.version          = '1.74.32'
   s.summary          = 'An API Wrapper for Pixlee API'
 
 # This description is used to generate tags and improve search results.
