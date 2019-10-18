@@ -321,7 +321,7 @@ To upload an Image to an album use the class function uploadImage available on P
 ```
 
 
-### Including Pixlee SDK
+### Including Pixlee SDK With Carthage 
 ##### If you're building for iOS, tvOS, or watchOS
 1. Create a Cartfile that lists the frameworks you’d like to use in your project.
 1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
@@ -345,6 +345,12 @@ With the debug information copied into the built products directory, Xcode will 
 
 When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
+### Including Pixlee SDK With Cocoapods 
+1. install and init the cocoapods https://cocoapods.org/, you should have a Podfile 
+1. Add pixlee_api to your PODFILE ``` target 'MyApp' do
+  pod 'pixlee_api', '~> 1.74.25''
+end'```
+1. run pod install
 
 ### Swift
 
