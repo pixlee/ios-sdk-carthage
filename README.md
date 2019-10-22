@@ -363,7 +363,7 @@ To upload an Image to an album use the class function uploadImage available on P
 
 
 
-### Swift
+### Setup Swift Project with Carthage
 
 If you are trying to use the Objective-C Pixlee API with a Swift project please follow these steps, you can also view the sample project available at ~example_swift/:
 
@@ -371,6 +371,11 @@ If you are trying to use the Objective-C Pixlee API with a Swift project please 
 1. Run `carthage update`. This will fetch dependencies into a Carthage/Checkouts folder, then build each one or download a pre-compiled framework.
 1. On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the Carthage/Build folder on disk.
 1. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: `/bin/sh`), add the following contents to the script area below the shell:
+
+
+
+
+### Adding Pixlee_SDK headers to Swift 
 1. Add a bridging_header.h to your current project, follow these steps to create one https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis/importing_objective-c_into_swift
 1. Import the Pixlee sdk header files like this
 
