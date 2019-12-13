@@ -6,19 +6,14 @@ This SDK makes it easy for Pixlee customers to easily include Pixlee albums in t
 
 Due to a current issue with the AFNetworking library, compilation of the application currently requires XCode 10 or lower.
 
-If compiling with XCode 11 or higher, these instructions must be executed:
+If compiling with XCode 11 or higher, these two environment variables must be set before running carthage:
 
-1. Firstly, save a new xcconfig file with the following content:
 
 `CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO`
 
-2. When calling carthage build, provide this file like so:
+`GCC_TREAT_WARNINGS_AS_ERRORS = NO`
 
-`XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage build …`
-
-or 
-
-`XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage update …`
+Then, carthage build and carthage update commands can proceed.
 
 ## Getting Started
 
