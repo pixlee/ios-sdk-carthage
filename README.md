@@ -10,11 +10,11 @@ If compiling with XCode 11 or higher, these instructions must be executed:
 
 1. Firstly, save a new xcconfig file with the following content:
 
-CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO
+`CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO`
 
 When calling carthage build, provide this file like so:
 
-XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage build …
+`XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage build …`
 
 ## Getting Started
 
