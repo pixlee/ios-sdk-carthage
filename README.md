@@ -16,6 +16,10 @@ When calling carthage build, provide this file like so:
 
 `XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage build …`
 
+or 
+
+`XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage update …`
+
 ## Getting Started
 
 This repo includes both the Pixlee iOS SDK and an example project to show you how it's used.
