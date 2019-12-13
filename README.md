@@ -2,6 +2,20 @@
 
 This SDK makes it easy for Pixlee customers to easily include Pixlee albums in their native iOS apps. It includes a native wrapper to the Pixlee album API as well as some drop-in and customizable UI elements to quickly get you started.
 
+## Dependencies
+
+Compilation of the application currently requires XCode 10 or lower.
+
+If compiling with XCode 11 or higher, these instructions must be executed:
+
+1. Firstly, save a new xcconfig file with the following content:
+
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO
+
+When calling carthage build, provide this file like so:
+
+XCODE_XCCONFIG_FILE=path/to/AFNetworking_workaround.xcconfig carthage build …
+
 ## Getting Started
 
 This repo includes both the Pixlee iOS SDK and an example project to show you how it's used.
