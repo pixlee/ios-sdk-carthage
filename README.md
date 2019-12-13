@@ -12,7 +12,7 @@ If compiling with XCode 11 or higher, these instructions must be executed:
 
 `CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO`
 
-When calling carthage build, provide this file like so:
+2. When calling carthage build, provide this file like so:
 
 `XCODE_XCCONFIG_FILE=path/to/file.xcconfig carthage build …`
 
