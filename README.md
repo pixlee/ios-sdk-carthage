@@ -1,3 +1,6 @@
+# Deprecated - no longer maintained!
+- We have a Swift SDK for you instead. Visit here https://github.com/pixlee/pixlee-ios-sdk
+
 # pixlee-ios-sdk-carthage
 
 This SDK makes it easy for Pixlee customers to easily include Pixlee albums in their native iOS apps. It includes a native wrapper to the Pixlee album API as well as some drop-in and customizable UI elements to quickly get you started.
